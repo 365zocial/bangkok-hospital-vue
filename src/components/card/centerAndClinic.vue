@@ -20,7 +20,7 @@
 
 <script setup>
 // This is where Composition API logic goes
-    const specialties = [ // Use ref() to make the array reactive
+    const specialtiesTest = [ 
       {
         name: 'Heart',
         icon: 'bi-heart',
