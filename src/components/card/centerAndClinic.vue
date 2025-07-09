@@ -18,13 +18,9 @@
   </div>
 </template>
 
-<script>
-import { defineComponent, ref } from 'vue'; // Import 'ref' for reactive data
-
-export default defineComponent({
-  name: 'MedicalSpecialtiesGrid',
-  setup() { // This is where Composition API logic goes
-    const specialties = ref([ // Use ref() to make the array reactive
+<script setup>
+// This is where Composition API logic goes
+    const specialties = [ // Use ref() to make the array reactive
       {
         name: 'Heart',
         icon: 'bi-heart',
@@ -74,14 +70,9 @@ export default defineComponent({
         icon: 'bi-tooth',
         description: 'Bangkok Hospital Dental Center, Dental Implant, Digital Smile Design, Geriatri...',
       },
-    ]);
+    ];
 
-    // Return the reactive data and methods that should be exposed to the template
-    return {
-      specialties,
-    };
-  },
-});
+
 </script>
 
 <style scoped>
