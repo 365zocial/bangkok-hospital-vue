@@ -3,7 +3,7 @@
 <template>
 
    <div class="full-width">
-     <CenterAndClinic :data="specialties" />
+     <CenterAndClinic :dataList="specialties" />
    </div>
  
 </template>
@@ -15,51 +15,41 @@ import CenterAndClinic from './components/card/centerAndClinic.vue';
 const specialties = [ // Use ref() to make the array reactive
       {
         name: 'Heart',
-        icon: 'bi-heart',
+        icon: 'http://static.bangkokhospital.com/uploads/2024/03/Heart4.svg',
         description: 'Cardiology Clinic, Cardiac Rehabilitation Clinic, Cardiac...',
       },
       {
         name: 'Cancer',
-        icon: 'bi-ribbon', // bi-ribbon for a general awareness/cancer ribbon
+        icon: 'https://static.bangkokhospital.com/uploads/2024/03/Cancer2.svg', // bi-ribbon for a general awareness/cancer ribbon
         description: 'Radiation Oncology Center, Prevention and Early Detection Center, Medical...',
       },
       {
         name: 'Bone & Spine',
-        // Closest for bone/spine: bi-person-bounding-box, bi-ruler-horizontal.
-        // For the image's abstract feel, maybe bi-activity or a custom SVG.
-        // Using bi-lungs for now, as it's a body part.
-        icon: 'bi-lungs',
+        icon: 'https://static.bangkokhospital.com/uploads/2024/03/Bone.svg',
         description: 'Orthopedic Center, Spine Center, Hip & Knee Center, Fracture Center...',
       },
-      {
-        name: 'Brain',
-        // Closest for brain: bi-lightbulb (concept), bi-person-fill (head).
-        // The image has a very specific brain icon, might need custom.
-        icon: 'bi-lightbulb', // Placeholder, conceptual
+      {name: 'Brain',
+        icon: 'https://static.bangkokhospital.com/uploads/2024/03/Brain2.svg', // Placeholder, conceptual
         description: 'Neuroscience Center, Neurological Surgery Center, Longevity Center...',
       },
       {
         name: 'Trauma',
-        // Closest for ambulance/trauma: bi-truck (ambulance-like), bi-bandages.
-        icon: 'bi-truck', // Placeholder for ambulance icon
+        icon: 'https://static.bangkokhospital.com/uploads/2024/03/trauma2.svg', // Placeholder for ambulance icon
         description: 'Trauma Center (Call 1724), BDMS Medevac Center, BDMS Emergency...',
       },
       {
         name: 'Health Check-up',
-        // Closest for check-up: bi-clipboard-check, bi-journal-check.
-        icon: 'bi-clipboard-check',
+        icon: 'https://static.bangkokhospital.com/uploads/2024/03/Checkup3.svg',
         description: 'Health Design Center, Civil Aeromedical Center, Bangkok Hospit...',
       },
       {
         name: 'Surgery',
-        // Closest for surgery: bi-scissors (conceptual), bi-tools.
-        // The image has a scalpel-like icon, which is not directly in BS Icons.
-        icon: 'bi-lightning', // Placeholder for a quick/sharp action
+        icon: 'https://static.bangkokhospital.com/uploads/2024/03/Surgery2.svg', // Placeholder for a quick/sharp action
         description: 'Surgery Center, Vascular Center, Colorectal Surgery Clinic, Advanced...',
       },
       {
         name: 'Dental Care',
-        icon: 'bi-tooth',
+        icon: 'https://static.bangkokhospital.com/uploads/2024/03/Dental.svg',
         description: 'Bangkok Hospital Dental Center, Dental Implant, Digital Smile Design, Geriatri...',
       },
     ];
