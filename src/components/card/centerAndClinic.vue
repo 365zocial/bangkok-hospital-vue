@@ -1,19 +1,21 @@
 <template>
-  <div class="container my-4">
-    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+  <div class="my-4">
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-2 g-sm-3">
       <div v-for="data in dataList" :key="dataList.name" class="col">
         <div class="card shadow border-0 rounded-3 h-100 w-100 bg-white">
           <div
-            class="d-flex flex-row flex-sm-column align-items-start justify-content-between"
-            style="padding: 1.5rem"
+            class="d-flex flex-row flex-sm-column align-items-start justify-content-between p-3 p-sm-4"
+            
           >
             <div
-  class="d-flex justify-content-center align-items-center rounded-3 mb-2 p-3 bg-primary bg-opacity-10 icon-responsive"
->
-  <img :src="data.icon" :alt="dataList.name" style="width: 2.5rem; height: 2.5rem" />
-</div>
-             
-            <h5 class="card-title fw-bold mb-2" style="color: #002d73">{{ data.name }}</h5>
+              class="border d-flex justify-content-center align-items-center rounded-3 mb-2 bg-primary bg-opacity-10 icon-responsive"
+            >
+              <img :src="data.icon" :alt="dataList.name" class="icon"/>
+            </div>
+
+            <h5 class="card-title fw-bold mb-2 font-title" style="color: #002d73">
+              {{ data.name }}
+            </h5>
 
             <p
               class="fw-light lh-sm text-truncate-2 your-element-class description-2lines"
@@ -81,20 +83,34 @@ const props = defineProps({
   text-overflow: ellipsis;
 }
 
-@media (max-width: 575.98px) {
-  .description-2lines {
-    display: none !important;
-  }
-}
-
 .icon-responsive {
   width: 4rem;
   height: 4rem;
 }
+  .icon{
+    width: 2.5rem; 
+    height: 2.5rem
+  }
+
+.font-title {
+  font-size: 18px;
+}
+
 @media (max-width: 575.98px) {
   .icon-responsive {
-    width: 2rem !important;
-    height: 2rem !important;
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  .icon{
+    width: 2rem; 
+    height: 2rem
+  }
+  .description-2lines {
+    display: none !important;
+  }
+
+  .font-title {
+    font-size: 14px;
   }
 }
 </style>
