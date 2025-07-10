@@ -1,7 +1,7 @@
 <template>
-  <div class="my-4">
+  <!-- <div class="my-4">
     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-2 g-sm-3">
-      <div v-for="data in dataList" :key="dataList.name" class="col">
+      <div v-for="data in dataList" :key="dataList.name" class="col"> -->
         <div class="card shadow border-0 rounded-3 h-100 w-100 bg-white">
           <div
             class="d-flex flex-row flex-sm-column align-items-start justify-content-between p-3 p-sm-4"
@@ -10,7 +10,7 @@
             <div
               class="border d-flex justify-content-center align-items-center rounded-3 mb-2 bg-primary bg-opacity-10 icon-responsive"
             >
-              <img :src="data.icon" :alt="dataList.name" class="icon"/>
+              <img :src="data.icon" :alt="data.name" class="icon"/>
             </div>
 
             <h5 class="card-title fw-bold mb-2 font-title" style="color: #002d73">
@@ -25,16 +25,15 @@
             </p>
           </div>
         </div>
-      </div>
+      <!-- </div>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script setup>
 const props = defineProps({
-  dataList: {
-    type: Array,
-    default: [],
+  data: {
+    type: Object,
   },
 })
 </script>
