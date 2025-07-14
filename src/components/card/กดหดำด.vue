@@ -1,18 +1,24 @@
 <template>
-  <div class="card shadow rounded-3 h-100 w-100 bg-white">
-    <div class="border s d-grid gap-2 p-3 p-sm-4 grid-template-mobile grid-template-sm">
+  <div class="card shadow border border-primary rounded-3 h-100 w-100 bg-white">
+    <!-- <div
+            class="bg-warning border border-success d-flex flex-row flex-sm-column align-items-start justify-content-between p-3 p-sm-4"
+            
+          > -->
+    <div
+      class="bg-warning border border-success d-flex flex-row flex-sm-column align-items-center align-items-sm-start justify-content-start justify-content-sm-between p-3 p-sm-4"
+    >
       <div
-        class="border d-flex justify-content-center align-items-center rounded-3 bg-primary bg-opacity-10 icon-responsive"
+        class="border d-flex justify-content-center align-items-center rounded-3 mb-2 bg-primary bg-opacity-10 icon-responsive"
       >
         <img :src="data.icon" :alt="data.name" class="icon" />
       </div>
 
-      <h5 class="border card-title fw-bold font-title mb-0" style="color: #002d73">
+      <h5 class="border card-title fw-bold mb-2 font-title" style="color: #002d73">
         {{ data.name }}
       </h5>
 
       <p
-        class="border fw-light lh-sm text-truncate-2 description-2lines mb-0"
+        class="border fw-light lh-sm text-truncate-2 your-element-class description-2lines"
         style="color: #627380; font-size: 0.8rem"
       >
         {{ data.description }}
@@ -53,11 +59,12 @@ const props = defineProps({
 }
 
 .text-primary {
-  color: #007bff !important;
+  color: #007bff !important; /* Standard Bootstrap primary color */
+  /* You can override this if you have a custom primary color in your Bootstrap theme */
 }
 
 .your-element-class {
-  margin: 0;
+  margin: 0; /* ลบ margin ทั้งสี่ด้าน */
 }
 
 .card-title {
@@ -100,16 +107,6 @@ const props = defineProps({
 
   .font-title {
     font-size: 14px;
-  }
-}
-
-.grid-template-mobile {
-  grid-template-columns: 1fr;
-}
-@media (min-width: 576px) {
-  .grid-template-sm {
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto;
   }
 }
 </style>
