@@ -1,21 +1,22 @@
 <template>
-  <div class="card shadow rounded-3 h-100 w-100 bg-white">
-<!-- <div>ssss</div> -->
+  <div class="card rounded-3 h-100 w-100 bg-white border-0">
     <div
-      class=" d-flex flex-row flex-sm-column align-items-center align-items-sm-start justify-content-start justify-content-sm-between px-2 py-2 p-sm-4 mb-0"
+      class="d-flex flex-row flex-sm-column align-items-center align-items-sm-start justify-content-start justify-content-sm-between padding-card p-sm-4 mb-0"
     >
       <div
-        class=" d-flex justify-content-center align-items-center rounded-3 bg-primary bg-opacity-10 icon-responsive"
+        class="me-2 d-flex justify-content-center align-items-center rounded-2  rounded-lg-3 bg-primary bg-opacity-10 icon-responsive"
       >
         <img :src="data.icon" :alt="data.name" class="icon" />
       </div>
 
-      <h5 class="ms-3  card-title fw-bold my-2 font-title " style="color: #002d73">
-        {{ data.name }}
-      </h5>
+      <div class="w-100 ">
+        <h5 class="card-title fw-bold my-2 font-title" style="color: #002d73">
+          {{ data.name }}
+        </h5>
+      </div>
 
       <p
-        class=" fw-light lh-sm text-truncate-2 your-element-class description-2lines "
+        class="border fw-light lh-sm text-truncate-2 your-element-class description-2lines"
         style="color: #627380; font-size: 0.8rem"
       >
         {{ data.description }}
@@ -77,8 +78,8 @@ const props = defineProps({
 }
 
 .icon-responsive {
-  width: 4rem;
-  height: 4rem;
+  width: 4rem !important;
+  height: 4rem !important;
 }
 .icon {
   width: 2.5rem;
@@ -89,23 +90,31 @@ const props = defineProps({
   font-size: 18px;
 }
 
+.padding-card {
+  padding: 1.5rem;
+}
 @media (max-width: 576px) {
   .icon-responsive {
-    width: 3.5rem !important;
-    height: 3.5rem !important;
+    min-width: 3rem !important;
+    /* aspect-ratio: 1 / 1; */
+    height: 3rem !important;
   }
 
   .icon {
     width: 2rem;
     height: 2rem;
   }
-  
+
   .description-2lines {
     display: none !important;
   }
 
   .font-title {
     font-size: 14px;
+  }
+
+  .padding-card{
+    padding: 0.75rem;
   }
 }
 </style>
