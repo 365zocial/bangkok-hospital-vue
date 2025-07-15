@@ -1,24 +1,21 @@
 <template>
-  <div class="card shadow border border-primary rounded-3 h-100 w-100 bg-white">
-    <!-- <div
-            class="bg-warning border border-success d-flex flex-row flex-sm-column align-items-start justify-content-between p-3 p-sm-4"
-            
-          > -->
+  <div class="card shadow rounded-3 h-100 w-100 bg-white">
+<!-- <div>ssss</div> -->
     <div
-      class="bg-warning border border-success d-flex flex-row flex-sm-column align-items-center align-items-sm-start justify-content-start justify-content-sm-between p-3 p-sm-4"
+      class=" d-flex flex-row flex-sm-column align-items-center align-items-sm-start justify-content-start justify-content-sm-between px-2 py-2 p-sm-4 mb-0"
     >
       <div
-        class="border d-flex justify-content-center align-items-center rounded-3 mb-2 bg-primary bg-opacity-10 icon-responsive"
+        class=" d-flex justify-content-center align-items-center rounded-3 bg-primary bg-opacity-10 icon-responsive"
       >
         <img :src="data.icon" :alt="data.name" class="icon" />
       </div>
 
-      <h5 class="border card-title fw-bold mb-2 font-title" style="color: #002d73">
+      <h5 class="ms-3  card-title fw-bold my-2 font-title " style="color: #002d73">
         {{ data.name }}
       </h5>
 
       <p
-        class="border fw-light lh-sm text-truncate-2 your-element-class description-2lines"
+        class=" fw-light lh-sm text-truncate-2 your-element-class description-2lines "
         style="color: #627380; font-size: 0.8rem"
       >
         {{ data.description }}
@@ -92,15 +89,17 @@ const props = defineProps({
   font-size: 18px;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
   .icon-responsive {
-    width: 3rem !important;
-    height: 3rem !important;
+    width: 3.5rem !important;
+    height: 3.5rem !important;
   }
+
   .icon {
     width: 2rem;
     height: 2rem;
   }
+  
   .description-2lines {
     display: none !important;
   }

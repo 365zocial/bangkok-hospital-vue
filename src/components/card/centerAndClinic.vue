@@ -1,6 +1,6 @@
 <template>
-  <div class="card shadow rounded-3 h-100 w-100 bg-white">
-    <div class="border s d-grid gap-2 p-3 p-sm-4 grid-template-mobile grid-template-sm">
+  <!-- <div class="card shadow rounded-3 h-100 w-100 bg-white">
+    <div class="border d-grid gap-2 p-3 p-sm-4 ">
       <div
         class="border d-flex justify-content-center align-items-center rounded-3 bg-primary bg-opacity-10 icon-responsive"
       >
@@ -17,6 +17,33 @@
       >
         {{ data.description }}
       </p>
+    </div>
+  </div> -->
+
+  <div class="card shadow rounded-3 h-100 w-100 bg-white px-3 py-2">
+    <div class="row g-2">
+      <div class="col-4 col-lg-12 border">
+        <div
+          class="d-flex justify-content-center align-items-center rounded-3 bg-primary bg-opacity-10 icon-responsive"
+        >
+          <img :src="data.icon" :alt="data.name" class="icon" />
+        </div>
+      </div>
+
+      <div class="col-8 col-md-12 border d-flex align-items-center">
+        <h5 class=" card-title fw-bold font-title mb-0" style="color: #002d73">
+          {{ data.name }}
+        </h5>
+      </div>
+
+      <div class="d-none col-md-12">
+        <p
+          class="border fw-light lh-sm text-truncate-2 description-2lines mb-0"
+          style="color: #627380; font-size: 0.8rem"
+        >
+          {{ data.description }}
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -85,7 +112,10 @@ const props = defineProps({
   font-size: 18px;
 }
 
-@media (max-width: 575.98px) {
+.grid-template-mobile {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 576px) {
   .icon-responsive {
     width: 3rem !important;
     height: 3rem !important;
@@ -101,12 +131,7 @@ const props = defineProps({
   .font-title {
     font-size: 14px;
   }
-}
 
-.grid-template-mobile {
-  grid-template-columns: 1fr;
-}
-@media (min-width: 576px) {
   .grid-template-sm {
     grid-template-columns: auto 1fr;
     grid-template-rows: auto auto;
