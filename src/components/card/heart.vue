@@ -1,25 +1,20 @@
 <template>
-  <div class="card-shadow rounded-3 h-100 w-100 bg-white border-0">
-    <div class="row padding-card mb-0 ">
-      <!-- <div class="col-4 border rounded-3">
-        <img :src="data.img" :alt="data.name" class="w-100" />
-      </div> -->
-
+  <div class="card-shadow rounded-3 h-100 w-100 bg-white border-0 cursor-pointer">
+    <div class="row padding-card mb-0">
       <div class="col-4 rounded-3 h-100 p-0">
         <img :src="data.img" :alt="data.name" class="w-100 h-100 rounded-3 object-fit-cover" />
       </div>
 
-      <div class="col-8 border m-0 ">
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="border m-0 bg-primary">
-            <h5 class="card-title fw-bold my-2 font-title" style="color: #002d73">
-              {{ data.name }}
-            </h5>
-          </div>
+      <div class="col-8 m-0 d-flex flex-row justify-content-between align-items-center">
+        <div class="m-0">
+          <h6 class="card-title fw-bold my-2 font-title" style="color: #002d73">
+            {{ data.name }}
+          </h6>
+        </div>
 
-          <div class="cov-arrow-right m-0 bg-warning" style="min-width: 50px;">
-            <div class="border"><i class="bi bi-arrow-right" style="color: #002d73"></i></div>
-          </div>
+        <div class="cov-arrow-right m-0" style="min-width: 33px">
+          <div class=""><i class="bi bi-arrow-right" style="color: #002d73"></i></div>
+     
         </div>
       </div>
     </div>
@@ -35,23 +30,6 @@ const props = defineProps({
 </script>
 
 <style scoped>
-/* .icon-wrapper {
-  background-color: #e7edff !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3.5rem;
-  height: 3.5rem;
-} */
-
-/* .text-primary {
-  color: #007bff !important;
-
-} */
-/* 
-.your-element-class {
-  margin: 0; 
-} */
 
 .card-title {
   font-size: 1.25rem;
@@ -76,26 +54,22 @@ const props = defineProps({
 }
 
 .font-title {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .padding-card {
-  padding: 1rem;
+  padding:1rem 1rem 1rem 1.75rem;
 }
 .cov-arrow-right {
-  width: 50px !important;
-  height: 50px !important;
+  width: 33px !important;
+  height: 33px !important;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50% !important;
-  background-color: #e7edff;
-  overflow: hidden;
-  aspect-ratio: 1 / 1;
-  box-sizing: border-box;
-  padding: 0; /* สำคัญมาก */
-  margin: 0; /* สำคัญมาก */
+  background-color: #e7edff; 
 }
+
 @media (max-width: 576px) {
   .icon-responsive {
     min-width: 3rem !important;

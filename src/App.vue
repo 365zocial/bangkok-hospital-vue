@@ -1,15 +1,12 @@
 <template>
   <div class="full-width">
 
-<div class="row">
+<div class="row" v-if="false">
   <div class="col-sm-4 col-lg-6 bg-primary text-white p-3">Column 1</div>
   <div class="col-sm-4 col-lg-6 bg-secondary text-white p-3">Column 2</div>
   <div class="col-sm-4 col-lg-6 bg-success text-white p-3">Column 3</div>
   <div class="col-sm-4 col-lg-6 bg-danger text-white p-3">Column 4</div>
 </div>
-
-
-    <div class="my-10">-----------------------------------</div>
 
     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-2 g-sm-3">
       <div v-for="data in specialties" :key="data.name" class="col">
@@ -17,8 +14,8 @@
       </div>
     </div>
 
-
-     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2 g-sm-3">
+   <div style="margin-top: 50px;"></div>
+     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 g-sm-4">
       <div v-for="data in heartList" :key="data.name" class="col">
         <Heart :data="data" />
       </div>
