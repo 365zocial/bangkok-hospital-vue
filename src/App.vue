@@ -8,11 +8,6 @@
   <div class="col-sm-4 col-lg-6 bg-danger text-white p-3">Column 4</div>
 </div>
 
-    <!-- <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-2 g-sm-3">
-      <div v-for="data in specialties" :key="data.name" class="col">
-        <CenterAndClinic :data="data" />
-      </div>
-    </div> -->
 
     <div class="my-10">-----------------------------------</div>
 
@@ -23,15 +18,20 @@
     </div>
 
 
+     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2 g-sm-3">
+      <div v-for="data in heartList" :key="data.name" class="col">
+        <Heart :data="data" />
+      </div>
+    </div>
+
   </div>
 </template>
 
 <script setup>
 import CenterAndClinic from './components/card/centerAndClinic.vue'
-
+import Heart from './components/card/heart.vue'
 import Test from './components/card/test.vue'
 const specialties = [
-  // Use ref() to make the array reactive
   {
     name: 'Heart',
     icon: 'http://static.bangkokhospital.com/uploads/2024/03/Heart4.svg',
@@ -79,6 +79,24 @@ const specialties = [
     icon: 'https://static.bangkokhospital.com/uploads/2024/03/Dental.svg',
     description:
       'Bangkok Hospital Dental Center, Dental Implant, Digital Smile Design, Geriatri Bangkok Hospital Dental Center, Dental Implant',
+  },
+]
+
+const heartList = [
+  {
+    name:'Cardiology Clinic',
+    img:'https://static.bangkokhospital.com/uploads/2020/04/IHL-Cn-Heart-Clinic-600x315.jpg',
+    link:'#'
+  },
+  {
+    name:'Cardiac Rehabilitation Clinic',
+    img:'https://static.bangkokhospital.com/uploads/2020/04/IHL-Cn-Cardiac-Rehabilitation-Clinic-600x315.jpg',
+    link:'#'
+  },
+   {
+    name:'Cardiac Intervention Clinic',
+    img:'https://static.bangkokhospital.com/uploads/2020/09/IHL-Cn-%E0%B8%84%E0%B8%A5%E0%B8%B4%E0%B8%99%E0%B8%B4%E0%B8%81%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B8%AB%E0%B8%B1%E0%B8%A7%E0%B9%83%E0%B8%88%E0%B8%9C%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B8%AA%E0%B8%A7%E0%B8%99-600x315.jpg',
+    link:'#'
   },
 ]
 </script>

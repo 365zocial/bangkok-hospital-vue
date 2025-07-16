@@ -1,26 +1,26 @@
 <template>
   <div class="card-shadow rounded-3 h-100 w-100 bg-white border-0">
     <div
-      class="d-flex flex-row flex-sm-column align-items-center align-items-sm-start justify-content-start justify-content-sm-between padding-card p-sm-4 mb-0"
+      class="row padding-card p-sm-4 mb-0"
     >
       <div
-        class="me-2 d-flex justify-content-center align-items-center rounded-2  rounded-lg-3 bg-primary bg-opacity-10 icon-responsive"
+        class=" col-col-sm-4 border rounded-2  rounded-lg-3 "
       >
-        <img :src="data.icon" :alt="data.name" class="icon" />
+        <img :src="data.img" :alt="data.name" class="icon" />
       </div>
 
-      <div class="w-100 ">
+      <div class="col-col-sm-8 border">
+<div class="w-100 ">
         <h5 class="card-title fw-bold my-2 font-title" style="color: #002d73">
           {{ data.name }}
         </h5>
       </div>
 
-      <p
-        class=" fw-light lh-sm text-truncate-2 m-0 description-2lines"
-        style="color: #627380; font-size: 0.8rem"
-      >
-        {{ data.description }}
-      </p>
+     <div>
+      icon
+     </div>
+      </div>
+      
     </div>
   </div>
 </template>
