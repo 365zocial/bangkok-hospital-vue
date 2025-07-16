@@ -7,10 +7,18 @@
   <div class="col-sm-4 col-lg-6 bg-success text-white p-3">Column 3</div>
   <div class="col-sm-4 col-lg-6 bg-danger text-white p-3">Column 4</div>
 </div>
+ 
+     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 g-sm-4">
+      <div v-for="data in doctorList" :key="data.name" class="col">
+        <Doctor :data="data" />
+      </div>
+    </div>
 
+     <div style="margin-top: 50px;"></div>
+     
     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-2 g-sm-3">
       <div v-for="data in specialties" :key="data.name" class="col">
-        <Test :data="data" />
+        <Service :data="data" />
       </div>
     </div>
 
@@ -21,13 +29,17 @@
       </div>
     </div>
 
+   
+
   </div>
 </template>
 
 <script setup>
-import CenterAndClinic from './components/card/centerAndClinic.vue'
+
+import Doctor from './components/card/doctor.vue'
 import Heart from './components/card/heart.vue'
-import Test from './components/card/test.vue'
+import Service from './components/card/service.vue'
+
 const specialties = [
   {
     name: 'Heart',
@@ -96,4 +108,29 @@ const heartList = [
     link:'#'
   },
 ]
+
+const doctorList = [
+        {
+          name: 'มาโนช เตชะโชควิวัฒน์',
+          title: 'นพ.',
+          specialtyPrimary: 'อายุรศาสตร์',
+          specialtySecondary: 'อายุรศาสตร์โรคไต',
+          imageUrl: 'https://epms.bdms.co.th/media/images/photos/BHQ/MANOCH_website_img.jpeg', // Replace with actual image paths
+        },
+        {
+          name: 'วรัญกานต์ เกียรติธรากร',
+          title: 'ทพญ.',
+          specialtyPrimary: 'ทันตกรรมทั่วไป',
+          specialtySecondary: null, // No secondary specialty for this doctor
+          imageUrl: 'https://epms.bdms.co.th/media/images/photos/BHQ/25560315_045400.JPG',
+        },
+        {
+          name: 'วิฑูรย์ ปิติเกื้อกูล',
+          title: 'นพ.',
+          specialtyPrimary: 'ศัลยศาสตร์ทรวงอก',
+          specialtySecondary: null,
+          imageUrl: 'https://epms.bdms.co.th/media/images/photos/BHQ/25541130_091643.JPG',
+        },
+
+      ]
 </script>
