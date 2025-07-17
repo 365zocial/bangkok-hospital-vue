@@ -46,3 +46,7 @@ a,
 .card-shadow:hover {
   transform: scale(1.02);
 }
+
+.text-navy{
+  color: #002d73
+}

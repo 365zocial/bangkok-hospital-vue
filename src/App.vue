@@ -111,23 +111,23 @@ const heartList = [
 
 const doctorList = [
         {
-          name: 'มาโนช เตชะโชควิวัฒน์',
-          title: 'นพ.',
-          specialtyPrimary: 'อายุรศาสตร์',
-          specialtySecondary: 'อายุรศาสตร์โรคไต',
+          name: 'Manoch Techachokwiwat',
+          title: 'Dr. ',
+          specialtyPrimary: 'Internal Medicine',
+          specialtySecondary: 'Nephrology',
            imageUrl: '/public/images/doctor/1.png', 
         },
         {
-          name: 'วรัญกานต์ เกียรติธรากร',
-          title: 'ทพญ.',
-          specialtyPrimary: 'ทันตกรรมทั่วไป',
+          name: 'Valailuck Kiatthanakorn',
+          title: 'Dr. ',
+          specialtyPrimary: null,
           specialtySecondary: null, 
           imageUrl: '/public/images/doctor/2.png', 
         },
         {
-          name: 'วิฑูรย์ ปิติเกื้อกูล',
-          title: 'นพ.',
-          specialtyPrimary: 'ศัลยศาสตร์ทรวงอก',
+          name: 'Vitoon Pitiguagool',
+          title: 'Dr. ',
+          specialtyPrimary: 'Thoracic Surgery',
           specialtySecondary: null,
          imageUrl: '/public/images/doctor/3.png', 
         },

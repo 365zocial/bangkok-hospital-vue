@@ -1,33 +1,45 @@
 <template>
-  <div class="card card-shadow border-0 h-100">
-    <div class="card-body d-flex flex-column align-items-center text-center p-4">
-
-
+  <div class="card card-shadow border-0 h-100 ">
+    <div class=" d-flex flex-column align-items-center text-center p-4 rounded-3">
       <div class="doctor-image-wrapper mb-3">
-        <img :src="data.imageUrl" :alt="data.name" class="rounded-circle w-100 h-100 object-fit-cover">
+        <img
+          :src="data.imageUrl"
+          :alt="data.name"
+          class="rounded-circle w-100 h-100 object-fit-cover"
+        />
       </div>
-
 
       <h5 class="card-title mb-1">{{ data.title }} {{ data.name }}</h5>
-      <p class="card-text text-muted mb-2">{{ data.specialtyPrimary }}</p>
-      <div v-if="data.specialtySecondary"
-        class="badge bg-light text-primary border border-primary px-3 py-2 rounded-pill mb-3">
+
+      <div v-if="data.specialtyPrimary" class="text-navy mb-2">
+        {{ data.specialtyPrimary }}
+      </div>
+
+      <div
+        v-if="data.specialtySecondary"
+        class="badge bg-light text-navy border border-primary px-3 py-2 rounded-pill mb-3"
+      >
         {{ data.specialtySecondary }}
       </div>
-      <div class="d-flex justify-content-around w-100 mt-auto">
-        <button class="btn btn-outline-primary d-flex align-items-center flex-grow-1 mx-1 justify-content-center">
-          <i class="bi bi-calendar me-2"></i>
-          นัดหมาย
+    </div>
+
+       <div class=" rounded-3 d-flex justify-content-around w-100 " style="background-color: #F8F9F9;">
+        <button
+          class="btn  d-flex align-items-center flex-grow-1 mx-1 justify-content-center"
+        >
+      
+          <i class="bi bi-calendar4-week me-2"></i>
+          Book
         </button>
-        <button class="btn btn-outline-secondary d-flex align-items-center flex-grow-1 mx-1 justify-content-center">
+        <button
+          class="btn  d-flex align-items-center flex-grow-1 mx-1 justify-content-center"
+        >
           <i class="bi bi-info-circle me-2"></i>
-          รายละเอียด
+          Profile
         </button>
       </div>
-    </div>
   </div>
 </template>
-
 
 <script setup>
 const props = defineProps({
@@ -38,19 +50,10 @@ const props = defineProps({
 </script>
 
 <style scoped>
-/* .card {
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-} */
-
 .doctor-image-wrapper {
-  width: 120px;
+  width: 140px;
   /* Adjust as needed */
-  height: 120px;
+  height: 140px;
   /* Adjust as needed */
   /* overflow: hidden; */
   border-radius: 50%;
