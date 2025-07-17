@@ -1,6 +1,8 @@
 <template>
-  <div class="card card-shadow border-0 h-100 ">
-    <div class=" d-flex flex-column align-items-center text-center p-4 rounded-3">
+  <div class=" border-0 " style="height: 100%;">
+
+    <div class="d-flex flex-column align-items-center text-center p-4 rounded-top-3 bg-white border "
+    style="height: 300px;">
       <div class="doctor-image-wrapper mb-3">
         <img
           :src="data.imageUrl"
@@ -23,21 +25,16 @@
       </div>
     </div>
 
-       <div class=" rounded-3 d-flex justify-content-around w-100 " style="background-color: #F8F9F9;">
-        <button
-          class="btn  d-flex align-items-center flex-grow-1 mx-1 justify-content-center"
-        >
-      
-          <i class="bi bi-calendar4-week me-2"></i>
-          Book
-        </button>
-        <button
-          class="btn  d-flex align-items-center flex-grow-1 mx-1 justify-content-center"
-        >
-          <i class="bi bi-info-circle me-2"></i>
-          Profile
-        </button>
-      </div>
+    <div class="rounded-3 d-flex justify-content-around w-100" style="background-color: #f8f9f9">
+      <button class="btn d-flex align-items-center flex-grow-1 mx-1 justify-content-center">
+        <i class="bi bi-calendar4-week me-2"></i>
+        Book
+      </button>
+      <button class="btn d-flex align-items-center flex-grow-1 mx-1 justify-content-center">
+        <i class="bi bi-info-circle me-2"></i>
+        Profile
+      </button>
+    </div>
   </div>
 </template>
 
