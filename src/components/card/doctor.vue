@@ -26,14 +26,14 @@
     </div>
 
     <div class="rounded-3 d-flex justify-content-around w-100" style="background-color: #f8f9f9">
-      <button class="btn d-flex align-items-center flex-grow-1 mx-1 justify-content-center">
+      <div class="border-end  d-flex align-items-center flex-grow-1 mx-1 justify-content-center">
         <i class="bi bi-calendar4-week me-2"></i>
         Book
-      </button>
-      <button class="btn d-flex align-items-center flex-grow-1 mx-1 justify-content-center">
+      </div>
+      <div class=" d-flex align-items-center flex-grow-1 mx-1 justify-content-center">
         <i class="bi bi-info-circle me-2"></i>
         Profile
-      </button>
+      </div>
     </div>
   </div>
 </template>
