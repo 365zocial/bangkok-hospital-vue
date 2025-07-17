@@ -25,12 +25,12 @@
       </div>
     </div>
 
-    <div class="rounded-3 d-flex justify-content-around w-100" style="background-color: #f8f9f9">
-      <div class="border-end  d-flex align-items-center flex-grow-1 mx-1 justify-content-center">
+    <div class="rounded-bottom-3 d-flex w-100 " style="background-color: #f8f9f9">
+      <div class="border btn rounded-bottom-start d-flex align-items-center flex-grow-1  justify-content-center">
         <i class="bi bi-calendar4-week me-2"></i>
         Book
       </div>
-      <div class=" d-flex align-items-center flex-grow-1 mx-1 justify-content-center">
+      <div class="border btn d-flex align-items-center flex-grow-1  justify-content-center">
         <i class="bi bi-info-circle me-2"></i>
         Profile
       </div>
