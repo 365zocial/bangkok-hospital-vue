@@ -115,21 +115,21 @@ const doctorList = [
           title: 'นพ.',
           specialtyPrimary: 'อายุรศาสตร์',
           specialtySecondary: 'อายุรศาสตร์โรคไต',
-          imageUrl: 'https://epms.bdms.co.th/media/images/photos/BHQ/MANOCH_website_img.jpeg', // Replace with actual image paths
+           imageUrl: '/public/images/doctor/1.png', 
         },
         {
           name: 'วรัญกานต์ เกียรติธรากร',
           title: 'ทพญ.',
           specialtyPrimary: 'ทันตกรรมทั่วไป',
-          specialtySecondary: null, // No secondary specialty for this doctor
-          imageUrl: 'https://epms.bdms.co.th/media/images/photos/BHQ/25560315_045400.JPG',
+          specialtySecondary: null, 
+          imageUrl: '/public/images/doctor/2.png', 
         },
         {
           name: 'วิฑูรย์ ปิติเกื้อกูล',
           title: 'นพ.',
           specialtyPrimary: 'ศัลยศาสตร์ทรวงอก',
           specialtySecondary: null,
-          imageUrl: 'https://epms.bdms.co.th/media/images/photos/BHQ/25541130_091643.JPG',
+         imageUrl: '/public/images/doctor/3.png', 
         },
 
       ]
