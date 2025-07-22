@@ -4,7 +4,7 @@
   class=" d-flex flex-row flex-lg-column align-items-start align-items-lg-center text-center p-4 rounded-top-3 bg-white"
   style="max-height: 300px"
 >
-      <div class="doctor-image-wrapper mb-3 ">
+      <div class="doctor-image-wrapper mb-3 border">
         <img
           :src="data.imageUrl"
           :alt="data.name"
@@ -12,8 +12,8 @@
         />
       </div>
 
-      <div class="w-50 ms-3  d-flex flex-column justify-content-start align-items-start">
-        <h5 class="card-title fw-semibold  text-start" style="color: #363636">
+      <div class="border width-cov-text ms-3 ms-lg-0  d-flex flex-column justify-content-start align-items-start align-items-lg-center">
+        <h5 class="w-100 card-title fw-semibold  text-start text-lg-center " style="color: #363636">
           {{ data.title }} {{ data.name }}
         </h5>
 
@@ -58,8 +58,6 @@ const props = defineProps({
 
 <style scoped>
 .doctor-image-wrapper {
-  /* width: 140px !important;
-  height: 140px !important; */
   width: 120px !important;
   height: 120px !important;
   border-radius: 50%;
@@ -79,8 +77,6 @@ const props = defineProps({
 
 .card-title {
   font-size: 1rem;
-  /* font-weight: 600;
-  color: #333; */
 }
 
 .card-text {
@@ -111,6 +107,9 @@ a:hover {
   background-color: #e7edff;
   color: #002d73;
 }
+.width-cov-text {
+  width: 50% !important;
+}
 
 @media (max-width: 576px) {
 a {
@@ -124,7 +123,11 @@ a {
   height: 140px !important;
  
 }
-
 }
 
+@media (min-width: 992px) {
+  .width-cov-text {
+    width: 100% !important; 
+  }
+}
 </style>
