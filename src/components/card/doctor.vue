@@ -149,7 +149,7 @@ const props = defineProps({
 a {
   text-decoration: none;
   cursor: pointer;
-  color: #5f6368;
+  color: #596977;
   height: 56px;
 }
 a:hover {
