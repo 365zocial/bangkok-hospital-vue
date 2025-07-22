@@ -1,10 +1,10 @@
-<template>
+<!-- <template>
   <div class="border-0 card-shadow rounded-3" style="height: 100%">
   <div
   class=" d-flex flex-row flex-lg-column align-items-start align-items-lg-center text-center p-4 rounded-top-3 bg-white"
   style="max-height: 300px"
 >
-      <div class="doctor-image-wrapper mb-3 border">
+      <div class="doctor-image-wrapper mb-3 ">
         <img
           :src="data.imageUrl"
           :alt="data.name"
@@ -12,7 +12,7 @@
         />
       </div>
 
-      <div class="border width-cov-text ms-3 ms-lg-0  d-flex flex-column justify-content-start align-items-start align-items-lg-center">
+      <div class=" width-cov-text ms-3 ms-lg-0  d-flex flex-column justify-content-start align-items-start align-items-lg-center">
         <h5 class="w-100 card-title fw-semibold  text-start text-lg-center " style="color: #363636">
           {{ data.title }} {{ data.name }}
         </h5>
@@ -46,8 +46,57 @@
       </a>
     </div>
   </div>
-</template>
+</template> -->
 
+
+<template>
+  <div class="border-0 card-shadow rounded-3 d-flex flex-column" style="height: 100%">
+    <div
+      class="d-flex flex-row flex-lg-column align-items-start align-items-lg-center text-center p-4 rounded-top-3 bg-white flex-grow-1"
+    >
+      <div class="doctor-image-wrapper mb-3">
+        <img
+          :src="data.imageUrl"
+          :alt="data.name"
+          class="rounded-circle w-100 h-100 object-fit-cover"
+        />
+      </div>
+
+      <div class="width-cov-text ms-3 ms-lg-0 d-flex flex-column justify-content-start align-items-start align-items-lg-center">
+        <h5 class="w-100 card-title fw-semibold text-start text-lg-center" style="color: #363636">
+          {{ data.title }} {{ data.name }}
+        </h5>
+
+        <div v-if="data.specialtyPrimary" class="text-dark-blue card-text fw-semibold" style="margin: 10px 0;">
+          {{ data.specialtyPrimary }}
+        </div>
+
+        <div
+          v-if="data.specialtySecondary"
+          class="badge rounded-pill fw-semibold px-3 py-2 card-text"
+          style="background-color: #e7edff; color: #0047a3"
+        >
+          {{ data.specialtySecondary }}
+        </div>
+      </div>
+    </div>
+
+    <div class="rounded-bottom-3 d-flex w-100 mt-auto" style="background-color: #f8f9f9">
+      <a
+        class="fw-semibold d-flex align-items-center flex-grow-1 justify-content-center"
+        style="border-right: 1px solid #e7edff"
+        v-if="data.isBookingAvailable"
+      >
+        <i class="bi bi-calendar4-week me-2"></i>
+        Book
+      </a>
+      <a class="fw-semibold d-flex align-items-center flex-grow-1 justify-content-center">
+        <i class="bi bi-info-circle me-2"></i>
+        Profile
+      </a>
+    </div>
+  </div>
+</template>
 <script setup>
 const props = defineProps({
   data: {

@@ -8,11 +8,17 @@
   <div class="col-sm-4 col-lg-6 bg-danger text-white p-3">Column 4</div>
 </div>
  
-     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 g-sm-4">
+     <!-- <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 g-sm-4">
       <div v-for="data in doctorList" :key="data.name" class="col">
         <Doctor :data="data" />
       </div>
-    </div>
+    </div> -->
+    <div class="row g-3">
+  <div v-for="data in doctorList" :key="data.name" class="col-12 col-md-6 col-lg-4 d-flex">
+    <Doctor :data="data" class="flex-fill" />
+  </div>
+</div>
+
 
      <div style="margin-top: 50px;"></div>
      
