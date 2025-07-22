@@ -1,8 +1,9 @@
 <template>
-  <div class=" border-0 card-shadow rounded-3 " style="height: 100%;">
-
-    <div class="d-flex flex-column align-items-center text-center p-4 rounded-top-3 bg-white "
-    style="height: 300px;">
+  <div class="border-0 card-shadow rounded-3" style="height: 100%">
+    <div
+      class="d-flex flex-column align-items-center text-center p-4 rounded-top-3 bg-white"
+      style="height: 300px"
+    >
       <div class="doctor-image-wrapper mb-3">
         <img
           :src="data.imageUrl"
@@ -11,29 +12,34 @@
         />
       </div>
 
-      <h5 class="card-title mb-1 fw-semibold" style="color: #363636;">{{ data.title }} {{ data.name }}</h5>
+      <h5 class="card-title mb-1 fw-semibold" style="color: #363636">
+        {{ data.title }} {{ data.name }}
+      </h5>
 
-      <div v-if="data.specialtyPrimary" class="text-navy fw-semibold mb-2">
+      <div v-if="data.specialtyPrimary" class="text-dark-blue card-text fw-semibold mb-2">
         {{ data.specialtyPrimary }}
       </div>
 
       <div
         v-if="data.specialtySecondary"
-        class="badge fw-semibold px-3 py-2 rounded-pill mb-3 "
-      style="background-color: #E7EDFF; color: #002d73;">
+        class="badge rounded-pill fw-semibold px-3 py-2 mb-3 card-text"
+        style="background-color: #e7edff; color: #0047a3"
+      >
         {{ data.specialtySecondary }}
       </div>
     </div>
 
-    <div class="rounded-bottom-3 d-flex w-100  " style="background-color: #f8f9f9">
-      <div class=" fw-semibold border-end d-flex align-items-center flex-grow-1  justify-content-center">
+    <div class="rounded-bottom-3 d-flex w-100 h-" style="background-color: #f8f9f9">
+      <a
+        class="fw-semibold border-end d-flex align-items-center flex-grow-1 justify-content-center"
+      >
         <i class="bi bi-calendar4-week me-2"></i>
         Book
-      </div>
-      <div class=" fw-semibold d-flex align-items-center flex-grow-1  justify-content-center">
+    </a>
+      <a class="fw-semibold d-flex align-items-center flex-grow-1 justify-content-center">
         <i class="bi bi-info-circle me-2"></i>
         Profile
-      </div>
+      </a>
     </div>
   </div>
 </template>
@@ -79,8 +85,7 @@ const props = defineProps({
 }
 
 .card-text {
-  font-size: 0.95rem;
-  color: #6c757d;
+  font-size: 0.85rem;
 }
 
 .badge {
@@ -96,5 +101,14 @@ const props = defineProps({
 
 .btn i {
   font-size: 1rem;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #5F6368;
+  height: 50px;
+}
+a:hover {
+  background-color: #e7edff;
 }
 </style>
