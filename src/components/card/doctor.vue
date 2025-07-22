@@ -31,8 +31,9 @@
 
     <div class="rounded-bottom-3 d-flex w-100 h-" style="background-color: #f8f9f9">
       <a
-        class="fw-semibold border-end d-flex align-items-center flex-grow-1 justify-content-center"
-      >
+        class="fw-semibold d-flex align-items-center flex-grow-1 justify-content-center"
+        style="border-right: 1px solid #e7edff;"
+   v-if="data.isBookingAvailable"   >
         <i class="bi bi-calendar4-week me-2"></i>
         Book
     </a>
@@ -40,6 +41,8 @@
         <i class="bi bi-info-circle me-2"></i>
         Profile
       </a>
+
+    
     </div>
   </div>
 </template>
@@ -106,9 +109,10 @@ a {
   text-decoration: none;
   cursor: pointer;
   color: #5F6368;
-  height: 50px;
+  height: 56px;
 }
 a:hover {
   background-color: #e7edff;
+  color: #002d73;
 }
 </style>

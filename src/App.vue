@@ -116,6 +116,7 @@ const doctorList = [
           specialtyPrimary: 'Internal Medicine',
           specialtySecondary: 'Nephrology',
            imageUrl: '/public/images/doctor/1.png', 
+           isBookingAvailable: true,
         },
         {
           name: 'Valailuck Kiatthanakorn',
@@ -123,6 +124,7 @@ const doctorList = [
           specialtyPrimary: null,
           specialtySecondary: null, 
           imageUrl: '/public/images/doctor/2.png', 
+          isBookingAvailable: false,
         },
         {
           name: 'Vitoon Pitiguagool',
@@ -130,6 +132,7 @@ const doctorList = [
           specialtyPrimary: 'Thoracic Surgery',
           specialtySecondary: null,
          imageUrl: '/public/images/doctor/3.png', 
+         isBookingAvailable: true,
         },
 
       ]
