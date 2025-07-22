@@ -12,18 +12,18 @@
         />
       </div>
 
-      <div class="w-50 ms-3 border d-flex flex-column justify-content-start align-items-start">
-        <h5 class="card-title mb-1 fw-semibold border text-start" style="color: #363636">
+      <div class="w-50 ms-3  d-flex flex-column justify-content-start align-items-start">
+        <h5 class="card-title fw-semibold  text-start" style="color: #363636">
           {{ data.title }} {{ data.name }}
         </h5>
 
-        <div v-if="data.specialtyPrimary" class="text-dark-blue card-text fw-semibold mb-2">
+        <div v-if="data.specialtyPrimary" class="text-dark-blue card-text fw-semibold " style="margin: 10px 0;">
           {{ data.specialtyPrimary }}
         </div>
 
         <div
           v-if="data.specialtySecondary"
-          class="badge rounded-pill fw-semibold px-3 py-2 mb-3 card-text"
+          class="badge rounded-pill fw-semibold px-3 py-2 card-text"
           style="background-color: #e7edff; color: #0047a3"
         >
           {{ data.specialtySecondary }}
@@ -31,7 +31,7 @@
       </div>
     </div>
 
-    <div class="rounded-bottom-3 d-flex w-100 h-" style="background-color: #f8f9f9">
+    <div class="rounded-bottom-3 d-flex w-100 " style="background-color: #f8f9f9">
       <a
         class="fw-semibold d-flex align-items-center flex-grow-1 justify-content-center"
         style="border-right: 1px solid #e7edff"
@@ -60,8 +60,8 @@ const props = defineProps({
 .doctor-image-wrapper {
   /* width: 140px !important;
   height: 140px !important; */
-  width: 115px !important;
-  height: 115px !important;
+  width: 120px !important;
+  height: 120px !important;
   border-radius: 50%;
   border: 4px solid white;
   padding: 3px;
@@ -111,4 +111,20 @@ a:hover {
   background-color: #e7edff;
   color: #002d73;
 }
+
+@media (max-width: 576px) {
+a {
+  height: 46px;
+}
+}
+
+@media (min-width: 768px) {
+.doctor-image-wrapper {
+  width: 140px !important;
+  height: 140px !important;
+ 
+}
+
+}
+
 </style>
