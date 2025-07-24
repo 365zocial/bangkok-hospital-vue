@@ -34,14 +34,14 @@
 
           <div class="w-100 d-grid d-md-flex justify-content-md-center justify-content-lg-start">
             <button
-              class="btn btn-outline-secondary w-100 detail-btn flex-grow-1 flex-md-grow-0 mb-2 mb-md-0 me-md-2 rounded-pill"
-              style="font-size: 0.8rem"
+              class="btn btn-outline-secondary w-100 detail-btn flex-grow-1 flex-md-grow-0 mb-2 mb-md-0 me-md-2 rounded-pill p-2"
+              style="font-size: 0.9rem"
             >
               Detail
             </button>
             <button
-              class="btn btn-danger w-100 buy-now-btn flex-grow-1 flex-md-grow-0 rounded-pill"
-              style="font-size: 0.8rem"
+              class="btn btn-danger w-100 buy-now-btn flex-grow-1 flex-md-grow-0 rounded-pill p-2"
+              style="font-size: 0.9rem"
             >
               Buy Now
             </button>
