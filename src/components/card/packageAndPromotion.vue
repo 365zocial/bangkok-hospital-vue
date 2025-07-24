@@ -1,7 +1,7 @@
 <template>
-  <div class="card-shadow rounded-3 bg-success p-3">
+  <div class="card-shadow rounded-3 bg-white p-3">
     <div class="">
-      <div class="card-image-container position-relative rounded-3 bg-white">
+      <div class="card-image-container position-relative rounded-3 ">
         <!-- Main image of the package -->
         <img :src="data.imageSrc" class="card-img-top" :alt="data.title" />
         <!-- Overlay text and elements on the image -->
@@ -22,13 +22,13 @@
           <span class="contact-number text-white mt-1">1719</span> -->
         </div>
       </div>
-      <div class="card-content-body p-3 bg-warning">
+      <div class="card-content-body p-3 ">
         <!-- Card title (package name) -->
         <h5 class="card-title text-center text-md-start">{{ data.title }}</h5>
         <!-- Price display: current price and original price -->
         <div class="d-flex align-items-baseline justify-content-center justify-content-md-start mb-2">
-          <span class="current-price me-2">{{ data.formattedCurrentPrice }} Baht</span>
-          <span class="original-price text-decoration-line-through">{{ data.formattedOriginalPrice }} Baht</span>
+          <span class="current-price me-2">{{ data.currentPrice }} Baht</span>
+          <span class="original-price text-decoration-line-through">{{ data.originalPrice }} Baht</span>
         </div>
         <!-- Expiration date -->
         <div class="expire-date text-center text-md-start mb-3">

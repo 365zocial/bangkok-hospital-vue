@@ -8,6 +8,11 @@
     </div>
 
 
+
+ <div style="margin: 50px 0 20px 0 ; ">Path : src/components/text/titleWithBorderRB.vue</div>
+<TitleWithBorderRB title="Centers & Clinics" />
+
+
     <div style="margin: 50px 0 20px 0 ; ">Path : src/components/card/packageAndPromotion.vue</div>
       <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 g-sm-3">
       <div v-for="data in packageAndPromotionList" :key="data.id" class="col">
@@ -18,9 +23,6 @@
     </div>
 
 
-
- <div style="margin: 50px 0 20px 0 ; ">Path : src/components/text/titleWithBorderRB.vue</div>
-<TitleWithBorderRB title="Centers & Clinics" />
 
 
     <div style="margin: 50px 0 20px 0 ; ">Path : src/components/card/centerAndClinic.vue</div>
@@ -158,8 +160,8 @@ const packageAndPromotionList = [
     thaiPackageName: 'ชุดตรวจสุขภาพหัวใจ โดยการวิ่งสายพาน',
     englishPackageName: 'Superior Heart Screening EST Package',
     title: 'Superior Heart Screening EST',
-    currentPrice: 8900,
-    originalPrice: 16650,
+    currentPrice: '8,900',
+    originalPrice: '16,650',
     expireDate: '31 Dec 2025',
   },
   {
@@ -169,8 +171,8 @@ const packageAndPromotionList = [
     thaiPackageName: 'ชุดตรวจสุขภาพหัวใจ โดยการวิ่งสายพาน 2',
     englishPackageName: 'Superior Heart Screening EST Package 2',
     title: 'Superior Heart Screening EST 2',
-    currentPrice: 9500,
-    originalPrice: 18000,
+    currentPrice: '9,500',
+    originalPrice: '18,000',
     expireDate: '31 Dec 2025',
   },
    {
@@ -180,8 +182,8 @@ const packageAndPromotionList = [
     thaiPackageName: 'ชุดตรวจสุขภาพหัวใจ โดยการวิ่งสายพาน',
     englishPackageName: 'Superior Heart Screening EST Package',
     title: 'Superior Heart Screening EST',
-    currentPrice: 8900,
-    originalPrice: 16650,
+    currentPrice: '8,900',
+    originalPrice: '16,650',
     expireDate: '31 Dec 2025',
   },
   {
@@ -191,8 +193,8 @@ const packageAndPromotionList = [
     thaiPackageName: 'ชุดตรวจสุขภาพหัวใจ โดยการวิ่งสายพาน 2',
     englishPackageName: 'Superior Heart Screening EST Package 2',
     title: 'Superior Heart Screening EST 2',
-    currentPrice: 9500,
-    originalPrice: 18000,
+    currentPrice: '9,500',
+    originalPrice: '18,000',
     expireDate: '31 Dec 2025',
   },
   
