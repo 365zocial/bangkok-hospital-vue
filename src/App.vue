@@ -7,12 +7,23 @@
       <div class="col-sm-4 col-lg-6 bg-danger text-white p-3">Column 4</div>
     </div>
 
+
+    <div style="margin: 50px 0 20px 0 ; ">Path : src/components/card/packageAndPromotion.vue</div>
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-2 g-sm-3">
+      <div v-for="data in packageAndPromotionList" :key="data.id" class="col">
+      <PackageAndPromotion
+:data="data"
+          />
+      </div>
+    </div>
+
+
+
  <div style="margin: 50px 0 20px 0 ; ">Path : src/components/text/titleWithBorderRB.vue</div>
 <TitleWithBorderRB title="Centers & Clinics" />
 
 
     <div style="margin: 50px 0 20px 0 ; ">Path : src/components/card/centerAndClinic.vue</div>
-
     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-2 g-sm-3">
       <div v-for="data in specialties" :key="data.name" class="col">
         <CenterAndClinic :data="data" />
@@ -41,6 +52,7 @@ import Doctor from './components/card/doctor.vue'
 import CenterAndClinic from './components/card/centerAndClinic.vue'
 import Heart from './components/card/heart.vue'
 import TitleWithBorderRB from './components/text/titleWithBorderRB.vue'
+import PackageAndPromotion from './components/card/packageAndPromotion.vue'
 
 const specialties = [
   {
@@ -136,5 +148,53 @@ const doctorList = [
     imageUrl: '/public/images/doctor/3.png',
     isBookingAvailable: true,
   },
+]
+
+const packageAndPromotionList = [
+  {
+    packageId: '1',
+    imageSrc: 'https://static.bangkokhospital.com/uploads/2025/06/EST_Heart.1-41-44.jpg',
+    recommendationBadgeSrc: 'https://placehold.co/100x50/dc3545/ffffff?text=30%2B+years',
+    thaiPackageName: 'ชุดตรวจสุขภาพหัวใจ โดยการวิ่งสายพาน',
+    englishPackageName: 'Superior Heart Screening EST Package',
+    title: 'Superior Heart Screening EST',
+    currentPrice: 8900,
+    originalPrice: 16650,
+    expireDate: '31 Dec 2025',
+  },
+  {
+    packageId: '2',
+    imageSrc: 'https://static.bangkokhospital.com/uploads/2025/06/Preventive_Heart.1-29-70-640x640.jpg',
+    recommendationBadgeSrc: 'https://placehold.co/100x50/dc3545/ffffff?text=30%2B+years',
+    thaiPackageName: 'ชุดตรวจสุขภาพหัวใจ โดยการวิ่งสายพาน 2',
+    englishPackageName: 'Superior Heart Screening EST Package 2',
+    title: 'Superior Heart Screening EST 2',
+    currentPrice: 9500,
+    originalPrice: 18000,
+    expireDate: '31 Dec 2025',
+  },
+   {
+    packageId: '3',
+    imageSrc: 'https://static.bangkokhospital.com/uploads/2025/05/Heart__Lungs.2-58-75-640x640.jpg',
+    recommendationBadgeSrc: 'https://placehold.co/100x50/dc3545/ffffff?text=30%2B+years',
+    thaiPackageName: 'ชุดตรวจสุขภาพหัวใจ โดยการวิ่งสายพาน',
+    englishPackageName: 'Superior Heart Screening EST Package',
+    title: 'Superior Heart Screening EST',
+    currentPrice: 8900,
+    originalPrice: 16650,
+    expireDate: '31 Dec 2025',
+  },
+  {
+    packageId: '4',
+    imageSrc: 'https://static.bangkokhospital.com/uploads/2025/06/EST_Heart.1-41-44.jpg',
+    recommendationBadgeSrc: 'https://placehold.co/100x50/dc3545/ffffff?text=30%2B+years',
+    thaiPackageName: 'ชุดตรวจสุขภาพหัวใจ โดยการวิ่งสายพาน 2',
+    englishPackageName: 'Superior Heart Screening EST Package 2',
+    title: 'Superior Heart Screening EST 2',
+    currentPrice: 9500,
+    originalPrice: 18000,
+    expireDate: '31 Dec 2025',
+  },
+  
 ]
 </script>
