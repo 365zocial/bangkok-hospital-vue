@@ -1,7 +1,7 @@
 <template>
-  <div class="card-shadow heart-screening-card mb-4">
-    <div class="card-body p-0">
-      <div class="card-image-container position-relative">
+  <div class="card-shadow rounded-3 bg-white p-3">
+    <div class="">
+      <div class="card-image-container">
         <!-- Main image of the package -->
         <img :src="data.imageSrc" class="card-img-top" :alt="data.title" />
         <!-- Overlay text and elements on the image -->
