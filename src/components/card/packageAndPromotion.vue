@@ -22,23 +22,25 @@
           <span class="contact-number text-white mt-1">1719</span> -->
         </div>
       </div>
-      <div class="card-content-body p-3 ">
-        <!-- Card title (package name) -->
-        <h5 class="card-title text-center text-md-start">{{ data.title }}</h5>
-        <!-- Price display: current price and original price -->
+      <div class="card-content-body ">
+     
+        <h5 class="card-title fw-bold my-2 font-title" >
+          {{ data.title }}
+        </h5>
+     
         <div class="d-flex align-items-baseline justify-content-center justify-content-md-start mb-2">
           <span class="current-price me-2">{{ data.currentPrice }} Baht</span>
           <span class="original-price text-decoration-line-through">{{ data.originalPrice }} Baht</span>
         </div>
-        <!-- Expiration date -->
-        <div class="expire-date text-center text-md-start mb-3">
+       
+        <div class="expire-date text-center text-md-start mb-3" style="font-size: 0.8rem">
           <i class="bi bi-clock me-1"></i>
           Expire Date {{ data.expireDate }}
         </div>
-        <!-- Action buttons: Detail and Buy Now -->
-        <div class="d-grid gap-2 d-md-flex justify-content-md-center justify-content-lg-start">
-          <button class="btn btn-outline-secondary detail-btn flex-grow-1 flex-md-grow-0 mb-2 mb-md-0 me-md-2" @click="$emit('detail-click', packageId)">Detail</button>
-          <button class="btn btn-danger buy-now-btn flex-grow-1 flex-md-grow-0" @click="$emit('buy-now-click', packageId)">Buy Now</button>
+       
+        <div class=" w-100 d-grid d-md-flex justify-content-md-center justify-content-lg-start">
+          <button class="btn btn-outline-secondary w-100 detail-btn flex-grow-1 flex-md-grow-0 mb-2 mb-md-0 me-md-2 rounded-pill" >Detail</button>
+          <button class="btn btn-danger w-100 buy-now-btn flex-grow-1 flex-md-grow-0 rounded-pill" >Buy Now</button>
         </div>
       </div>
     </div>
@@ -136,15 +138,31 @@ const props = defineProps({
 
 /* Styling for the "Detail" button */
 .detail-btn {
-  border-color: #dee2e6;
+  border: 0.4px solid #f5f5f5;
   color: #6c757d;
+  background-color: white;
+  font-weight: 500;
+
+}
+
+.detail-btn:hover {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: white;
 }
 
 /* Styling for the "Buy Now" button */
 .buy-now-btn {
-  background-color: #dc3545;
-  border-color: #dc3545;
+  background: linear-gradient(135deg, #b71c1c 0%,  #dc3545 100%);
+  border: none;
   color: white;
+  font-weight: 500;
+  padding: 8px 20px;
+}
+
+.buy-now-btn:hover {
+  background-color: #dc3545;
+  border: none;
 }
 
 /* Responsive adjustments */
@@ -164,6 +182,7 @@ const props = defineProps({
   /* Align card title to the left */
   .card-title {
     text-align: left !important;
+      font-size: 1rem;
   }
   /* Align price and expire date elements to the start (left) */
   .current-price,

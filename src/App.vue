@@ -192,7 +192,7 @@ const packageAndPromotionList = [
     recommendationBadgeSrc: 'https://placehold.co/100x50/dc3545/ffffff?text=30%2B+years',
     thaiPackageName: 'ชุดตรวจสุขภาพหัวใจ โดยการวิ่งสายพาน 2',
     englishPackageName: 'Superior Heart Screening EST Package 2',
-    title: 'Superior Heart Screening EST 2',
+    title: 'Heart & Lung Together – Heart and Lung CT Scan Package',
     currentPrice: '9,500',
     originalPrice: '18,000',
     expireDate: '31 Dec 2025',
