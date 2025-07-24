@@ -1,28 +1,28 @@
 <template>
-  <div class="card-shadow rounded-3 bg-white p-3">
+  <div class="card-shadow rounded-3 bg-success p-3">
     <div class="">
-      <div class="card-image-container">
+      <div class="card-image-container position-relative rounded-3 bg-white">
         <!-- Main image of the package -->
         <img :src="data.imageSrc" class="card-img-top" :alt="data.title" />
         <!-- Overlay text and elements on the image -->
-        <div v-if="false" class="overlay-text position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3">
+        <div class="overlay-text position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3">
           <!-- Location text -->
-          <p class="mb-1 text-white text-bold" style="font-size: 0.9rem;">
+          <!-- <p class="mb-1 text-white text-bold" style="font-size: 0.9rem;">
             <i class="bi bi-geo-alt-fill me-1"></i>{{ data.location }}
           </p>
-          <!-- Recommendation badge (e.g., 30+ years, 40+ years) -->
+  
           <img :src="data.recommendationBadgeSrc" alt="Recommendation Badge" class="recommendation-badge img-fluid mt-2" />
-          <!-- Thai package name -->
+     
           <h5 class="mt-2 text-white text-bold package-title">{{ data.thaiPackageName }}</h5>
-          <!-- English package name (subtitle) -->
+          
           <p class="text-white package-subtitle">{{ data.englishPackageName }}</p>
-          <!-- Hospital logo -->
+         
           <img src="https://www.bangkokhospital.com/assets/img/logo_bangkok_hospital.png" alt="Bangkok Hospital Logo" class="hospital-logo mt-2">
-          <!-- Contact number -->
-          <span class="contact-number text-white mt-1">1719</span>
+         
+          <span class="contact-number text-white mt-1">1719</span> -->
         </div>
       </div>
-      <div class="card-content-body p-3">
+      <div class="card-content-body p-3 bg-warning">
         <!-- Card title (package name) -->
         <h5 class="card-title text-center text-md-start">{{ data.title }}</h5>
         <!-- Price display: current price and original price -->
@@ -64,8 +64,9 @@ const props = defineProps({
 
 /* Styling for the image container at the top of the card */
 .card-image-container {
-  height: 200px; /* Base height for image container */
-  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1; /* Makes height equal to width (square) */
+  overflow: hidden; /* Rounded corners for the top of the card */
 }
 
 /* Styling for the main package image */
@@ -77,7 +78,7 @@ const props = defineProps({
 
 /* Styling for the overlay text on the image */
 .overlay-text {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+  background: linear-gradient(to bottom, #0000000b 0%, #00000000 30%, #0000000b 100%);
   bottom: 0;
   left: 0;
   display: flex;

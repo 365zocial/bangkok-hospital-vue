@@ -9,7 +9,7 @@
 
 
     <div style="margin: 50px 0 20px 0 ; ">Path : src/components/card/packageAndPromotion.vue</div>
-      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-2 g-sm-3">
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 g-sm-3">
       <div v-for="data in packageAndPromotionList" :key="data.id" class="col">
       <PackageAndPromotion
 :data="data"
