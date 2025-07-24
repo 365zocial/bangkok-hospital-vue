@@ -119,14 +119,14 @@ const props = defineProps({
 
 /* Styling for the current price */
 .current-price {
-  font-size: 1.5rem;
+  font-size: 18px;
   font-weight: bold;
   color: #dc3545; /* Bootstrap danger color for emphasis */
 }
 
 /* Styling for the original price (strikethrough) */
 .original-price {
-  font-size: 1rem;
+  font-size: 14px;
   color: #6c757d; /* Bootstrap muted color */
 }
 
@@ -153,7 +153,7 @@ const props = defineProps({
 
 /* Styling for the "Buy Now" button */
 .buy-now-btn {
-  background: linear-gradient(135deg, #b71c1c 0%,  #dc3545 100%);
+  background: linear-gradient(135deg, #9e1717 0%,  #dc3545 100%);
   border: none;
   color: white;
   font-weight: 500;
