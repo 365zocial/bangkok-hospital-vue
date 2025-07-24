@@ -1,46 +1,51 @@
 <template>
-  <div class="card-shadow rounded-3 bg-white p-3">
-    <div class="">
-      <div class="card-image-container position-relative rounded-3 ">
-        <!-- Main image of the package -->
+  <div class="card-shadow rounded-3 bg-white p-3 h-100 d-flex flex-column">
+    <div class="d-flex flex-column h-100">
+      <div class="card-image-container position-relative rounded-3">
         <img :src="data.imageSrc" class="card-img-top" :alt="data.title" />
-        <!-- Overlay text and elements on the image -->
-        <div class="overlay-text position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3">
-          <!-- Location text -->
-          <!-- <p class="mb-1 text-white text-bold" style="font-size: 0.9rem;">
-            <i class="bi bi-geo-alt-fill me-1"></i>{{ data.location }}
-          </p>
-  
-          <img :src="data.recommendationBadgeSrc" alt="Recommendation Badge" class="recommendation-badge img-fluid mt-2" />
-     
-          <h5 class="mt-2 text-white text-bold package-title">{{ data.thaiPackageName }}</h5>
-          
-          <p class="text-white package-subtitle">{{ data.englishPackageName }}</p>
-         
-          <img src="https://www.bangkokhospital.com/assets/img/logo_bangkok_hospital.png" alt="Bangkok Hospital Logo" class="hospital-logo mt-2">
-         
-          <span class="contact-number text-white mt-1">1719</span> -->
-        </div>
+
+        <div
+          class="overlay-text position-absolute w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3"
+        ></div>
       </div>
-      <div class="card-content-body ">
-     
-        <h5 class="card-title fw-bold my-2 font-title" >
+      <div class="card-content-body d-flex flex-column justify-content-between flex-grow-1">
+
+        <h5 class="card-title fw-semibold my-2 font-title " style="color: #363636">
           {{ data.title }}
         </h5>
-     
-        <div class="d-flex align-items-baseline justify-content-center justify-content-md-start mb-2">
-          <span class="current-price me-2">{{ data.currentPrice }} Baht</span>
-          <span class="original-price text-decoration-line-through">{{ data.originalPrice }} Baht</span>
-        </div>
-       
-        <div class="expire-date text-center text-md-start mb-3" style="font-size: 0.8rem">
-          <i class="bi bi-clock me-1"></i>
-          Expire Date {{ data.expireDate }}
-        </div>
-       
-        <div class=" w-100 d-grid d-md-flex justify-content-md-center justify-content-lg-start">
-          <button class="btn btn-outline-secondary w-100 detail-btn flex-grow-1 flex-md-grow-0 mb-2 mb-md-0 me-md-2 rounded-pill" >Detail</button>
-          <button class="btn btn-danger w-100 buy-now-btn flex-grow-1 flex-md-grow-0 rounded-pill" >Buy Now</button>
+
+        <div class="d-flex flex-column mt-2">
+          <div
+            class="d-flex align-items-baseline justify-content-center justify-content-md-start "
+          >
+            <span class="current-price me-2">{{ data.currentPrice }} Baht</span>
+            <span class="original-price text-decoration-line-through"
+              >{{ data.originalPrice }} Baht</span
+            >
+          </div>
+
+          <div
+            class="expire-date text-center text-md-start mb-3"
+            style="font-size: 0.8rem; color: #363636"
+          >
+            <i class="bi bi-clock me-1"></i>
+            Expire Date {{ data.expireDate }}
+          </div>
+
+          <div class="w-100 d-grid d-md-flex justify-content-md-center justify-content-lg-start">
+            <button
+              class="btn btn-outline-secondary w-100 detail-btn flex-grow-1 flex-md-grow-0 mb-2 mb-md-0 me-md-2 rounded-pill"
+              style="font-size: 0.8rem"
+            >
+              Detail
+            </button>
+            <button
+              class="btn btn-danger w-100 buy-now-btn flex-grow-1 flex-md-grow-0 rounded-pill"
+              style="font-size: 0.8rem"
+            >
+              Buy Now
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -130,30 +135,23 @@ const props = defineProps({
   color: #6c757d; /* Bootstrap muted color */
 }
 
-/* Styling for the expiration date */
-.expire-date {
-  font-size: 0.9rem;
-  color: #6c757d;
-}
-
 /* Styling for the "Detail" button */
 .detail-btn {
-  border: 0.4px solid #f5f5f5;
+  border: 0.5px solid #F5F5F5;
   color: #6c757d;
   background-color: white;
   font-weight: 500;
-
 }
 
 .detail-btn:hover {
-  background-color: #6c757d;
-  border-color: #6c757d;
-  color: white;
+  background-color: #F5F5F5;
+  border-color: #F5F5F5;
+color: #6c757d;
 }
 
 /* Styling for the "Buy Now" button */
 .buy-now-btn {
-  background: linear-gradient(135deg, #9e1717 0%,  #dc3545 100%);
+  background: linear-gradient(135deg, #9e1717 0%, #dc3545 100%);
   border: none;
   color: white;
   font-weight: 500;
@@ -182,7 +180,7 @@ const props = defineProps({
   /* Align card title to the left */
   .card-title {
     text-align: left !important;
-      font-size: 1rem;
+    font-size: 1rem;
   }
   /* Align price and expire date elements to the start (left) */
   .current-price,

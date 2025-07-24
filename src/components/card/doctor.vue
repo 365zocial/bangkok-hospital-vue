@@ -1,7 +1,7 @@
 
 
 <template>
-  <div class="border-0 card-shadow rounded-3 d-flex flex-column" style="height: 100%">
+  <div class=" card-shadow rounded-3 d-flex flex-column" style="height: 100%">
     <div
       class="d-flex flex-row flex-lg-column align-items-start align-items-lg-center text-center p-4 rounded-top-3 bg-white flex-grow-1"
     >
@@ -13,7 +13,7 @@
         />
       </div>
 
-      <div class="width-cov-text ms-3 ms-lg-0 d-flex flex-column justify-content-start align-items-start align-items-lg-center">
+      <div class="width-cov-text ms-start align-it-3 ms-lg-0 d-flex flex-column justify-content-start align-itemsems-lg-center">
         <h5 class="w-100 card-title fw-semibold text-start text-lg-center" style="color: #363636">
           {{ data.title }} {{ data.name }}
         </h5>

@@ -7,32 +7,36 @@
       <div class="col-sm-4 col-lg-6 bg-danger text-white p-3">Column 4</div>
     </div>
 
+    <div style="margin: 50px 0 20px 0">Path : src/components/text/titleWithBorderRB.vue</div>
+    <TitleWithBorderRB title="Centers & Clinics" />
 
-
- <div style="margin: 50px 0 20px 0 ; ">Path : src/components/text/titleWithBorderRB.vue</div>
-<TitleWithBorderRB title="Centers & Clinics" />
-
-
-    <div style="margin: 50px 0 20px 0 ; ">Path : src/components/card/packageAndPromotion.vue</div>
-      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 g-sm-3">
-      <div v-for="data in packageAndPromotionList" :key="data.id" class="col">
-      <PackageAndPromotion
-:data="data"
-          />
+    <div style="margin: 50px 0 20px 0">Path : src/components/card/packageAndPromotion.vue</div>
+    <div class="row g-3 g-sm-3">
+      <div v-for="data in packageAndPromotionList" :key="data.id" class="col-12 col-md-6 col-lg-3 d-flex">
+        <PackageAndPromotion :data="data" />
       </div>
     </div>
 
+    <!-- <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 g-sm-3">
+      <div v-for="data in packageAndPromotionList" :key="data.id" class="col">
+        <PackageAndPromotion :data="data" />
+      </div>
+    </div> -->
 
+    <!-- <div class="row g-3">
+      <div v-for="data in doctorList" :key="data.name" class="col-12 col-md-6 col-lg-4 d-flex">
+        <Doctor :data="data" class="flex-fill" />
+      </div>
+    </div> -->
 
-
-    <div style="margin: 50px 0 20px 0 ; ">Path : src/components/card/centerAndClinic.vue</div>
+    <div style="margin: 50px 0 20px 0">Path : src/components/card/centerAndClinic.vue</div>
     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-2 g-sm-3">
       <div v-for="data in specialties" :key="data.name" class="col">
         <CenterAndClinic :data="data" />
       </div>
     </div>
 
-    <div style="margin: 50px 0 20px 0 ; ">Path : src/components/card/heart.vue</div>
+    <div style="margin: 50px 0 20px 0">Path : src/components/card/heart.vue</div>
 
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 g-sm-4">
       <div v-for="data in heartList" :key="data.name" class="col">
@@ -40,7 +44,7 @@
       </div>
     </div>
 
-    <div style="margin: 50px 0 20px 0 ; ">Path : src/components/card/doctor.vue</div>
+    <div style="margin: 50px 0 20px 0">Path : src/components/card/doctor.vue</div>
     <div class="row g-3">
       <div v-for="data in doctorList" :key="data.name" class="col-12 col-md-6 col-lg-4 d-flex">
         <Doctor :data="data" class="flex-fill" />
@@ -166,7 +170,8 @@ const packageAndPromotionList = [
   },
   {
     packageId: '2',
-    imageSrc: 'https://static.bangkokhospital.com/uploads/2025/06/Preventive_Heart.1-29-70-640x640.jpg',
+    imageSrc:
+      'https://static.bangkokhospital.com/uploads/2025/06/Preventive_Heart.1-29-70-640x640.jpg',
     recommendationBadgeSrc: 'https://placehold.co/100x50/dc3545/ffffff?text=30%2B+years',
     thaiPackageName: 'ชุดตรวจสุขภาพหัวใจ โดยการวิ่งสายพาน 2',
     englishPackageName: 'Superior Heart Screening EST Package 2',
@@ -175,7 +180,7 @@ const packageAndPromotionList = [
     originalPrice: '18,000',
     expireDate: '31 Dec 2025',
   },
-   {
+  {
     packageId: '3',
     imageSrc: 'https://static.bangkokhospital.com/uploads/2025/05/Heart__Lungs.2-58-75-640x640.jpg',
     recommendationBadgeSrc: 'https://placehold.co/100x50/dc3545/ffffff?text=30%2B+years',
@@ -197,6 +202,5 @@ const packageAndPromotionList = [
     originalPrice: '18,000',
     expireDate: '31 Dec 2025',
   },
-  
 ]
 </script>
