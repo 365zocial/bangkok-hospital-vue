@@ -1,6 +1,6 @@
 <template>
-  <div class="card-shadow rounded-3 bg-white p-2 p-md-3 h-100 d-flex flex-column">
-    <div class="d-flex flex-row flex-lg-column w-100">
+  <div class="card-shadow rounded-3 bg-white p-2 p-md-3 h-100 w-100 d-flex flex-column">
+    <div class="d-flex flex-row flex-lg-column w-100 h-100">
       <div class="card-image-container position-relative rounded-3 ">
         <img :src="data.imageSrc" class="card-img-top" :alt="data.title" />
 
@@ -9,10 +9,13 @@
         ></div>
       </div>
       
-      <div class="card-content-body d-flex flex-column justify-content-between  flex-grow-1 ms-3 ms-md-4 ms-lg-0">
-        <h5 class="card-title fw-semibold my-2 font-title" style="color: #363636">
+      <div class="border card-content-body d-flex flex-column justify-content-between flex-grow-1 ms-3 ms-md-4 ms-lg-0">
+        <div class="border">
+          <h5 class="card-title fw-semibold my-2 font-title" style="color: #363636">
           {{ data.title }}
         </h5>
+        </div>
+        
 
         <div class="d-flex flex-column mt-2 border align-items-start">
           <div class="d-flex align-items-baseline justify-content-center justify-content-md-start">
