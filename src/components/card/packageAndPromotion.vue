@@ -143,7 +143,7 @@ const props = defineProps({
 }
 
 .buy-now-btn {
-  background: linear-gradient(90deg, #9e1717 0%, #dc3545 100%);
+  background: linear-gradient(90deg, #96010b 0%, #d40004 100%);
   border: none;
   color: white;
   font-weight: 500;
