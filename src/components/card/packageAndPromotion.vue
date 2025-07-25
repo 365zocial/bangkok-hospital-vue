@@ -12,11 +12,11 @@
       <div
         class="card-content-body d-flex flex-column justify-content-between flex-grow-1 ms-3 ms-md-4 ms-lg-0"
       >
-        <div class="">
+  
           <h5 class="card-title fw-semibold my-2" >
             {{ data.title }}
           </h5>
-        </div>
+      
 
         <div class="d-flex flex-column mt-2 align-items-start">
           <div class="d-flex align-items-baseline justify-content-center justify-content-md-start">
@@ -59,10 +59,6 @@ const props = defineProps({
 </script>
 
 <style scoped>
-/* h5 {
-  font-size: 0.8rem;
-  color: #363636"
-} */
 
 .heart-screening-card {
   border-radius: 15px;
@@ -147,13 +143,13 @@ const props = defineProps({
 }
 
 .buy-now-btn {
-  background: linear-gradient(135deg, #9e1717 0%, #dc3545 100%);
+  background: linear-gradient(90deg, #9e1717 0%, #dc3545 100%);
   border: none;
   color: white;
   font-weight: 500;
   padding: 8px 20px;
   font-size: 0.75rem;
-  transition: all 5s ease-out; 
+  transition: background 3s ease-in-out;
 }
 
 .buy-now-btn:hover {
@@ -168,7 +164,7 @@ const props = defineProps({
     transition: color 0.3s ease;
   }
 
-  .card-title:hover {
+  .card-shadow:hover .card-title {
     color: #0047A3;
   }
 @media (min-width: 768px) {
