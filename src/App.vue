@@ -17,18 +17,6 @@
       </div>
     </div>
 
-    <!-- <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 g-sm-3">
-      <div v-for="data in packageAndPromotionList" :key="data.id" class="col">
-        <PackageAndPromotion :data="data" />
-      </div>
-    </div> -->
-
-    <!-- <div class="row g-3">
-      <div v-for="data in doctorList" :key="data.name" class="col-12 col-md-6 col-lg-4 d-flex">
-        <Doctor :data="data" class="flex-fill" />
-      </div>
-    </div> -->
-
     <div style="margin: 50px 0 20px 0">Path : src/components/card/centerAndClinic.vue</div>
     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-2 g-sm-3">
       <div v-for="data in specialties" :key="data.name" class="col">
