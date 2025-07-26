@@ -9,7 +9,7 @@
 
 <div style="margin: 50px 0 20px 0">Path : src/components/card/healthInfo.vue</div>
  <div class="row g-3 g-sm-3">
-      <div v-for="data in healthInfoList" :key="data.id" class="col-12 col-lg-3 d-flex">
+      <div v-for="data in healthInfoList" :key="data.id" class="col-12 col-md-6 col-lg-3 d-flex">
 <HealthInfo :data="data"/>
       </div>
     </div>
