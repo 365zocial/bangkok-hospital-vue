@@ -1,19 +1,64 @@
 <template>
-  <div>
-    <button type="button" class="subscribe-btn button-animate rounded-3">
-      <span class="text-navy fw-semibold">Subscribe E-Newsletter</span>
+
+      <button type="button" :class="getClass(props)" >
+      <span class="fw-semibold">{{ props.title }}</span>
     </button>
-  </div>
+
 </template>
+<script setup>
+const props = defineProps({
+  color: {
+    type: String,
+    default: 'white'
+  },
+  title: {
+    type: String,
+    default: 'Subscribe E-Newsletter'
+  }
+})
+
+function getClass(props) {
+  const baseClass = 'button-animate rounded-3';
+  
+  if (props.color === 'white') {
+    return `light-btn ${baseClass}`;
+  } else if (props.color === 'blue') {
+    return `blue-btn ${baseClass}`;
+  } else {
+    return `light-btn ${baseClass}`;
+  }
+}
+</script>
 
 <style scoped>
-.subscribe-btn {
+.light-btn {
   position: relative;
   width: 100%;
   padding: 1rem 2.5rem;
   font-weight: 600;
   font-size: 1rem;
   background-color: white;
+  color: #002d73;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 2px 5px hwb(0 61% 39% / 0.1),
+    0 0 30px -15px #0066ff33;
+  border: 1px solid rgba(54, 54, 54, 0.1);
+}
+
+.blue-btn {
+  position: relative;
+  width: 100%;
+  padding: 1rem 2.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: #0047A3;
+  color: white;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
   cursor: pointer;
