@@ -14,10 +14,10 @@
       </div>
     </div>
 
-    <div style="margin: 50px 0 20px 0">Path : src/components/ยังไม่เสร็จ</div>
+    <div style="margin: 50px 0 20px 0">Path : src/components/button/lightBtn.vue</div>
     <div class="row g-sm-3">
       <div v-for="item in 2" :key="item" class="col-12 col-md-6 col-lg-3">
-        <Btn />
+        <LightBtn />
       </div>
     </div>
 
@@ -62,7 +62,7 @@ import Heart from './components/card/heart.vue'
 import TitleWithBorderRB from './components/text/titleWithBorderRB.vue'
 import PackageAndPromotion from './components/card/packageAndPromotion.vue'
 import HealthInfo from './components/card/healthInfo.vue'
-import Btn from './components/btn.vue'
+import LightBtn from './components/button/lightBtn.vue'
 
 const specialties = [
   {
