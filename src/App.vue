@@ -7,13 +7,15 @@
       <div class="col-sm-4 col-lg-6 bg-danger text-white p-3">Column 4</div>
     </div>
 
-<div style="margin: 50px 0 20px 0">Path : src/components/card/healthInfo.vue</div>
- <div class="row g-3 g-sm-3">
+    <div style="margin: 50px 0 20px 0">Path : src/components/card/healthInfo.vue</div>
+    <div class="row g-3 g-sm-3">
       <div v-for="data in healthInfoList" :key="data.id" class="col-12 col-md-6 col-lg-3 d-flex">
-<HealthInfo :data="data"/>
+        <HealthInfo :data="data" />
       </div>
     </div>
-    
+
+      <div style="margin: 50px 0 20px 0">Path : src/components/</div>
+    <Btn />
 
     <div style="margin: 50px 0 20px 0">Path : src/components/text/titleWithBorderRB.vue</div>
     <TitleWithBorderRB title="Centers & Clinics" />
@@ -56,6 +58,7 @@ import Heart from './components/card/heart.vue'
 import TitleWithBorderRB from './components/text/titleWithBorderRB.vue'
 import PackageAndPromotion from './components/card/packageAndPromotion.vue'
 import HealthInfo from './components/card/healthInfo.vue'
+import Btn from './components/btn.vue'
 
 const specialties = [
   {
@@ -203,34 +206,39 @@ const packageAndPromotionList = [
 
 const healthInfoList = [
   {
-  id: 1,
-  image: 'https://static.bangkokhospital.com/uploads/2024/07/%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94_BHT_shutterstock_2121304532-1.jpg',
-  title: 'Frequent migraine headaches may indicate a heart wall defect.',
-  description: 'Migraine headaches, or simply migraines, are one of the common diseases in working-age people. Did you know that if you have a migraine with an aura, such as seeing flashes of light or having blurred vision, in some cases, where a part of the brain lacks blood supply, resulting in slurred speech .',
- translateByAi : true
-},
+    id: 1,
+    image:
+      'https://static.bangkokhospital.com/uploads/2024/07/%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94_BHT_shutterstock_2121304532-1.jpg',
+    title: 'Frequent migraine headaches may indicate a heart wall defect.',
+    description:
+      'Migraine headaches, or simply migraines, are one of the common diseases in working-age people. Did you know that if you have a migraine with an aura, such as seeing flashes of light or having blurred vision, in some cases, where a part of the brain lacks blood supply, resulting in slurred speech .',
+    translateByAi: true,
+  },
   {
     id: 2,
     image: 'https://static.bangkokhospital.com/uploads/2024/11/IHL-Heart-cancer.jpg',
     title: 'Heart cancer: A rare disease but possible',
-    description: 'Although heart cancer is a disease that is rarely found, it can occur in 1 per 100,000 people, especially if it is liver cancer, kidney cancer, or lung cancer, which can spread through the veins to the heart area. It is mostly found in men rather than women. ',
-  translateByAi : true
+    description:
+      'Although heart cancer is a disease that is rarely found, it can occur in 1 per 100,000 people, especially if it is liver cancer, kidney cancer, or lung cancer, which can spread through the veins to the heart area. It is mostly found in men rather than women. ',
+    translateByAi: true,
   },
   {
     id: 3,
-    image: 'https://bhq-cms.sgp1.digitaloceanspaces.com/uploads/2024/10/%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94-BHT_shutterstock_1056559850.jpg',
+    image:
+      'https://bhq-cms.sgp1.digitaloceanspaces.com/uploads/2024/10/%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94-BHT_shutterstock_1056559850.jpg',
     title: 'Heart disease can be detected from the eyes.',
-    description: 'The eyes are the windows to the heart. The eyes can tell us about our health, especially the heart. If you have a yellowish-white ring around your cornea, it may indicate high cholesterol levels in your blood.',
-    translateByAi : false
+    description:
+      'The eyes are the windows to the heart. The eyes can tell us about our health, especially the heart. If you have a yellowish-white ring around your cornea, it may indicate high cholesterol levels in your blood.',
+    translateByAi: false,
   },
   {
     id: 4,
-    image: 'https://static.bangkokhospital.com/uploads/2023/11/%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94_%E0%B8%AB%E0%B8%B1%E0%B8%A7%E0%B9%83%E0%B8%88%E0%B8%81%E0%B8%B3%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B8%9A.jpg',
+    image:
+      'https://static.bangkokhospital.com/uploads/2023/11/%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94_%E0%B8%AB%E0%B8%B1%E0%B8%A7%E0%B9%83%E0%B8%88%E0%B8%81%E0%B8%B3%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B8%9A.jpg',
     title: 'Heart disease can be detected from the eyes.',
-    description: 'The eyes are the windows to the heart. The eyes can tell us about our health, especially the heart. If you have a yellowish-white ring around your cornea, it may indicate high cholesterol levels in your blood.',
-    translateByAi : false
+    description:
+      'The eyes are the windows to the heart. The eyes can tell us about our health, especially the heart. If you have a yellowish-white ring around your cornea, it may indicate high cholesterol levels in your blood.',
+    translateByAi: false,
   },
 ]
-
-
 </script>
