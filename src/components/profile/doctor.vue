@@ -1,6 +1,5 @@
 <template>
   <div class="w-100 card-content rounded-4 card-shadow">
-    <!-- <div class="doctor-card"> -->
     <div class="doctor-image-container card-shadow">
       <img
         src="https://epms.bdms.co.th/media/images/photos/BHQ/MANOCH_website_img.jpeg"
@@ -9,20 +8,23 @@
       />
     </div>
 
-    <div>
-      <h3 class="doctor-name">Dr. Manoch</h3>
-      <h3 class="doctor-name">Techachokwiwat</h3>
+    <div class="mt-5 d-flex flex-column align-items-center justify-content-center text-center">
+        <div class=" d-flex flex-column align-items-center justify-content-center" style="width: 60%;">
+          <h3 class="doctor-name">Dr. Manoch Techachokwiwat</h3>
+          <Divider class="my-3"/>
+        </div>
+        
 
-         <DividerCustom />
+      <p class="specialty fw-bold mb-2">Internal Medicine</p>
 
-      <p class="specialty primary">Internal Medicine</p>
-      <p class="specialty secondary">Nephrology</p>
+        <Badge>Nephrology</Badge>
     </div>
   </div>
   <!-- </div> -->
 </template>
 <script setup>  
-import DividerCustom from '@/components/dividerCustom.vue'
+import Divider from '@/components/custom/divider.vue'
+import Badge from '@/components/custom/badge.vue'
 </script>
 
 <style scoped>
@@ -30,7 +32,7 @@ import DividerCustom from '@/components/dividerCustom.vue'
   background-image: url('https://static.bangkokhospital.com/uploads/2024/09/doctor-profile-bg-mobile-2.png');
   background-size: cover;
   background-position: 50% 50%;
-  min-height: 320px;
+  min-height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,7 +65,6 @@ import DividerCustom from '@/components/dividerCustom.vue'
   height: 140px;
   border-radius: 50%;
   border: 5px solid white;
-  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
 }
 
 .doctor-image {
@@ -100,20 +101,12 @@ import DividerCustom from '@/components/dividerCustom.vue'
 }
 
 .specialty {
-  margin: 0.5rem 0;
-  font-weight: 500;
   font-size: 0.95rem;
+    color: #6b7280;
 }
 
-.specialty.primary {
-  color: #6b7280;
-  font-weight: 600;
-}
 
-.specialty.secondary {
-  color: #3b82f6;
-  font-weight: 600;
-}
+
 
 @media (min-width: 768px) {
   .card-content {
