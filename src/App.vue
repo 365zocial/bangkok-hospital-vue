@@ -14,11 +14,12 @@
       </div>
     </div>
 
-    <div style="margin: 50px 0 20px 0">Path : src/components/button/lightBtn.vue</div>
+    <div style="margin: 50px 0 20px 0">Path : src/components/button/animationBtn.vue</div>
     <div class="row g-sm-3">
       <div v-for="item in 2" :key="item" class="col-12 col-md-6 col-lg-3 my-2">
-        <LightBtn color="white" title="Subscribe E-Newsletter"  />
-        <LightBtn color="blue" title="Feedback & Suggestion"  />
+        <AnimationBtn color="white" title="Subscribe E-Newsletter"  />
+        <div class="mt-3"></div>
+        <AnimationBtn color="blue" title="Feedback & Suggestion"  />
       </div>
     </div>
 
@@ -63,7 +64,7 @@ import Heart from './components/card/heart.vue'
 import TitleWithBorderRB from './components/text/titleWithBorderRB.vue'
 import PackageAndPromotion from './components/card/packageAndPromotion.vue'
 import HealthInfo from './components/card/healthInfo.vue'
-import LightBtn from './components/button/lightBtn.vue'
+import AnimationBtn from './components/button/animationBtn.vue'
 
 const specialties = [
   {
