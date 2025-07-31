@@ -27,18 +27,21 @@
 
       <Badge fontSize="14px">Nephrology</Badge>
 
-      <div class="w-100 row g-3 mt-5">
+      <div class="w-100 d-none d-md-flex mt-5">
+      <div class="w-100 row gap-x-5 ">
         <div class="col-6">
-          <AnimationBtn color="blue" class="d-none d-md-block ">
+          <AnimationBtn color="blue" width="200px" class="d-none d-md-block ">
             <i class="bi bi-calendar2-week-fill me-2"></i> Book
           </AnimationBtn>
         </div>
         <div class="col-6">
-          <AnimationBtn color="blue" class="d-none d-md-block d-lg-none">
+          <AnimationBtn color="blue" width="200px" class="d-none d-md-block d-lg-none">
             <i class="bi bi-telephone-fill me-2"></i> Call Us
           </AnimationBtn>
         </div>
       </div>
+      </div>
+
     </div>
     
     

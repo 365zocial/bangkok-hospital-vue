@@ -1,5 +1,5 @@
 <template>
-  <button type="button" :class="getClass(props)">
+  <button type="button" :class="getClass(props)" :style="{ width: props.width }">
     <span class="fw-semibold"><slot /></span>
   </button>
 </template>
@@ -16,6 +16,10 @@ const props = defineProps({
   icon: {
     type: String,
     default: null,
+  },
+  width: {
+    type: String,
+    default: 'auto',
   },
 })
 
