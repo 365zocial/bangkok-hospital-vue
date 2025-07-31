@@ -43,19 +43,20 @@
         />
       </div>
     </div>
+    
   </div>
-  <div class="d-md-none w-100 row g-2 mt-2 border">
-    <div class="col-6">
-      <AnimationBtn color="blue" class="w-100">
-        <i class="bi bi-calendar2-week-fill me-2"></i> Book
-      </AnimationBtn>
-    </div>
-    <div class="col-6">
-      <AnimationBtn color="blue" class="w-100">
-        <i class="bi bi-telephone-fill me-2"></i> Call Us
-      </AnimationBtn>
-    </div>
-  </div>
+  <div class=" d-md-none w-100 row g-2 mt-2 ">
+        <div class="col-6">
+          <AnimationBtn color="blue" class="w-100">
+            <i class="bi bi-calendar2-week-fill me-2"></i> Book
+          </AnimationBtn>
+        </div>
+        <div class="col-6">
+          <AnimationBtn color="blue" class="w-100 ">
+            <i class="bi bi-telephone-fill me-2"></i> Call Us
+          </AnimationBtn>
+        </div>
+      </div>
 </template>
 <script setup>
 import Divider from '@/components/custom/divider.vue'

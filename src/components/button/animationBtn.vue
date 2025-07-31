@@ -36,7 +36,7 @@ function getClass(props) {
 .btn {
   position: relative;
   width: 100%;
-  padding: 1rem 2.5rem;
+  padding: 0.75rem 2.5rem;
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s ease-in-out;
@@ -96,5 +96,14 @@ function getClass(props) {
 
 .button-animate:hover::after {
   right: -85px;
+}
+
+@media screen and (min-width: 992px) {
+.btn {
+
+  padding: 1rem 2.5rem;
+
+}
+  
 }
 </style>
