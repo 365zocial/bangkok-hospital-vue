@@ -1,5 +1,5 @@
 <template>
-  <div class="w-100 card-content rounded-4 card-shadow">
+  <div class="w-100 card-content rounded-4 rounded-md-5 card-shadow">
     <div class="doctor-image-container card-shadow w-md-50 bg-white">
       <img
         src="https://epms.bdms.co.th/media/images/photos/BHQ/MANOCH_website_img.jpeg"
@@ -20,12 +20,22 @@
 
       <Badge fontSize="14px">Nephrology</Badge>
 
-      <AnimationBtn
-        color="blue"
-        title="Book"
-        icon="bi bi-calendar2-week-fill"
-        class="d-none d-md-block mt-5"
-      />
+    <div class="w-100 row g-3">
+  <div class="col-6">
+    <AnimationBtn color="blue" class="d-none d-md-block mt-5">
+      <i class="bi bi-calendar2-week-fill me-2"></i> Book
+    </AnimationBtn>
+  </div>
+  <div class="col-6">
+    <AnimationBtn color="blue" class="d-none d-md-block d-lg-none mt-5">
+      <i class="bi bi-telephone-fill me-2"></i> Call Us
+    </AnimationBtn>
+  </div>
+</div>
+
+      <!-- <AnimationBtn color="blue" class="d-none d-md-block mt-5"> <i class="bi bi-calendar2-week-fill me-2"></i> Book</AnimationBtn>
+     <AnimationBtn color="blue" class="d-none d-md-block mt-5"> <i class="bi bi-telephone-fill me-2"></i> Call Us</AnimationBtn>
+    -->
     </div>
 
     <div class=" d-none d-md-flex justify-content-end align-items-center">
@@ -86,8 +96,8 @@ import AnimationBtn from '@/components/button/animationBtn.vue'
 }
 
 .doctor-image-container-2 {
-  width: 280px;
-  height: 280px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   border: 5px solid white !important;
 }
@@ -188,5 +198,13 @@ import AnimationBtn from '@/components/button/animationBtn.vue'
     font-size: 18px;
      margin: 0.7rem 0 ;
   }
+}
+@media screen and (min-width: 992px) {
+ .doctor-image-container-2 {
+  width: 280px;
+  height: 280px;
+}
+
+    
 }
 </style>

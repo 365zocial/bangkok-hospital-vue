@@ -1,7 +1,6 @@
 <template>
   <button type="button" :class="getClass(props)">
-    <i v-if="props.icon" :class="props.icon + ' me-2'"></i>
-    <span class="fw-semibold">{{ props.title }}</span>
+    <span class="fw-semibold"><slot /></span>
   </button>
 </template>
 <script setup>
