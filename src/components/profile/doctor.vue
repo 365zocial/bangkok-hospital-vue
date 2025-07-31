@@ -11,29 +11,37 @@
     <div
       class="mt-5 mt-md-0 d-flex flex-column align-items-center justify-content-center justify-content-md-start align-items-md-start text-center text-md-start w-md-75"
     >
-      <div class="d-flex flex-column align-items-center justify-content-center cov-name">
-        <h1 class="doctor-name">Dr. Manoch</h1>
-            <h1 class="doctor-name">Techachokwiwat</h1>
-        <Divider class="my-3" />
+      <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center align-items-md-start justify-content-md-start cov-name">
+        <div class="">
+          <h1 class="doctor-name me-lg-2">Dr. Manoch</h1>
+        </div>
+        <div class="">
+          <h1 class="doctor-name">Techachokwiwat</h1>
+          <Divider class="mt-4 mt-md-4 mb-3 mb-md-2  d-md-block d-lg-none" />
+        </div>
+        <!-- <Divider class="my-3  d-none d-lg-block" /> -->
       </div>
+<Divider class="mt-4 mb-2  d-none d-lg-block" />
 
       <p class="specialty fw-bold">Internal Medicine</p>
 
       <Badge fontSize="14px">Nephrology</Badge>
 
-      <div class="w-100 row g-3">
+      <div class="w-100 row g-3 mt-5">
         <div class="col-6">
-          <AnimationBtn color="blue" class="d-none d-md-block mt-5">
+          <AnimationBtn color="blue" class="d-none d-md-block ">
             <i class="bi bi-calendar2-week-fill me-2"></i> Book
           </AnimationBtn>
         </div>
         <div class="col-6">
-          <AnimationBtn color="blue" class="d-none d-md-block d-lg-none mt-5">
+          <AnimationBtn color="blue" class="d-none d-md-block d-lg-none">
             <i class="bi bi-telephone-fill me-2"></i> Call Us
           </AnimationBtn>
         </div>
       </div>
     </div>
+    
+    
 
     <div class="d-none d-md-flex justify-content-end align-items-center">
       <div class="doctor-image-container-2 card-shadow bg-white">
@@ -46,18 +54,18 @@
     </div>
     
   </div>
-  <div class=" d-md-none w-100 row g-2 mt-2 ">
-        <div class="col-6">
-          <AnimationBtn color="blue" class="w-100">
-            <i class="bi bi-calendar2-week-fill me-2"></i> Book
-          </AnimationBtn>
-        </div>
-        <div class="col-6">
-          <AnimationBtn color="blue" class="w-100 ">
-            <i class="bi bi-telephone-fill me-2"></i> Call Us
-          </AnimationBtn>
-        </div>
-      </div>
+  <div class="d-md-none w-100 row g-2 mt-2">
+    <div class="col-6">
+      <AnimationBtn color="blue" class="w-100">
+        <i class="bi bi-calendar2-week-fill me-2"></i> Book
+      </AnimationBtn>
+    </div>
+    <div class="col-6">
+      <AnimationBtn color="blue" class="w-100">
+        <i class="bi bi-telephone-fill me-2"></i> Call Us
+      </AnimationBtn>
+    </div>
+  </div>
 </template>
 <script setup>
 import Divider from '@/components/custom/divider.vue'
@@ -144,7 +152,6 @@ import AnimationBtn from '@/components/button/animationBtn.vue'
 
 .cov-name {
   width: 30% !important;
-  border: 1px solid #180f0f;
 }
 
 @media (min-width: 768px) {
@@ -185,7 +192,6 @@ import AnimationBtn from '@/components/button/animationBtn.vue'
 
   .cov-name {
     width: 60% !important;
-    border: 1px solid #ac2929;
   }
 
   .specialty {
@@ -203,7 +209,7 @@ import AnimationBtn from '@/components/button/animationBtn.vue'
   }
 }
 
- .cov-name {
-    width: 100% !important  ;
-  }
+.cov-name {
+  width: 100% !important  ;
+}
 </style>
