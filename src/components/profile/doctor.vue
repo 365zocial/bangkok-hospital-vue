@@ -9,36 +9,32 @@
     </div>
 
     <div
-      class="mt-5 mt-md-0 d-flex flex-column align-items-center justify-content-center justify-content-md-start align-items-md-start text-center text-md-start w-md-75 "
+      class="mt-5 mt-md-0 d-flex flex-column align-items-center justify-content-center justify-content-md-start align-items-md-start text-center text-md-start w-md-75"
     >
       <div class="d-flex flex-column align-items-center justify-content-center cov-name">
         <h1 class="doctor-name">Dr. Manoch Techachokwiwat</h1>
         <Divider class="my-3" />
       </div>
 
-      <p class="specialty fw-bold ">Internal Medicine</p>
+      <p class="specialty fw-bold">Internal Medicine</p>
 
       <Badge fontSize="14px">Nephrology</Badge>
 
-    <div class="w-100 row g-3">
-  <div class="col-6">
-    <AnimationBtn color="blue" class="d-none d-md-block mt-5">
-      <i class="bi bi-calendar2-week-fill me-2"></i> Book
-    </AnimationBtn>
-  </div>
-  <div class="col-6">
-    <AnimationBtn color="blue" class="d-none d-md-block d-lg-none mt-5">
-      <i class="bi bi-telephone-fill me-2"></i> Call Us
-    </AnimationBtn>
-  </div>
-</div>
-
-      <!-- <AnimationBtn color="blue" class="d-none d-md-block mt-5"> <i class="bi bi-calendar2-week-fill me-2"></i> Book</AnimationBtn>
-     <AnimationBtn color="blue" class="d-none d-md-block mt-5"> <i class="bi bi-telephone-fill me-2"></i> Call Us</AnimationBtn>
-    -->
+      <div class="w-100 row g-3">
+        <div class="col-6">
+          <AnimationBtn color="blue" class="d-none d-md-block mt-5">
+            <i class="bi bi-calendar2-week-fill me-2"></i> Book
+          </AnimationBtn>
+        </div>
+        <div class="col-6">
+          <AnimationBtn color="blue" class="d-none d-md-block d-lg-none mt-5">
+            <i class="bi bi-telephone-fill me-2"></i> Call Us
+          </AnimationBtn>
+        </div>
+      </div>
     </div>
 
-    <div class=" d-none d-md-flex justify-content-end align-items-center">
+    <div class="d-none d-md-flex justify-content-end align-items-center">
       <div class="doctor-image-container-2 card-shadow bg-white">
         <img
           src="https://epms.bdms.co.th/media/images/photos/BHQ/MANOCH_website_img.jpeg"
@@ -46,6 +42,18 @@
           class="doctor-image"
         />
       </div>
+    </div>
+  </div>
+  <div class="d-md-none w-100 row g-2 mt-2 border">
+    <div class="col-6">
+      <AnimationBtn color="blue" class="w-100">
+        <i class="bi bi-calendar2-week-fill me-2"></i> Book
+      </AnimationBtn>
+    </div>
+    <div class="col-6">
+      <AnimationBtn color="blue" class="w-100">
+        <i class="bi bi-telephone-fill me-2"></i> Call Us
+      </AnimationBtn>
     </div>
   </div>
 </template>
@@ -66,7 +74,6 @@ import AnimationBtn from '@/components/button/animationBtn.vue'
   justify-content: center;
   padding: 20px;
   position: relative;
-  /* text-align: center; */
   margin-top: 100px;
 }
 
@@ -119,14 +126,6 @@ import AnimationBtn from '@/components/button/animationBtn.vue'
   margin-top: 1rem;
 }
 
-/* .doctor-surname {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #1e3a8a;
-  margin: 0.25rem 0 1.5rem 0;
-  line-height: 1.2;
-} */
-
 .divider {
   width: 60px;
   height: 4px;
@@ -138,7 +137,7 @@ import AnimationBtn from '@/components/button/animationBtn.vue'
 .specialty {
   font-size: 0.95rem;
   color: #6b7280;
-   margin: 0 0 0.7rem 0 ;
+  margin: 0 0 0.7rem 0;
 }
 
 .cov-name {
@@ -153,7 +152,7 @@ import AnimationBtn from '@/components/button/animationBtn.vue'
     align-items: center;
     justify-content: space-between;
     justify-items: center;
-    padding: 64px;
+    padding: 48px;
   }
 
   .doctor-card {
@@ -176,16 +175,7 @@ import AnimationBtn from '@/components/button/animationBtn.vue'
     margin-top: 1.2rem;
   }
 
-  /* .doctor-surname {
-    font-size: 1.4rem;
-  } */
-
   .doctor-image-container {
-    /* position: relative;
-  top: 0;
-  left: 0;
-  transform: none;
-  z-index: 0; */
     display: none !important;
     visibility: hidden;
   }
@@ -196,15 +186,16 @@ import AnimationBtn from '@/components/button/animationBtn.vue'
 
   .specialty {
     font-size: 18px;
-     margin: 0.7rem 0 ;
+    margin: 0.7rem 0;
   }
 }
 @media screen and (min-width: 992px) {
- .doctor-image-container-2 {
-  width: 280px;
-  height: 280px;
-}
-
-    
+  .doctor-image-container-2 {
+    width: 280px;
+    height: 280px;
+  }
+  .card-content {
+    padding: 64px;
+  }
 }
 </style>
