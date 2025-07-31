@@ -1,6 +1,5 @@
 <template>
   <div class="w-100 card-content rounded-4 card-shadow">
-
     <div class="doctor-image-container card-shadow w-md-50 bg-white">
       <img
         src="https://epms.bdms.co.th/media/images/photos/BHQ/MANOCH_website_img.jpeg"
@@ -9,18 +8,24 @@
       />
     </div>
 
-
     <div
-      class="mt-5 mt-md-0 d-flex flex-column align-items-center justify-content-center text-center w-md-75 border"
+      class="mt-5 mt-md-0 d-flex flex-column align-items-center justify-content-center justify-content-md-start align-items-md-start text-center text-md-start w-md-75 border"
     >
-      <div class="d-flex flex-column align-items-center justify-content-center cov-name ">
+      <div class="d-flex flex-column align-items-center justify-content-center cov-name">
         <h1 class="doctor-name">Dr. Manoch Techachokwiwat</h1>
         <Divider class="my-3" />
       </div>
 
       <p class="specialty fw-bold mb-2">Internal Medicine</p>
 
-      <Badge>Nephrology</Badge>
+      <Badge fontSize="14px">Nephrology</Badge>
+
+      <AnimationBtn
+        color="blue"
+        title="Book"
+        icon="bi bi-calendar2-week-fill"
+        class="d-none d-md-block"
+      />
     </div>
 
     <div class="border d-none d-md-flex justify-content-end align-items-center">
@@ -37,6 +42,7 @@
 <script setup>
 import Divider from '@/components/custom/divider.vue'
 import Badge from '@/components/custom/badge.vue'
+import AnimationBtn from '@/components/button/animationBtn.vue'
 </script>
 
 <style scoped>
@@ -175,6 +181,10 @@ import Badge from '@/components/custom/badge.vue'
 
   .cov-name {
     width: 100%;
+  }
+
+  .specialty {
+    font-size: 18px;
   }
 }
 </style>

@@ -1,6 +1,7 @@
 <template>
   <div
     class="badge rounded-pill fw-semibold badge-lightblue"
+     :style="{ fontSize: props.fontSize }"
   >
     <slot />
   </div>
@@ -9,6 +10,13 @@
 </template>
 
 <script setup>
+const props = defineProps({
+  fontSize: {
+    type: String,
+    default: '16px'
+  }
+})
+
 </script>
 
 <style scoped>
