@@ -8,7 +8,7 @@
     </div>
 
      <div style="margin: 50px 0 20px 0"></div>
-    <div class="p-5">
+    <div class="p-4">
    <ProfileDoctor />
     </div>
 

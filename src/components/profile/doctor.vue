@@ -9,14 +9,14 @@
     </div>
 
     <div
-      class="mt-5 mt-md-0 d-flex flex-column align-items-center justify-content-center justify-content-md-start align-items-md-start text-center text-md-start w-md-75 border"
+      class="mt-5 mt-md-0 d-flex flex-column align-items-center justify-content-center justify-content-md-start align-items-md-start text-center text-md-start w-md-75 "
     >
       <div class="d-flex flex-column align-items-center justify-content-center cov-name">
         <h1 class="doctor-name">Dr. Manoch Techachokwiwat</h1>
         <Divider class="my-3" />
       </div>
 
-      <p class="specialty fw-bold mb-2">Internal Medicine</p>
+      <p class="specialty fw-bold ">Internal Medicine</p>
 
       <Badge fontSize="14px">Nephrology</Badge>
 
@@ -24,12 +24,12 @@
         color="blue"
         title="Book"
         icon="bi bi-calendar2-week-fill"
-        class="d-none d-md-block"
+        class="d-none d-md-block mt-5"
       />
     </div>
 
-    <div class="border d-none d-md-flex justify-content-end align-items-center">
-      <div class="doctor-image-container-2 card-shadow border bg-white">
+    <div class=" d-none d-md-flex justify-content-end align-items-center">
+      <div class="doctor-image-container-2 card-shadow bg-white">
         <img
           src="https://epms.bdms.co.th/media/images/photos/BHQ/MANOCH_website_img.jpeg"
           alt="Dr. Manoch Techachokwiwat"
@@ -128,6 +128,7 @@ import AnimationBtn from '@/components/button/animationBtn.vue'
 .specialty {
   font-size: 0.95rem;
   color: #6b7280;
+   margin: 0 0 0.7rem 0 ;
 }
 
 .cov-name {
@@ -185,6 +186,7 @@ import AnimationBtn from '@/components/button/animationBtn.vue'
 
   .specialty {
     font-size: 18px;
+     margin: 0.7rem 0 ;
   }
 }
 </style>
