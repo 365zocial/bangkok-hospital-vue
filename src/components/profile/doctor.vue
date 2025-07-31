@@ -12,7 +12,8 @@
       class="mt-5 mt-md-0 d-flex flex-column align-items-center justify-content-center justify-content-md-start align-items-md-start text-center text-md-start w-md-75"
     >
       <div class="d-flex flex-column align-items-center justify-content-center cov-name">
-        <h1 class="doctor-name">Dr. Manoch Techachokwiwat</h1>
+        <h1 class="doctor-name">Dr. Manoch</h1>
+            <h1 class="doctor-name">Techachokwiwat</h1>
         <Divider class="my-3" />
       </div>
 
@@ -123,7 +124,7 @@ import AnimationBtn from '@/components/button/animationBtn.vue'
   font-weight: 700;
   color: #1e3a8a;
   margin: 0;
-  line-height: 1.2;
+  line-height: 70%;
   margin-top: 1rem;
 }
 
@@ -142,7 +143,8 @@ import AnimationBtn from '@/components/button/animationBtn.vue'
 }
 
 .cov-name {
-  width: 60%;
+  width: 30% !important;
+  border: 1px solid #180f0f;
 }
 
 @media (min-width: 768px) {
@@ -182,7 +184,8 @@ import AnimationBtn from '@/components/button/animationBtn.vue'
   }
 
   .cov-name {
-    width: 100%;
+    width: 60% !important;
+    border: 1px solid #ac2929;
   }
 
   .specialty {
@@ -190,7 +193,7 @@ import AnimationBtn from '@/components/button/animationBtn.vue'
     margin: 0.7rem 0;
   }
 }
-@media screen and (min-width: 992px) {
+@media (min-width: 992px) {
   .doctor-image-container-2 {
     width: 280px;
     height: 280px;
@@ -199,4 +202,8 @@ import AnimationBtn from '@/components/button/animationBtn.vue'
     padding: 64px;
   }
 }
+
+ .cov-name {
+    width: 100% !important  ;
+  }
 </style>
