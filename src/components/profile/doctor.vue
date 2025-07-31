@@ -1,6 +1,7 @@
 <template>
   <div class="w-100 card-content rounded-4 card-shadow">
-    <div class="doctor-image-container card-shadow">
+
+    <div class="doctor-image-container card-shadow w-md-50 bg-white">
       <img
         src="https://epms.bdms.co.th/media/images/photos/BHQ/MANOCH_website_img.jpeg"
         alt="Dr. Manoch Techachokwiwat"
@@ -8,21 +9,32 @@
       />
     </div>
 
-    <div class="mt-5 d-flex flex-column align-items-center justify-content-center text-center">
-        <div class=" d-flex flex-column align-items-center justify-content-center" style="width: 60%;">
-          <h3 class="doctor-name">Dr. Manoch Techachokwiwat</h3>
-          <Divider class="my-3"/>
-        </div>
-        
+
+    <div
+      class="mt-5 mt-md-0 d-flex flex-column align-items-center justify-content-center text-center w-md-75 border"
+    >
+      <div class="d-flex flex-column align-items-center justify-content-center cov-name ">
+        <h1 class="doctor-name">Dr. Manoch Techachokwiwat</h1>
+        <Divider class="my-3" />
+      </div>
 
       <p class="specialty fw-bold mb-2">Internal Medicine</p>
 
-        <Badge>Nephrology</Badge>
+      <Badge>Nephrology</Badge>
+    </div>
+
+    <div class="border d-none d-md-flex justify-content-end align-items-center">
+      <div class="doctor-image-container-2 card-shadow border bg-white">
+        <img
+          src="https://epms.bdms.co.th/media/images/photos/BHQ/MANOCH_website_img.jpeg"
+          alt="Dr. Manoch Techachokwiwat"
+          class="doctor-image"
+        />
+      </div>
     </div>
   </div>
-  <!-- </div> -->
 </template>
-<script setup>  
+<script setup>
 import Divider from '@/components/custom/divider.vue'
 import Badge from '@/components/custom/badge.vue'
 </script>
@@ -38,7 +50,7 @@ import Badge from '@/components/custom/badge.vue'
   justify-content: center;
   padding: 20px;
   position: relative;
-  text-align: center;
+  /* text-align: center; */
   margin-top: 100px;
 }
 
@@ -67,6 +79,13 @@ import Badge from '@/components/custom/badge.vue'
   border: 5px solid white;
 }
 
+.doctor-image-container-2 {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 5px solid white !important;
+}
+
 .doctor-image {
   width: 100%;
   height: 100%;
@@ -84,13 +103,13 @@ import Badge from '@/components/custom/badge.vue'
   margin-top: 1rem;
 }
 
-.doctor-surname {
+/* .doctor-surname {
   font-size: 1.2rem;
   font-weight: 600;
   color: #1e3a8a;
   margin: 0.25rem 0 1.5rem 0;
   line-height: 1.2;
-}
+} */
 
 .divider {
   width: 60px;
@@ -102,16 +121,22 @@ import Badge from '@/components/custom/badge.vue'
 
 .specialty {
   font-size: 0.95rem;
-    color: #6b7280;
+  color: #6b7280;
 }
 
-
-
+.cov-name {
+  width: 60%;
+}
 
 @media (min-width: 768px) {
   .card-content {
     background-image: url('https://static.bangkokhospital.com/uploads/2023/05/doctor-profile-bg-2.png');
-    height: 300px;
+    height: auto;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+    padding: 64px;
   }
 
   .doctor-card {
@@ -125,20 +150,31 @@ import Badge from '@/components/custom/badge.vue'
   }
 
   .doctor-image {
-    width: 140px;
-    height: 140px;
+    width: 100%;
+    height: 100%;
   }
 
   .doctor-name {
-    font-size: 1.75rem;
+    font-size: 36px;
     margin-top: 1.2rem;
   }
 
-  .doctor-surname {
+  /* .doctor-surname {
     font-size: 1.4rem;
+  } */
+
+  .doctor-image-container {
+    /* position: relative;
+  top: 0;
+  left: 0;
+  transform: none;
+  z-index: 0; */
+    display: none !important;
+    visibility: hidden;
+  }
+
+  .cov-name {
+    width: 100%;
   }
 }
-
-
-
 </style>
