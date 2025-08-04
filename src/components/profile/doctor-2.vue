@@ -1,6 +1,6 @@
 <template>
   <div class="w-100 card-content rounded-4 rounded-md-5 shadow-blue">
-    <div class="doctor-image-container shadow-blue w-md-50 bg-white">
+    <div class="doctor-image-container shadow-blue w-md-50 bg-white " v-if="false">
       <img :src="data.imageUrl" :alt="data.firstName" class="doctor-image" />
     </div>
 
