@@ -8,8 +8,10 @@
     </div>
 
      <div style="margin: 50px 0 20px 0"></div>
-    <div class="" >
-   <ProfileDoctor />
+    <div class="" v-for="item in doctorData" :key="item.firstName">
+    
+     
+   <ProfileDoctor :data="item" />
     </div>
 
 
@@ -255,5 +257,26 @@ const healthInfoList = [
   },
 ]
 
-
+const doctorData = [
+  {
+  firstName: 'Manoch ',
+  lastName: 'Techachokwiwat',
+  title: 'Dr. ',
+  specialtyPrimary: 'Internal Medicine',
+  specialtySecondary: 'Nephrology',
+  imageUrl: 'https://epms.bdms.co.th/media/images/photos/BHQ/MANOCH_website_img.jpeg',
+  isBookingAvailable: true,
+  description:''
+},
+  {
+  firstName: 'Valailuck',
+  lastName: 'Kiatthanakorn',
+  title: 'Dr. ',
+  specialtyPrimary: null,
+  specialtySecondary: null,
+  imageUrl: 'https://epms.bdms.co.th/media/images/photos/BHQ/25560315_045400.JPG',
+  isBookingAvailable: false,
+  description:'Experienced family dentist providing comprehensive, preventive care for all ages. Dedicated to healthy teeth and beautiful smiles with over 30 years in practice.'
+},
+]
 </script>

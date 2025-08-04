@@ -1,8 +1,8 @@
 <template>
-  <div class="w-100 card-content rounded-4 rounded-md-5 card-shadow">
-    <div class="doctor-image-container card-shadow w-md-50 bg-white">
+  <div class="w-100 card-content rounded-4 rounded-md-5 shadow-blue">
+    <div class="doctor-image-container shadow-blue w-md-50 bg-white">
       <img
-        src="https://epms.bdms.co.th/media/images/photos/BHQ/MANOCH_website_img.jpeg"
+        :src="data.imageUrl"
         alt="Dr. Manoch Techachokwiwat"
         class="doctor-image"
       />
@@ -13,19 +13,19 @@
     >
       <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center align-items-md-start justify-content-md-start cov-name">
         <div class="">
-          <h1 class="doctor-name me-lg-2">Dr. Manoch</h1>
+          <h1 class="doctor-name me-lg-2"> {{data.title}} {{ data.firstName }}</h1>
         </div>
         <div class="">
-          <h1 class="doctor-name">Techachokwiwat</h1>
+          <h1 class="doctor-name">{{ data.lastName }}</h1>
           <Divider class="mt-4 mt-md-4 mb-3 mb-md-2  d-md-block d-lg-none" />
         </div>
-        <!-- <Divider class="my-3  d-none d-lg-block" /> -->
+        
       </div>
 <Divider class="mt-4 mb-2  d-none d-lg-block" />
+<p v-if="data.description">{{ data.description }}</p>
+      <p class="specialty fw-bold">{{ data.specialtyPrimary }}</p>
 
-      <p class="specialty fw-bold">Internal Medicine</p>
-
-      <Badge fontSize="14px">Nephrology</Badge>
+      <Badge fontSize="14px">{{ data.specialtySecondary }}</Badge>
 
       <div class="w-100 d-none d-md-flex mt-5">
       <div class="w-100 row gap-x-5 ">
@@ -47,9 +47,9 @@
     
 
     <div class="d-none d-md-flex justify-content-end align-items-center">
-      <div class="doctor-image-container-2 card-shadow bg-white">
+      <div class="doctor-image-container-2 shadow-blue bg-white">
         <img
-          src="https://epms.bdms.co.th/media/images/photos/BHQ/MANOCH_website_img.jpeg"
+         :src="data.imageUrl"
           alt="Dr. Manoch Techachokwiwat"
           class="doctor-image"
         />
@@ -74,6 +74,11 @@
 import Divider from '@/components/custom/divider.vue'
 import Badge from '@/components/custom/badge.vue'
 import AnimationBtn from '@/components/button/animationBtn.vue'
+const props = defineProps({
+  data: {
+    type: Object,
+  },
+})
 </script>
 
 <style scoped>

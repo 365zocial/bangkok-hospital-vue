@@ -54,3 +54,13 @@ a,
 .text-dark-blue {
   color: #0047A3;
 }
+
+.shadow-blue {
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+  box-shadow:
+    0 -1px 20px rgba(0, 102, 255, 0.047),
+    0 8px 20px rgba(0, 102, 255, 0.12),
+    0 3px 5px rgba(81, 126, 194, 0.1) !important;
+}
