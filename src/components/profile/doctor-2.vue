@@ -1,7 +1,7 @@
 <template>
   <div class="w-100 card-content rounded-4 rounded-md-5 shadow-blue">
     <div class="doctor-image-container shadow-blue w-md-50 bg-white">
-      <img :src="data.imageUrl" alt="Dr. Manoch Techachokwiwat" class="doctor-image" />
+      <img :src="data.imageUrl" :alt="data.firstName" class="doctor-image" />
     </div>
 
     <div
@@ -27,22 +27,21 @@
       <div class="w-100 d-none d-md-flex mt-5">
         <div class="w-100 row gap-x-5">
           <div class="col-6">
-            <AnimationBtn color="blue" width="200px" class="d-none d-md-block">
-              <i class="bi bi-calendar2-week-fill me-2"></i> Book
+    
+              <AnimationBtn color="blue" width="200px" class="d-none d-md-block ">
+              <i class="bi bi-telephone-fill me-2"></i> Call Us
             </AnimationBtn>
           </div>
           <div class="col-6">
-            <AnimationBtn color="blue" width="200px" class="d-none d-md-block d-lg-none">
-              <i class="bi bi-telephone-fill me-2"></i> Call Us
-            </AnimationBtn>
+         
           </div>
         </div>
       </div>
     </div>
 
     <div class="d-none d-md-flex justify-content-end align-items-center">
-      <div class="doctor-image-container-2 shadow-blue bg-white">
-        <img :src="data.imageUrl" alt="Dr. Manoch Techachokwiwat" class="doctor-image" />
+      <div class="doctor-image-container-2">
+        <img :src="data.imageUrl" :alt="data.firstName" class="doctor-image" />
       </div>
     </div>
   </div>
@@ -110,16 +109,14 @@ const props = defineProps({
 }
 
 .doctor-image-container-2 {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  border: 5px solid white !important;
+    height: 400px;
+  width: auto;
+
 }
 
 .doctor-image {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
   object-position: top;
   object-fit: cover;
 }
@@ -208,8 +205,15 @@ const props = defineProps({
 }
 @media (min-width: 992px) {
   .doctor-image-container-2 {
-    width: 280px;
-    height: 280px;
+      height: 420px;
+    width: auto;
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+ 
+  
   }
   .card-content {
     padding: 64px;
