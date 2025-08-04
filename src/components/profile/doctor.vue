@@ -8,7 +8,7 @@
       class="mt-5 mt-md-0 d-flex flex-column align-items-center justify-content-center justify-content-md-start align-items-md-start text-center text-md-start w-md-75"
     >
       <div
-        class="border d-flex flex-column flex-lg-row align-items-center justify-content-center align-items-md-start justify-content-md-start cov-name"
+        class=" d-flex flex-column flex-lg-row align-items-center justify-content-center align-items-md-start justify-content-md-start cov-name"
       >
         <div class="">
           <h1 class="doctor-name me-lg-2 ">{{ data.title }} {{ data.firstName }}</h1>
@@ -19,10 +19,10 @@
         </div>
       </div>
       <Divider class="mt-4 mb-2 d-none d-lg-block" />
-      <p v-if="data.description" class="w-75 border text-description fw-light">{{ data.description }}</p>
-      <p class="specialty fw-bold">{{ data.specialtyPrimary }}</p>
+      <p v-if="data.description" class="w-lg-75 text-description fw-light">{{ data.description }}</p>
+      <p v-if="data.specialtyPrimary" class="specialty fw-bold">{{ data.specialtyPrimary }}</p>
 
-      <Badge fontSize="14px">{{ data.specialtySecondary }}</Badge>
+      <Badge v-if="data.specialtySecondary" fontSize="14px">{{ data.specialtySecondary }}</Badge>
 
       <div class="w-100 d-none d-md-flex mt-5">
         <div class="w-100 row gap-x-5">
@@ -99,14 +99,14 @@ const props = defineProps({
 
 .doctor-image-container {
   position: absolute;
-  top: -60px;
+  top: -70px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  border: 5px solid white;
+  border: 5px solid #ffffff;
 }
 
 .doctor-image-container-2 {
@@ -149,10 +149,12 @@ const props = defineProps({
 
 .cov-name {
   width: 30% !important;
+ 
 }
 .text-description {
   font-size: 0.9rem;;
   margin-top: 1rem;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -199,6 +201,10 @@ const props = defineProps({
     font-size: 18px;
     margin: 0.7rem 0;
   }
+
+  .text-description {
+  width: 75%;
+}
 }
 @media (min-width: 992px) {
   .doctor-image-container-2 {
@@ -208,6 +214,8 @@ const props = defineProps({
   .card-content {
     padding: 64px;
   }
+
+  
 }
 
 .cov-name {
