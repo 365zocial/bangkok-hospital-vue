@@ -7,13 +7,15 @@
       <div class="col-sm-4 col-lg-6 bg-danger text-white p-3">Column 4</div>
     </div>
 
-     <div style="margin: 50px 0 20px 0"></div>
-    <div class="" v-for="item in doctorData" :key="item.firstName">
-    
-     
-   <ProfileDoctor :data="item" />
+    <div style="margin: 50px 0 20px 0"></div>
+    <div class="" v-for="item in doctorData2" :key="item.id">
+      <ProfileDoctor2 :data="item" />
     </div>
 
+    <div style="margin: 50px 0 20px 0"></div>
+    <div class="" v-for="item in doctorData" :key="item.id">
+      <ProfileDoctor :data="item" />
+    </div>
 
     <div style="margin: 50px 0 20px 0">Path : src/components/card/healthInfo.vue</div>
     <div class="row g-3 g-sm-3">
@@ -25,8 +27,7 @@
     <div style="margin: 50px 0 20px 0">Path : src/components/button/animationBtn.vue</div>
     <div class="row g-sm-3">
       <div v-for="item in 2" :key="item" class="col-12 col-md-6 col-lg-3 my-2">
-       
-         <AnimationBtn color="white">Subscribe E-Newsletter</AnimationBtn>
+        <AnimationBtn color="white">Subscribe E-Newsletter</AnimationBtn>
         <div class="mt-3"></div>
         <AnimationBtn color="blue">Feedback & Suggestion</AnimationBtn>
       </div>
@@ -75,6 +76,7 @@ import PackageAndPromotion from './components/card/packageAndPromotion.vue'
 import HealthInfo from './components/card/healthInfo.vue'
 import AnimationBtn from './components/button/animationBtn.vue'
 import ProfileDoctor from './components/profile/doctor.vue'
+import ProfileDoctor2 from './components/profile/doctor-2.vue'
 const specialties = [
   {
     name: 'Heart',
@@ -259,24 +261,41 @@ const healthInfoList = [
 
 const doctorData = [
   {
-  firstName: 'Manoch ',
-  lastName: 'Techachokwiwat',
-  title: 'Dr. ',
-  specialtyPrimary: 'Internal Medicine',
-  specialtySecondary: 'Nephrology',
-  imageUrl: 'https://epms.bdms.co.th/media/images/photos/BHQ/MANOCH_website_img.jpeg',
-  isBookingAvailable: true,
-  description:''
-},
+    id: 1,
+    firstName: 'Manoch ',
+    lastName: 'Techachokwiwat',
+    title: 'Dr. ',
+    specialtyPrimary: 'Internal Medicine',
+    specialtySecondary: 'Nephrology',
+    imageUrl: 'https://epms.bdms.co.th/media/images/photos/BHQ/MANOCH_website_img.jpeg',
+    isBookingAvailable: true,
+    description: '',
+  },
   {
-  firstName: 'Valailuck',
-  lastName: 'Kiatthanakorn',
-  title: 'Dr. ',
-  specialtyPrimary: null,
-  specialtySecondary: null,
-  imageUrl: 'https://epms.bdms.co.th/media/images/photos/BHQ/25560315_045400.JPG',
-  isBookingAvailable: false,
-  description:'Experienced family dentist providing comprehensive, preventive care for all ages. Dedicated to healthy teeth and beautiful smiles with over 30 years in practice.'
-},
+    id: 2,
+    firstName: 'Valailuck',
+    lastName: 'Kiatthanakorn',
+    title: 'Dr. ',
+    specialtyPrimary: null,
+    specialtySecondary: null,
+    imageUrl: 'https://epms.bdms.co.th/media/images/photos/BHQ/25560315_045400.JPG',
+    isBookingAvailable: false,
+    description:
+      'Experienced family dentist providing comprehensive, preventive care for all ages. Dedicated to healthy teeth and beautiful smiles with over 30 years in practice.',
+  },
+]
+
+const doctorData2 = [
+  {
+    id: 1,
+    firstName: 'suthorn',
+    lastName: 'bavonratanavech',
+    title: 'Dr. ',
+    specialtyPrimary: 'Orthopedic Surgery',
+    specialtySecondary: null,
+    imageUrl: 'https://static.bangkokhospital.com/uploads/2024/09/281020211635418871-1.png',
+    isBookingAvailable: true,
+    description: '',
+  },
 ]
 </script>
