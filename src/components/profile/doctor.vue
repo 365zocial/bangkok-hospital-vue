@@ -1,61 +1,50 @@
 <template>
   <div class="w-100 card-content rounded-4 rounded-md-5 shadow-blue">
     <div class="doctor-image-container shadow-blue w-md-50 bg-white">
-      <img
-        :src="data.imageUrl"
-        alt="Dr. Manoch Techachokwiwat"
-        class="doctor-image"
-      />
+      <img :src="data.imageUrl" alt="Dr. Manoch Techachokwiwat" class="doctor-image" />
     </div>
 
     <div
       class="mt-5 mt-md-0 d-flex flex-column align-items-center justify-content-center justify-content-md-start align-items-md-start text-center text-md-start w-md-75"
     >
-      <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center align-items-md-start justify-content-md-start cov-name">
+      <div
+        class="border d-flex flex-column flex-lg-row align-items-center justify-content-center align-items-md-start justify-content-md-start cov-name"
+      >
         <div class="">
-          <h1 class="doctor-name me-lg-2"> {{data.title}} {{ data.firstName }}</h1>
+          <h1 class="doctor-name me-lg-2 ">{{ data.title }} {{ data.firstName }}</h1>
         </div>
         <div class="">
           <h1 class="doctor-name">{{ data.lastName }}</h1>
-          <Divider class="mt-4 mt-md-4 mb-3 mb-md-2  d-md-block d-lg-none" />
+          <Divider class="mt-4 mt-md-4 mb-3 mb-md-2 d-md-block d-lg-none" />
         </div>
-        
       </div>
-<Divider class="mt-4 mb-2  d-none d-lg-block" />
-<p v-if="data.description">{{ data.description }}</p>
+      <Divider class="mt-4 mb-2 d-none d-lg-block" />
+      <p v-if="data.description" class="w-75 border text-description fw-light">{{ data.description }}</p>
       <p class="specialty fw-bold">{{ data.specialtyPrimary }}</p>
 
       <Badge fontSize="14px">{{ data.specialtySecondary }}</Badge>
 
       <div class="w-100 d-none d-md-flex mt-5">
-      <div class="w-100 row gap-x-5 ">
-        <div class="col-6">
-          <AnimationBtn color="blue" width="200px" class="d-none d-md-block ">
-            <i class="bi bi-calendar2-week-fill me-2"></i> Book
-          </AnimationBtn>
-        </div>
-        <div class="col-6">
-          <AnimationBtn color="blue" width="200px" class="d-none d-md-block d-lg-none">
-            <i class="bi bi-telephone-fill me-2"></i> Call Us
-          </AnimationBtn>
+        <div class="w-100 row gap-x-5">
+          <div class="col-6">
+            <AnimationBtn color="blue" width="200px" class="d-none d-md-block">
+              <i class="bi bi-calendar2-week-fill me-2"></i> Book
+            </AnimationBtn>
+          </div>
+          <div class="col-6">
+            <AnimationBtn color="blue" width="200px" class="d-none d-md-block d-lg-none">
+              <i class="bi bi-telephone-fill me-2"></i> Call Us
+            </AnimationBtn>
+          </div>
         </div>
       </div>
-      </div>
-
     </div>
-    
-    
 
     <div class="d-none d-md-flex justify-content-end align-items-center">
       <div class="doctor-image-container-2 shadow-blue bg-white">
-        <img
-         :src="data.imageUrl"
-          alt="Dr. Manoch Techachokwiwat"
-          class="doctor-image"
-        />
+        <img :src="data.imageUrl" alt="Dr. Manoch Techachokwiwat" class="doctor-image" />
       </div>
     </div>
-    
   </div>
   <div class="d-md-none w-100 row g-2 mt-2">
     <div class="col-6">
@@ -160,6 +149,10 @@ const props = defineProps({
 
 .cov-name {
   width: 30% !important;
+}
+.text-description {
+  font-size: 0.9rem;;
+  margin-top: 1rem;
 }
 
 @media (min-width: 768px) {
