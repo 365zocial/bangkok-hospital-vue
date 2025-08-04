@@ -213,6 +213,7 @@ const props = defineProps({
   }
   .card-content {
     padding: 64px;
+    margin-top: 50px;
   }
 
   

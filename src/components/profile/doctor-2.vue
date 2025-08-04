@@ -24,7 +24,7 @@
 
       <Badge v-if="data.specialtySecondary" fontSize="14px">{{ data.specialtySecondary }}</Badge>
 
-      <div class="w-100 d-none d-md-flex mt-5">
+      <div class="w-100 d-none d-md-flex d-lg-none mt-5">
         <div class="w-100 row gap-x-5">
           <div class="col-6">
     
@@ -205,18 +205,19 @@ const props = defineProps({
 }
 @media (min-width: 992px) {
   .doctor-image-container-2 {
-      height: 420px;
+      height: 375px;
     width: auto;
   position: absolute;
-  top: -70px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0;
+  right: 60px;
+  /* transform: translateX(-50%); */
   z-index: 10;
  
   
   }
   .card-content {
     padding: 64px;
+    margin-top: 50px;
   }
 
   
