@@ -10,8 +10,9 @@
       <div
         class=" d-flex flex-column flex-lg-row align-items-center justify-content-center align-items-md-start justify-content-md-start cov-name"
       >
-        <div class="">
-          <h1 class="doctor-name me-lg-2 ">{{ data.title }} {{ data.firstName }}</h1>
+        <div class="d-flex flex-row">
+          <h1 class="doctor-name me-1 ">{{ data.title }} </h1>
+          <h1 class="doctor-name me-lg-2">{{ data.firstName }}</h1>
         </div>
         <div class="">
           <h1 class="doctor-name">{{ data.lastName }}</h1>
