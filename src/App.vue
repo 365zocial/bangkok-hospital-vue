@@ -271,18 +271,6 @@ const doctorData = [
     isBookingAvailable: true,
     description: '',
   },
-  {
-    id: 2,
-    firstName: 'Valailuck',
-    lastName: 'Kiatthanakorn',
-    title: 'Dr. ',
-    specialtyPrimary: null,
-    specialtySecondary: null,
-    imageUrl: 'https://epms.bdms.co.th/media/images/photos/BHQ/25560315_045400.JPG',
-    isBookingAvailable: false,
-    description:
-      'Experienced family dentist providing comprehensive, preventive care for all ages. Dedicated to healthy teeth and beautiful smiles with over 30 years in practice.',
-  },
 ]
 
 const doctorData2 = [

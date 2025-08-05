@@ -154,6 +154,10 @@ const props = defineProps({
   width: 100%;
 }
 
+.cov-name {
+  width: 100% !important  ;
+}
+
 @media (min-width: 768px) {
   .card-content {
     background-image: url('https://static.bangkokhospital.com/uploads/2024/05/doctor-profile-bg-1.png');
@@ -202,28 +206,32 @@ const props = defineProps({
   .text-description {
   width: 75%;
 }
+
+ .doctor-image-container-2 {
+      height: 440px;
+    width: auto;
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  z-index: 10;
+  }
 }
 @media (min-width: 992px) {
+
   .doctor-image-container-2 {
       height: 375px;
     width: auto;
   position: absolute;
   bottom: 0;
   right: 60px;
-  /* transform: translateX(-50%); */
   z-index: 10;
- 
-  
   }
+
   .card-content {
     padding: 64px;
     margin-top: 50px;
   }
-
-  
 }
 
-.cov-name {
-  width: 100% !important  ;
-}
+
 </style>
