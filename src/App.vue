@@ -276,8 +276,8 @@ const doctorData = [
 const doctorData2 = [
   {
     id: 1,
-    firstName: 'suthorn',
-    lastName: 'bavonratanavech',
+    firstName: 'Suthorn',
+    lastName: 'Bavonratanavech',
     title: 'Dr. ',
     specialtyPrimary: 'Orthopedic Surgery',
     specialtySecondary: null,

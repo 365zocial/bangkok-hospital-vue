@@ -1,11 +1,7 @@
 <template>
   <div class="w-100 card-content rounded-4 rounded-md-5 shadow-blue">
-    <div class="doctor-image-container shadow-blue w-md-50 bg-white " v-if="false">
-      <img :src="data.imageUrl" :alt="data.firstName" class="doctor-image" />
-    </div>
-
     <div
-      class="mt-5 mt-md-0 d-flex flex-column align-items-center justify-content-center justify-content-md-start align-items-md-start text-center text-md-start w-md-75"
+      class="mt-2 mt-md-0 d-flex flex-column align-items-center justify-content-center justify-content-md-start align-items-md-start text-center text-md-start w-md-75"
     >
       <div
         class=" d-flex flex-column flex-lg-row align-items-center justify-content-center align-items-md-start justify-content-md-start cov-name"
@@ -39,7 +35,7 @@
       </div>
     </div>
 
-    <div class="d-none d-md-flex justify-content-end align-items-center">
+    <div class="d-flex justify-content-end align-items-center">
       <div class="doctor-image-container-2">
         <img :src="data.imageUrl" :alt="data.firstName" class="doctor-image" />
       </div>
@@ -76,6 +72,7 @@ const props = defineProps({
   background-position: 50% 50%;
   min-height: 300px;
   display: flex;
+  flex-direction: column ;
   align-items: center;
   justify-content: center;
   padding: 20px;
@@ -108,11 +105,14 @@ const props = defineProps({
   border: 5px solid #ffffff;
 }
 
-.doctor-image-container-2 {
-    height: 400px;
+ .doctor-image-container-2 {
+  height: 300px;
   width: auto;
+  position: relative;
+  bottom: -20px;
+  z-index: 10;
+  }
 
-}
 
 .doctor-image {
   width: 100%;
