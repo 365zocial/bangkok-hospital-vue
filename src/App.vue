@@ -8,12 +8,17 @@
     </div>
 
     <div style="margin: 10px 0 10px 0"></div>
-    <div class="" v-for="item in doctorData2" :key="item.id">
+    <div  v-for="item in doctorData2" :key="item.id">
       <ProfileDoctor2 :data="item" />
     </div>
 
+      <div style="margin: 30px 0 10px 0"></div>
+    <div >
+      <AboutDoctor />
+    </div>
+
     <div style="margin: 10px 0 10px 0"></div>
-    <div class="" v-for="item in doctorData" :key="item.id">
+    <div  v-for="item in doctorData" :key="item.id">
       <ProfileDoctor :data="item" />
     </div>
 
@@ -77,6 +82,7 @@ import HealthInfo from './components/card/healthInfo.vue'
 import AnimationBtn from './components/button/animationBtn.vue'
 import ProfileDoctor from './components/profile/doctor.vue'
 import ProfileDoctor2 from './components/profile/doctor-2.vue'
+import AboutDoctor from './components/profile/about.vue'
 const specialties = [
   {
     name: 'Heart',
