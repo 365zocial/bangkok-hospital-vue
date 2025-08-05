@@ -1,11 +1,7 @@
 <template>
   <div class="w-100 card-content rounded-4 rounded-md-5 shadow-blue">
-    <div class="doctor-image-container shadow-blue w-md-50 bg-white">
-      <img :src="data.imageUrl" alt="Dr. Manoch Techachokwiwat" class="doctor-image" />
-    </div>
-
     <div
-      class="mt-5 mt-md-0 d-flex flex-column align-items-center justify-content-center justify-content-md-start align-items-md-start text-center text-md-start w-md-75"
+      class="mt-2 mt-md-0 d-flex flex-column align-items-center justify-content-center justify-content-md-start align-items-md-start text-center text-md-start w-md-75"
     >
       <div
         class=" d-flex flex-column flex-lg-row align-items-center justify-content-center align-items-md-start justify-content-md-start cov-name"
@@ -24,25 +20,24 @@
 
       <Badge v-if="data.specialtySecondary" fontSize="14px">{{ data.specialtySecondary }}</Badge>
 
-      <div class="w-100 d-none d-md-flex mt-5">
+      <div class="w-100 d-none d-md-flex d-lg-none mt-5">
         <div class="w-100 row gap-x-5">
           <div class="col-6">
-            <AnimationBtn color="blue" width="200px" class="d-none d-md-block">
-              <i class="bi bi-calendar2-week-fill me-2"></i> Book
+    
+              <AnimationBtn color="blue" width="200px" class="d-none d-md-block ">
+              <i class="bi bi-telephone-fill me-2"></i> Call Us
             </AnimationBtn>
           </div>
           <div class="col-6">
-            <AnimationBtn color="blue" width="200px" class="d-none d-md-block d-lg-none">
-              <i class="bi bi-telephone-fill me-2"></i> Call Us
-            </AnimationBtn>
+         
           </div>
         </div>
       </div>
     </div>
 
-    <div class="d-none d-md-flex justify-content-end align-items-center">
-      <div class="doctor-image-container-2 shadow-blue bg-white">
-        <img :src="data.imageUrl" alt="Dr. Manoch Techachokwiwat" class="doctor-image" />
+    <div class="d-flex justify-content-end align-items-center">
+      <div class="doctor-image-container-2">
+        <img :src="data.imageUrl" :alt="data.firstName" class="doctor-image" />
       </div>
     </div>
   </div>
@@ -72,11 +67,12 @@ const props = defineProps({
 
 <style scoped>
 .card-content {
-  background-image: url('https://static.bangkokhospital.com/uploads/2024/09/doctor-profile-bg-mobile-2.png');
+  background-image: url('https://static.bangkokhospital.com/uploads/2024/05/doctor-profile-bg-mobile.png');
   background-size: cover;
   background-position: 50% 50%;
   min-height: 300px;
   display: flex;
+  flex-direction: column ;
   align-items: center;
   justify-content: center;
   padding: 20px;
@@ -109,17 +105,18 @@ const props = defineProps({
   border: 5px solid #ffffff;
 }
 
-.doctor-image-container-2 {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  border: 5px solid white !important;
-}
+ .doctor-image-container-2 {
+  height: 300px;
+  width: auto;
+  position: relative;
+  bottom: -20px;
+  z-index: 10;
+  }
+
 
 .doctor-image {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
   object-position: top;
   object-fit: cover;
 }
@@ -157,9 +154,13 @@ const props = defineProps({
   width: 100%;
 }
 
+.cov-name {
+  width: 100% !important  ;
+}
+
 @media (min-width: 768px) {
   .card-content {
-    background-image: url('https://static.bangkokhospital.com/uploads/2023/05/doctor-profile-bg-2.png');
+    background-image: url('https://static.bangkokhospital.com/uploads/2024/05/doctor-profile-bg-1.png');
     height: auto;
     flex-direction: row !important;
     align-items: center;
@@ -205,21 +206,32 @@ const props = defineProps({
   .text-description {
   width: 75%;
 }
+
+ .doctor-image-container-2 {
+      height: 440px;
+    width: auto;
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  z-index: 10;
+  }
 }
 @media (min-width: 992px) {
+
   .doctor-image-container-2 {
-    width: 280px;
-    height: 280px;
+      height: 375px;
+    width: auto;
+  position: absolute;
+  bottom: 0;
+  right: 60px;
+  z-index: 10;
   }
+
   .card-content {
     padding: 64px;
     margin-top: 50px;
   }
-
-  
 }
 
-.cov-name {
-  width: 100% !important  ;
-}
+
 </style>
