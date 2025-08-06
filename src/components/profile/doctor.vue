@@ -1,5 +1,5 @@
 <template>
-  <div class="w-100 card-content rounded-4 rounded-md-5 shadow-blue">
+  <div class="w-100 card-content setting-rounded shadow-blue">
     <div class="doctor-image-container shadow-blue w-md-50 bg-white">
       <img :src="data.imageUrl" alt="Dr. Manoch Techachokwiwat" class="doctor-image" />
     </div>
@@ -85,6 +85,10 @@ const props = defineProps({
   margin-top: 100px;
 }
 
+.setting-rounded {
+  border-radius: 16px;
+}
+
 .doctor-card {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
@@ -168,6 +172,10 @@ const props = defineProps({
     justify-items: center;
     padding: 48px;
   }
+
+    .setting-rounded {
+  border-radius: 24px;
+}
 
   .doctor-card {
     max-width: 350px;

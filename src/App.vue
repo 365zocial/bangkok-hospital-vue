@@ -13,7 +13,7 @@
     </div>
 
       <div style="margin: 30px 0 10px 0"></div>
-    <div >
+    <div>
       <AboutDoctor />
     </div>
 

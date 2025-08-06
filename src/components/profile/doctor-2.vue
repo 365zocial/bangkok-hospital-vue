@@ -1,5 +1,5 @@
 <template>
-  <div class="w-100 card-content rounded-4 rounded-md-5 shadow-blue">
+  <div class="w-100 card-content setting-rounded shadow-blue">
     <div
       class="mt-2 mt-md-0 d-flex flex-column align-items-center justify-content-center justify-content-md-start align-items-md-start text-center text-md-start w-md-75"
     >
@@ -81,6 +81,10 @@ const props = defineProps({
   margin-top: 100px;
 }
 
+.setting-rounded {
+  border-radius: 16px;
+}
+
 .doctor-card {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
@@ -160,6 +164,10 @@ const props = defineProps({
 }
 
 @media (min-width: 768px) {
+  .setting-rounded {
+  border-radius: 24px;
+}
+
   .card-content {
     background-image: url('https://static.bangkokhospital.com/uploads/2024/05/doctor-profile-bg-1.png');
     height: auto;
