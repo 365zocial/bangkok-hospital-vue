@@ -3,7 +3,7 @@
     <div class="row g-0"> 
       <div 
         :class="getItemClasses(index)"
-        v-for="(item, index) in aboutData" 
+        v-for="(item, index) in props.data" 
         :key="item.id"
       >
         <div class="h-100 w-100 padding-item" >
@@ -23,6 +23,14 @@
 </template>
 
 <script setup>
+
+const props = defineProps({
+  data : {
+    type: Array,
+    default: () => []
+  }
+})
+
 function getItemClasses(index) {
   return [
     ...getColumnClasses().split(' '),
@@ -31,7 +39,7 @@ function getItemClasses(index) {
 }
 
 function getColumnClasses() {
-  const length = aboutData.length;
+  const length = props.data.length;
   let classes = ['col-12']; 
 
   if (length === 2) {
@@ -49,7 +57,7 @@ function getColumnClasses() {
 
 function getBorderClasses(index) {
    const classes = [];
-  const length = aboutData.length;
+  const length = props.data.length;
 
   if (index < length - 1) {
     classes.push('border-bottom');
@@ -73,28 +81,6 @@ function getIconSrc(title) {
 }
 
 
-const aboutData = [
-  {
-    id: 1,
-    title: 'Centers & Clinics',
-    description: 'Kidney Center , Hemodialysis Center'
-  },
-  {
-    id: 2,
-    title: 'Specialty',
-    description: 'Internal Medicine'
-  },
-  {
-    id: 3,
-    title: 'Sub Specialty',
-    description: 'Nephrology'
-  },
-  {
-    id: 4,
-    title: 'Languages',
-    description: 'English, Thai'
-  }
-]
 </script>
 
 <style scoped>

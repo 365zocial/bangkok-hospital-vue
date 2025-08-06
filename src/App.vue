@@ -14,12 +14,17 @@
 
       <div style="margin: 30px 0 10px 0"></div>
     <div>
-      <AboutDoctor />
+      <AboutDoctor :data="aboutData1" />
     </div>
 
     <div style="margin: 10px 0 10px 0"></div>
     <div  v-for="item in doctorData" :key="item.id">
       <ProfileDoctor :data="item" />
+    </div>
+
+       <div style="margin: 30px 0 10px 0"></div>
+    <div>
+      <AboutDoctor :data="aboutData2"/>
     </div>
 
     <div style="margin: 50px 0 20px 0">Path : src/components/card/healthInfo.vue</div>
@@ -291,5 +296,44 @@ const doctorData2 = [
     isBookingAvailable: true,
     description: '',
   },
+]
+
+const aboutData1 = [
+  {
+    id: 1,
+    title: 'Centers & Clinics',
+    description: 'Kidney Center , Hemodialysis Center'
+  },
+  {
+    id: 2,
+    title: 'Specialty',
+    description: 'Internal Medicine'
+  },
+  {
+    id: 3,
+    title: 'Sub Specialty',
+    description: 'Nephrology'
+  },
+  {
+    id: 4,
+    title: 'Languages',
+    description: 'English, Thai'
+  }
+]
+
+const aboutData2 = [
+  {
+    id: 1,
+    title: 'Centers & Clinics',
+    description: 'Kidney Center , Hemodialysis Center'
+  },
+  {
+    id: 2,
+    title: 'Specialty',
+    description: 'Internal Medicine'
+  },  
+
+
+
 ]
 </script>
