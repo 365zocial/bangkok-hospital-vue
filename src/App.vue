@@ -7,6 +7,11 @@
       <div class="col-sm-4 col-lg-6 bg-danger text-white p-3">Column 4</div>
     </div>
 
+     <div style="margin: 30px 0 10px 0"></div>
+    <div>
+      <Education :data="aboutData1" />
+    </div>
+
     <div style="margin: 10px 0 10px 0"></div>
     <div  v-for="item in doctorData2" :key="item.id">
       <ProfileDoctor2 :data="item" />
@@ -88,6 +93,7 @@ import AnimationBtn from './components/button/animationBtn.vue'
 import ProfileDoctor from './components/profile/doctor.vue'
 import ProfileDoctor2 from './components/profile/doctor-2.vue'
 import AboutDoctor from './components/profile/about.vue'
+import Education from './components/profile/education.vue'
 const specialties = [
   {
     name: 'Heart',
