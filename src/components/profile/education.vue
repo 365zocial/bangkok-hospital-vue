@@ -1,34 +1,51 @@
 <template>
-  <div class="education-container">
-    <!-- Education Card -->
-    <div class="education-card">
-      <!-- Header with Title -->
-      <div class="education-header">
-        <h3 class="education-title">Education</h3>
+  <div class="container">
+    <!-- กล่องที่ใช้ clip-path -->
+    <div class="clip-box" v-if="false">
+      <div class="content">
+        <h2>Education</h2>
+        <p>This is a box with custom clip-path shape</p>
+        <p>The polygon creates an irregular shape with curved edges</p>
+      </div>
+    </div>
+
+    <!-- ตัวอย่างหลายกล่อง -->
+
+    <div class="row mt-4">
+
+      <div class="col-md-6">
+        <div class="custom-box-2">2</div>
+        <div class="custom-box-1 bg-secondary p-4 mb-4">
+          <div class="content">
+            <h3>Box 1</h3>
+            <p>Custom shaped box with gradient background</p>
+          </div>
+        </div>
       </div>
 
-      <!-- Education Items -->
-      <div class="education-content">
-        <div class="education-item"
-          :class="{ 'border-bottom': index < educationData.length - 1 }"
-          v-for="(item, index) in educationData" 
-          :key="item.id"
-        >
-          <div class="row align-items-start g-0">
-            <!-- Year Column -->
-            <div class="col-2 col-md-1">
-              <div class="education-year">{{ item.year }}</div>
-            </div>
-            
-            <!-- Degree Column -->
-            <div class="col-6 col-md-7">
-              <div class="education-degree">{{ item.degree }}</div>
-            </div>
-            
-            <!-- University Column -->
-            <div class="col-4 col-md-4">
-              <div class="education-university">{{ item.university }}</div>
-            </div>
+      <div class="col-md-6">
+        <div class="clip-box clip-box-blue">
+          <div class="content">
+            <h3>Box 1</h3>
+            <p>Custom shaped box with gradient background</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="clip-box clip-box-blue">
+          <div class="content">
+            <h3>Box 1</h3>
+            <p>Custom shaped box with gradient background</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="clip-box clip-box-purple">
+          <div class="content">
+            <h3>Box 2</h3>
+            <p>Another custom shaped box</p>
           </div>
         </div>
       </div>
@@ -37,198 +54,168 @@
 </template>
 
 <script setup>
-const props = defineProps({
-  data: {
-    type: Array,
-    default: () => []
-  }
-})
-
-// Sample data - replace with props.data
-const educationData = props.data.length ? props.data : [
-  {
-    id: 1,
-    year: '1999',
-    degree: 'Master of Management by Sasin Graduate Institute of Business Administration',
-    university: 'Chulalongkorn University, Thailand'
-  },
-  {
-    id: 2,
-    year: '1989',
-    degree: 'Doctor of Dental Surgery',
-    university: 'Chulalongkorn University, Thailand'
-  }
-]
+// No script needed for this example
 </script>
 
 <style scoped>
-.education-container {
-  width: 100%;
-  margin-bottom: 2rem;
+
+.custom-box-1{
+  border-radius: 32px 0px 32px 32px;
 }
 
-.education-card {
+.custom-box-2{
+  border-radius: 0px 32px 0px 0px;
+  background-color: #7e98f5;
+  height: 40px ;
+}
+.container {
+  padding: 2rem;
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.clip-box {
   background: linear-gradient(135deg, #4c63b6 0%, #7b6db8 30%, #a67db8 70%, #d4a5c4 100%);
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(76, 99, 182, 0.25);
+  clip-path: polygon(35% 56%, 55% 40%, 100% 40%, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 56%);
+  border-radius: 16px; /* เพิ่ม border-radius */
+  padding: 3rem 2rem 2rem 2rem;
+  margin-bottom: 2rem;
+  min-height: 200px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(76, 99, 182, 0.3);
+  transition: all 0.3s ease;
 }
 
-.education-header {
-  padding: 2rem 2rem 1.5rem 2rem;
+.clip-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(76, 99, 182, 0.4);
 }
 
-.education-title {
+.content {
   color: white;
-  font-size: 1.75rem;
-  font-weight: 600;
-  margin: 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
-.education-content {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  margin: 0 1.5rem 1.5rem 1.5rem;
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.education-item {
-  padding: 2rem 2.5rem;
-  transition: background-color 0.3s ease;
-}
-
-.education-item:hover {
-  background: rgba(76, 99, 182, 0.03);
-}
-
-.border-bottom {
-  border-bottom: 1px solid rgba(76, 99, 182, 0.15);
-}
-
-.education-year {
-  font-size: 1.5rem;
+.content h2 {
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #2d3748;
-  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.education-degree {
-  font-size: 1.1rem;
+.content h3 {
+  font-size: 1.8rem;
   font-weight: 600;
-  color: #2d3748;
-  line-height: 1.4;
-  padding-right: 1rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.education-university {
-  font-size: 1rem;
-  color: #718096;
-  font-weight: 400;
-  line-height: 1.4;
-  text-align: right;
+.content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
 }
 
-/* Mobile Responsive */
-@media (max-width: 767px) {
-  .education-card {
-    border-radius: 20px;
-  }
-  
-  .education-header {
-    padding: 1.5rem 1.5rem 1rem 1.5rem;
-  }
-  
-  .education-title {
-    font-size: 1.5rem;
-  }
-  
-  .education-content {
-    margin: 0 1rem 1rem 1rem;
-    border-radius: 12px;
-  }
-  
-  .education-item {
-    padding: 1.5rem 1.5rem;
-  }
-  
-  .education-year {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .education-degree {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .education-university {
-    font-size: 0.9rem;
-    text-align: left;
-  }
+/* Variant colors */
+.clip-box-blue {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+  border-radius: 16px; /* เพิ่ม border-radius */
 }
 
-/* Tablet */
-@media (min-width: 768px) and (max-width: 991px) {
-  .education-degree {
-    font-size: 1.05rem;
-  }
-  
-  .education-university {
-    font-size: 0.95rem;
-  }
+.clip-box-purple {
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #c084fc 100%);
+  border-radius: 16px; /* เพิ่ม border-radius */
 }
 
-/* Large Screen */
-@media (min-width: 992px) {
-  .education-card {
-    border-radius: 28px;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .clip-box {
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    min-height: 150px;
+    border-radius: 12px; /* ลด border-radius สำหรับ mobile */
   }
-  
-  .education-header {
-    padding: 2.5rem 3rem 2rem 3rem;
-  }
-  
-  .education-title {
+
+  .content h2 {
     font-size: 2rem;
   }
-  
-  .education-content {
-    margin: 0 2rem 2rem 2rem;
-    border-radius: 20px;
+
+  .content h3 {
+    font-size: 1.5rem;
   }
-  
-  .education-item {
-    padding: 2.5rem 3rem;
+
+  .content p {
+    font-size: 1rem;
   }
-  
-  .education-year {
+}
+
+@media (max-width: 480px) {
+  .clip-box {
+    padding: 1.5rem 1rem 1rem 1rem;
+    min-height: 120px;
+    border-radius: 10px; /* ลด border-radius สำหรับ mobile เล็ก */
+  }
+
+  .content h2 {
     font-size: 1.75rem;
   }
-  
-  .education-degree {
-    font-size: 1.2rem;
+
+  .content h3 {
+    font-size: 1.3rem;
   }
-  
-  .education-university {
-    font-size: 1.1rem;
+
+  .content p {
+    font-size: 0.9rem;
   }
 }
 
-/* Animation */
-.education-container {
-  animation: slideInUp 0.6s ease-out;
+/* Alternative: เพิ่ม border หรือ outline */
+.clip-box-outlined {
+  background: white;
+  color: #4c63b6;
+  border: 3px solid;
+  border-image: linear-gradient(135deg, #4c63b6 0%, #7b6db8 30%, #a67db8 70%, #d4a5c4 100%) 1;
+  border-radius: 16px; /* เพิ่ม border-radius */
 }
 
-@keyframes slideInUp {
+.clip-box-outlined .content {
+  color: #4c63b6;
+}
+
+/* Animation example */
+@keyframes clipBoxFadeIn {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(50px) scale(0.9);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
+}
+
+.clip-box {
+  animation: clipBoxFadeIn 0.8s ease-out;
+}
+
+/* เพิ่ม pseudo-element สำหรับ pattern หรือ texture */
+.clip-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size:
+    50px 50px,
+    30px 30px;
+  clip-path: inherit;
+  border-radius: inherit; /* ให้ pseudo-element ใช้ border-radius เดียวกัน */
+  pointer-events: none;
 }
 </style>
