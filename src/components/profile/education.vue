@@ -12,13 +12,22 @@
     <!-- ตัวอย่างหลายกล่อง -->
 
     <div class="row mt-4">
-
       <div class="col-md-6">
-        <div class="custom-box-2">2</div>
-        <div class="custom-box-1 bg-secondary p-4 mb-4">
-          <div class="content">
-            <h3>Box 1</h3>
-            <p>Custom shaped box with gradient background</p>
+<div class="test-123">blue</div>
+
+        <div class="rounded-tab ">5</div>
+        <div class="w-100 d-flex flex-column align-items-end">
+          
+          <div class="d-flex flex-row w-100 cov-box-23">
+            <div class="custom-box-3 w-25">3</div>
+            <div class="custom-box-2 w-75">2</div>
+          </div>
+          
+          <div class="custom-box-1 bg-secondary p-4 mb-4 w-100">
+            <div class="content">
+              <h3>Box 1</h3>
+              <p>Custom shaped box with gradient background</p>
+            </div>
           </div>
         </div>
       </div>
@@ -58,16 +67,69 @@
 </script>
 
 <style scoped>
-
-.custom-box-1{
-  border-radius: 32px 0px 32px 32px;
+.test-123 {
+  /* รูปร่างเอียงตามดีไซน์ในภาพ */
+  background: #4ECDC4; /* สีฟ้าอมเขียวตามภาพ */
+  clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+  border-radius: 0 100px 100%  0;
+  padding: 2rem 1.5rem;
+  margin-bottom: 1rem;
+  min-height: 120px;
+  width: 100%;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.custom-box-2{
-  border-radius: 0px 32px 0px 0px;
+.rounded-tab {
+  --r: 24px;
+  height: 70px;
+  padding-inline: 0em;
+  border-left: var(--r) solid #0000;
+  border-radius: calc(2*var(--r)) var(--r) 0 0/var(--r) var(--r) 0 0;
+  mask: 
+    radial-gradient(var(--r) at 0 0,#0000 98%,#000 101%) 
+     0 100%/var(--r) var(--r) no-repeat, 
+    conic-gradient(#000 0 0) padding-box;
+  background: #bd5532 border-box;
+  width: 100%;
+  margin: 50px 0;
+}
+
+.custom-box-1 {
+  border-radius: 24px 0px 24px 24px;
+}
+
+.custom-box-2 {
+  border-radius: 0px 24px 0px 0px;
   background-color: #7e98f5;
-  height: 40px ;
+  height: 50px;
+  clip-path: polygon(12% 0%, 100% 0%, 100% 100%, 0% 100%);
+  position: sticky;
+  right: 0px;
 }
+
+.custom-box-3 {
+  border-radius: 16px;
+  background-color: #f5b7b1;
+  height: 50px;
+  position: sticky;
+  left: 50px;
+  z-index: 10;
+}
+
+.cov-box-23 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #b1f5da;
+  border-radius: 24px;
+}
+
 .container {
   padding: 2rem;
   min-height: 100vh;
@@ -77,39 +139,27 @@
 .clip-box {
   background: linear-gradient(135deg, #4c63b6 0%, #7b6db8 30%, #a67db8 70%, #d4a5c4 100%);
   clip-path: polygon(35% 56%, 55% 40%, 100% 40%, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 56%);
-  border-radius: 16px; /* เพิ่ม border-radius */
+  border-radius: 16px;
   padding: 3rem 2rem 2rem 2rem;
   margin-bottom: 2rem;
   min-height: 200px;
-  position: relative;
-  box-shadow: 0 10px 30px rgba(76, 99, 182, 0.3);
-  transition: all 0.3s ease;
-}
-
-.clip-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(76, 99, 182, 0.4);
 }
 
 .content {
   color: white;
   text-align: center;
-  position: relative;
-  z-index: 2;
 }
 
 .content h2 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .content h3 {
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .content p {
@@ -119,23 +169,21 @@
   margin-bottom: 0.5rem;
 }
 
-/* Variant colors */
 .clip-box-blue {
   background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
-  border-radius: 16px; /* เพิ่ม border-radius */
+  border-radius: 16px;
 }
 
 .clip-box-purple {
   background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #c084fc 100%);
-  border-radius: 16px; /* เพิ่ม border-radius */
+  border-radius: 16px;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .clip-box {
     padding: 2rem 1.5rem 1.5rem 1.5rem;
     min-height: 150px;
-    border-radius: 12px; /* ลด border-radius สำหรับ mobile */
+    border-radius: 12px;
   }
 
   .content h2 {
@@ -155,7 +203,7 @@
   .clip-box {
     padding: 1.5rem 1rem 1rem 1rem;
     min-height: 120px;
-    border-radius: 10px; /* ลด border-radius สำหรับ mobile เล็ก */
+    border-radius: 10px;
   }
 
   .content h2 {
@@ -169,53 +217,5 @@
   .content p {
     font-size: 0.9rem;
   }
-}
-
-/* Alternative: เพิ่ม border หรือ outline */
-.clip-box-outlined {
-  background: white;
-  color: #4c63b6;
-  border: 3px solid;
-  border-image: linear-gradient(135deg, #4c63b6 0%, #7b6db8 30%, #a67db8 70%, #d4a5c4 100%) 1;
-  border-radius: 16px; /* เพิ่ม border-radius */
-}
-
-.clip-box-outlined .content {
-  color: #4c63b6;
-}
-
-/* Animation example */
-@keyframes clipBoxFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(50px) scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-.clip-box {
-  animation: clipBoxFadeIn 0.8s ease-out;
-}
-
-/* เพิ่ม pseudo-element สำหรับ pattern หรือ texture */
-.clip-box::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
-    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size:
-    50px 50px,
-    30px 30px;
-  clip-path: inherit;
-  border-radius: inherit; /* ให้ pseudo-element ใช้ border-radius เดียวกัน */
-  pointer-events: none;
 }
 </style>
