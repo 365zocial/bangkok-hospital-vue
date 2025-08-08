@@ -25,6 +25,7 @@
 
           <div class="new-cov">
             <div class="folded-rectangle">test</div>
+            <div class="new-triangle">2</div>
             <div class="custom-box-1 bg-secondary p-4 w-100">
               <div class="content">
                 <h3>Box 1</h3>
@@ -110,7 +111,7 @@
 }
 
 .custom-box-1 {
-  border-radius: 24px 0px 24px 24px;
+  border-radius: 24px 24px 24px 24px;
 }
 
 .custom-box-2 {
@@ -152,7 +153,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: #000000;
+  background-color: #ffffff00;
 }
 
 .custom-box-5 {
@@ -167,21 +168,46 @@
 }
 
 .folded-rectangle {
-    position: absolute;
+  position: absolute;
   top: 0;
   z-index: 10;
   --r: 24px; /* radius */
   width: 150px;
   height: 80px;
   aspect-ratio: 1.5;
-  background: #519548;
+  background: white;
   border-top-left-radius: var(--r);
+  border-bottom-right-radius: var(--r) !important;
   mask:
     radial-gradient(var(--r) at 100% 100%,#0000 100%,#000 calc(100% + 1px))
     0 100%/var(--r) var(--r) no-repeat,
     linear-gradient(0,#0000 var(--r),#000 0);
+  /* clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%); */
 }
+
+.new-triangle {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  left: 130px;
+  --r:15px; /* border radius */
+  height: 77px;
+  width: auto;
+  aspect-ratio: 1;
+  border-top-left-radius: var(--r);
+  clip-path: polygon(0 100%,100% 0,0 0);
+  --_g:calc(50%*(1 + 1/tan(22.5deg)) - var(--r)/(3*sqrt(2) - 4));
+  --_r:calc(var(--r)/tan(22.5deg)),#000 98%,#0000 101%;
+  -webkit-mask:
+    radial-gradient(var(--r) at top  var(--r) right  var(--_r)),
+    radial-gradient(var(--r) at left var(--r) bottom var(--_r)),
+    conic-gradient(from -67.5deg at var(--_g) var(--_g),#000 90deg,#0000 0);
+  background: rgb(178, 47, 47);
+
+} 
+
 /* ------------------------------------------------ */
+
 .container {
   padding: 2rem;
   min-height: 100vh;
