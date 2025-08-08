@@ -15,6 +15,7 @@
       <div class="col-md-6">
         <div class="test-123">blue</div>
 
+        <div class="box-77">77</div>
         <div class="rounded-tab">5</div>
         <div class="w-100 d-flex flex-column align-items-end">
           <div class="d-flex flex-row w-100 cov-box-23" v-if="false">
@@ -80,7 +81,8 @@
 <style scoped>
 .test-123 {
   /* รูปร่างเอียงตามดีไซน์ในภาพ */
-  background: #4ecdc4; /* สีฟ้าอมเขียวตามภาพ */
+  background: #4ecdc4;
+  /* สีฟ้าอมเขียวตามภาพ */
   clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
   border-radius: 0 100px 100% 0;
   padding: 2rem 1.5rem;
@@ -164,14 +166,15 @@
   position: absolute;
   top: 0;
   z-index: 10;
-   clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+  clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
 }
 
 .folded-rectangle {
   position: absolute;
   top: 0;
   z-index: 10;
-  --r: 24px; /* radius */
+  --r: 24px;
+  /* radius */
   width: 150px;
   height: 80px;
   aspect-ratio: 1.5;
@@ -179,33 +182,73 @@
   border-top-left-radius: var(--r);
   border-bottom-right-radius: var(--r) !important;
   mask:
-    radial-gradient(var(--r) at 100% 100%,#0000 100%,#000 calc(100% + 1px))
-    0 100%/var(--r) var(--r) no-repeat,
-    linear-gradient(0,#0000 var(--r),#000 0);
+    radial-gradient(var(--r) at 100% 100%, #0000 100%, #000 calc(100% + 1px)) 0 100%/var(--r) var(--r) no-repeat,
+    linear-gradient(0, #0000 var(--r), #000 0);
   /* clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%); */
 }
 
-.new-triangle {
+.new-triangle-1 {
   position: absolute;
   top: 0;
   z-index: 10;
   left: 130px;
-  --r:15px; /* border radius */
+  --r: 15px;
+  /* border radius */
   height: 77px;
   width: auto;
   aspect-ratio: 1;
   border-top-left-radius: var(--r);
-  clip-path: polygon(0 100%,100% 0,0 0);
-  --_g:calc(50%*(1 + 1/tan(22.5deg)) - var(--r)/(3*sqrt(2) - 4));
-  --_r:calc(var(--r)/tan(22.5deg)),#000 98%,#0000 101%;
+  clip-path: polygon(0 100%, 100% 0, 0 0);
+  --_g: calc(50%*(1 + 1/tan(22.5deg)) - var(--r)/(3*sqrt(2) - 4));
+  --_r: calc(var(--r)/tan(22.5deg)), #000 98%, #0000 101%;
   -webkit-mask:
-    radial-gradient(var(--r) at top  var(--r) right  var(--_r)),
+    radial-gradient(var(--r) at top var(--r) right var(--_r)),
     radial-gradient(var(--r) at left var(--r) bottom var(--_r)),
-    conic-gradient(from -67.5deg at var(--_g) var(--_g),#000 90deg,#0000 0);
+    conic-gradient(from -67.5deg at var(--_g) var(--_g), #000 90deg, #0000 0);
   background: rgb(178, 47, 47);
 
-} 
+}
 
+/* HTML: <div class="triangle"></div> */
+.new-triangle {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  left: 109px;
+  --r: 14px;
+  /* border radius */
+  height: 70px;
+  width: auto;
+  /* width: 180px; */
+  aspect-ratio: 1/cos(30deg);
+  --_g: calc(tan(60deg)*var(--r)) top var(--r), #000 101%, #0000 101%;
+  /* -webkit-mask:
+    conic-gradient(from 150deg at 50% calc(3*var(--r)/2 - 100%), #000 60deg, #0000 0) 0 0/100% calc(100% - 3*var(--r)/2) no-repeat,
+    radial-gradient(var(--r) at 50% calc(100% - 2*var(--r)), #000 100%, #0000 101%),
+    radial-gradient(var(--r) at left var(--_g)),
+    radial-gradient(var(--r) at right var(--_g));
+  clip-path: polygon(50% 100%, 100% 0, 0 0); */
+    -webkit-mask:
+    linear-gradient(0deg,#0000 calc(3*var(--r)/2),#000 0),
+    radial-gradient(var(--r) at 50% calc(100% - 2*var(--r)),#000 98%,#0000 101%);
+  clip-path: polygon(50% 100%,100% 0,0 0);
+background: rgb(16, 194, 114);
+rotate: 0deg;
+}
+
+
+/* HTML: <div class="triangle"></div> */
+.triangle-45 {
+  --r:30px; /* border radius */
+
+  width: 180px;
+  aspect-ratio: 1/cos(30deg);
+  -webkit-mask:
+    linear-gradient(0deg,#0000 calc(3*var(--r)/2),#000 0),
+    radial-gradient(var(--r) at 50% calc(100% - 2*var(--r)),#000 98%,#0000 101%);
+  clip-path: polygon(50% 100%,100% 0,0 0);
+  background: linear-gradient(45deg,#FA6900,#C02942);
+}
 /* ------------------------------------------------ */
 
 .container {
@@ -262,7 +305,8 @@
   height: 0px;
   border-left: 30px solid transparent;
   border-right: 2px solid transparent;
-  border-bottom: 40px solid #7e98f5; /* สามเหลี่ยมชี้ขึ้น */
+  border-bottom: 40px solid #7e98f5;
+  /* สามเหลี่ยมชี้ขึ้น */
   position: absolute;
   left: 120px;
   bottom: 0;
@@ -270,7 +314,16 @@
 }
 
 
-
+.box-77 {
+mask: radial-gradient(41px at 100% 100%,#0000 98%,#000);
+  background: #7e98f5;
+  width: 50px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
 @media (max-width: 768px) {
   .clip-box {
     padding: 2rem 1.5rem 1.5rem 1.5rem;
