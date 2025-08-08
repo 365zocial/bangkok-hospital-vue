@@ -27,6 +27,7 @@
           <div class="new-cov">
             <div class="folded-rectangle">test</div>
             <div class="new-triangle">2</div>
+            <div class="box-77">77</div>
             <div class="custom-box-1 bg-secondary p-4 w-100">
               <div class="content">
                 <h3>Box 1</h3>
@@ -178,7 +179,7 @@
   width: 150px;
   height: 80px;
   aspect-ratio: 1.5;
-  background: white;
+  background: rgb(200, 66, 66);
   border-top-left-radius: var(--r);
   border-bottom-right-radius: var(--r) !important;
   mask:
@@ -315,13 +316,13 @@ rotate: 0deg;
 
 
 .box-77 {
-mask: radial-gradient(41px at 100% 100%,#0000 98%,#000);
+mask: radial-gradient(41px at 100% 100%,#0000 100%,#000);
   background: #7e98f5;
-  width: 50px;
+  width: 40px;
   height: 40px;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 172px;
   z-index: 10;
 }
 @media (max-width: 768px) {
