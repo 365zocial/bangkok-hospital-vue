@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="">
     <!-- กล่องที่ใช้ clip-path -->
     <div class="clip-box" v-if="false">
       <div class="content">
@@ -12,11 +12,11 @@
     <!-- ตัวอย่างหลายกล่อง -->
 
     <div class="row mt-4">
-      <div class="col-md-6">
-        <div class="test-123">blue</div>
+      <div class="col-md-12">
+        <!-- <div class="test-123">blue</div>
 
         <div class="box-77">77</div>
-        <div class="rounded-tab">5</div>
+        <div class="rounded-tab">5</div> -->
         <div class="w-100 d-flex flex-column align-items-end">
           <div class="d-flex flex-row w-100 cov-box-23" v-if="false">
             <div class="custom-box-3 w-25">3</div>
@@ -25,10 +25,10 @@
           </div>
 
           <div class="new-cov">
-            <div class="folded-rectangle">test</div>
-            <div class="new-triangle">2</div>
-            <div class="box-77">77</div>
-            <div class="custom-box-1 bg-secondary p-4 w-100">
+            <div class="folded-rectangle d-flex flex-row justify-content-center align-items-start border pt-">Education</div>
+            <div class="new-triangle"></div>
+            <div class="box-77"></div>
+            <div class="custom-box-1 p-4 w-100">
               <div class="content">
                 <h3>Box 1</h3>
                 <p>Custom shaped box with gradient background</p>
@@ -45,7 +45,7 @@
         </div>
       </div>
 
-      <div class="col-md-6">
+      <!-- <div class="col-md-6">
         <div class="clip-box clip-box-blue">
           <div class="content">
             <h3>Box 1</h3>
@@ -70,7 +70,7 @@
             <p>Another custom shaped box</p>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -115,6 +115,7 @@
 
 .custom-box-1 {
   border-radius: 24px 24px 24px 24px;
+  background: linear-gradient(34.83deg, rgba(0, 45, 115, .12) 17.64%, rgba(0, 45, 115, .02) 71.04%);
 }
 
 .custom-box-2 {
@@ -179,7 +180,7 @@
   width: 150px;
   height: 80px;
   aspect-ratio: 1.5;
-  background: rgb(200, 66, 66);
+  background: #ffffff;
   border-top-left-radius: var(--r);
   border-bottom-right-radius: var(--r) !important;
   mask:
@@ -206,7 +207,7 @@
     radial-gradient(var(--r) at top var(--r) right var(--_r)),
     radial-gradient(var(--r) at left var(--r) bottom var(--_r)),
     conic-gradient(from -67.5deg at var(--_g) var(--_g), #000 90deg, #0000 0);
-  background: rgb(178, 47, 47);
+  background: #a14848;
 
 }
 
@@ -233,7 +234,7 @@
     linear-gradient(0deg,#0000 calc(3*var(--r)/2),#000 0),
     radial-gradient(var(--r) at 50% calc(100% - 2*var(--r)),#000 98%,#0000 101%);
   clip-path: polygon(50% 100%,100% 0,0 0);
-background: rgb(16, 194, 114);
+background: #ffffff;
 rotate: 0deg;
 }
 
@@ -317,7 +318,7 @@ rotate: 0deg;
 
 .box-77 {
 mask: radial-gradient(41px at 100% 100%,#0000 100%,#000);
-  background: #7e98f5;
+  background: #ffffff;
   width: 40px;
   height: 40px;
   position: absolute;
