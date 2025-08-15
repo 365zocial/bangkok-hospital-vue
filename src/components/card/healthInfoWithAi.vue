@@ -4,7 +4,6 @@
       <img :src="data.image" :alt="data.title" class="rounded-top-3" />
       <div
         class="position-absolute badge rounded-pill fw-semibold px-3 py-2 card-text top-0 end-0 m-2"
-        style="background-color: #e7edff; color: #0047a3; top: 5px !important; right: 5px !important;"
       >
         Translated by AI
       </div>
@@ -68,6 +67,11 @@ const props = defineProps({
   font-size: 0.8rem;
   font-weight: 500;
   z-index: 10; /* ให้อยู่เหนือรูปภาพ */
+  background-color: #e7edff;
+  color: #0047a3;
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 
 /* Alternative approach using custom positioning */
