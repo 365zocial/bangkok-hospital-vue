@@ -360,28 +360,27 @@ const healthInfoWithAiList = [
   },
   {
     id: 2,
-    image: 'https://static.bangkokhospital.com/uploads/2024/11/IHL-Heart-cancer.jpg',
-    title: 'Heart cancer: A rare disease but possible',
+    image: 'https://static.bangkokhospital.com/uploads/2025/07/IHL-brca-gene-testing-breast-cancer-risk-84-11-640x336.jpg',
+    title: 'BRCA gene test to check breast cancer risk',
     description:
-      'Although heart cancer is a disease that is rarely found, it can occur in 1 per 100,000 people, especially if it is liver cancer, kidney cancer, or lung cancer, which can spread through the veins to the heart area. It is mostly found in men rather than women. ',
+      'BRCA gene mutations increase the risk of breast and ovarian cancer higher than the general population. BRCA gene testing helps assess risk, allows for preventive measures, and enables more precise treatment choices.',
     translateByAi: true,
   },
   {
     id: 3,
-    image:
-      'https://bhq-cms.sgp1.digitaloceanspaces.com/uploads/2024/10/%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94-BHT_shutterstock_1056559850.jpg',
-    title: 'Heart disease can be detected from the eyes.',
+    image:'https://static.bangkokhospital.com/uploads/2025/07/IHL-knee-swelling-elderly-knee-osteoarthritis-17-96-640x336.jpg',
+    title: 'Knee swelling in the elderly: A warning sign of osteoarthritis',
     description:
-      'The eyes are the windows to the heart. The eyes can tell us about our health, especially the heart. If you have a yellowish-white ring around your cornea, it may indicate high cholesterol levels in your blood.',
+      'Do not overlook knee swelling in the elderly as it may be a sign of osteoarthritis, a disease that affects mobility and quality of life. Early diagnosis, prompt treatment, along with VELYS™ robotic surgery technology, aids in effective recovery.',
     translateByAi: false,
   },
   {
     id: 4,
     image:
-      'https://static.bangkokhospital.com/uploads/2023/11/%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94_%E0%B8%AB%E0%B8%B1%E0%B8%A7%E0%B9%83%E0%B8%88%E0%B8%81%E0%B8%B3%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B8%9A.jpg',
-    title: 'Heart disease can be detected from the eyes.',
+      'https://static.bangkokhospital.com/uploads/2025/07/IHL-Allergic-Rhinitis-82-88-640x336.jpg',
+    title: 'Allergic Rhinitis: Answering All Questions for Allergy Sufferers',
     description:
-      'The eyes are the windows to the heart. The eyes can tell us about our health, especially the heart. If you have a yellowish-white ring around your cornea, it may indicate high cholesterol levels in your blood.',
+      'Allergic rhinitis is a condition where the body is sensitive to allergens such as dust mites, animal fur, or pollen, resulting in symptoms like nasal congestion, sneezing, itchy eyes, and continuous runny nose. If neglected, it can impact daily life and develop into other diseases.',
     translateByAi: false,
   },
 ]

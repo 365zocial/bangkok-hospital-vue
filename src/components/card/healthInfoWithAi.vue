@@ -1,5 +1,5 @@
 <template>
-  <div class="rounded-3 d-flex flex-column border card-content relative">
+  <div class="rounded-3 d-flex flex-column border card-content relative shadow-sm">
     <div
       class="absolute badge rounded-pill fw-semibold px-3 py-2 card-text top-0 start-0"
       style="background-color: #e7edff; color: #0047a3"
@@ -28,8 +28,8 @@ const props = defineProps({
 <style scoped>
 .card-content {
   height: 320px;
-  --tw-border-opacity: 1;
-  border-color: rgb(231 237 255 / var(--tw-border-opacity));
+  border: none;
+
 }
 .cov-img {
   height: 48%;
