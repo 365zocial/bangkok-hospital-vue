@@ -353,7 +353,7 @@ const healthInfoWithAiList = [
   {
     id: 1,
     image:'https://static.bangkokhospital.com/uploads/2025/08/IHL-weight-loss-hormones-obesity-21-31-640x336.jpg',
-    title: "Overweight due to hormones, no matter how you lose weight, you won't get slim.",
+    title: "Overweight due to hormones, no matter how you lose weight, you won't get slim and overweight due to hormones, no matter how you lose weight",
     description:
       'Many people diligently lose weight but still do not see results, possibly because the body lacks a balance of hormones such as GLP-1 and GIP that regulate hunger and metabolic rate. A health check-up with a specialist doctor can help identify causes and weight loss strategies suitable for you.',
     translateByAi: true,
