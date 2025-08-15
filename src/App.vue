@@ -383,5 +383,5 @@ const healthInfoWithAiList = [
       'Allergic rhinitis is a condition where the body is sensitive to allergens such as dust mites, animal fur, or pollen, resulting in symptoms like nasal congestion, sneezing, itchy eyes, and continuous runny nose. If neglected, it can impact daily life and develop into other diseases.',
     translateByAi: false,
   },
-]
+  ]
 </script>
