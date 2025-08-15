@@ -1,31 +1,15 @@
 <template>
   <div class="">
-    <!-- กล่องที่ใช้ clip-path -->
-    <div class="clip-box" v-if="false">
-      <div class="content">
-        <h2>Education</h2>
-        <p>This is a box with custom clip-path shape</p>
-        <p>The polygon creates an irregular shape with curved edges</p>
-      </div>
-    </div>
+ 
 
-    <!-- ตัวอย่างหลายกล่อง -->
 
     <div class="row mt-4">
       <div class="col-md-12">
-        <!-- <div class="test-123">blue</div>
-
-        <div class="box-77">77</div>
-        <div class="rounded-tab">5</div> -->
         <div class="w-100 d-flex flex-column align-items-end">
-          <div class="d-flex flex-row w-100 cov-box-23" v-if="false">
-            <div class="custom-box-3 w-25">3</div>
-            <div class="triangle w-25">4</div>
-            <div class="custom-box-2 w-75">2</div>
-          </div>
+   
 
           <div class="new-cov">
-            <div class="folded-rectangle d-flex flex-row justify-content-center align-items-start border pt-">Education</div>
+            <div class="folded-rectangle d-flex flex-row justify-content-center align-items-start ">Education</div>
             <div class="new-triangle"></div>
             <div class="box-77"></div>
             <div class="custom-box-1 p-4 w-100">
@@ -36,41 +20,11 @@
             </div>
           </div>
 
-          <!-- <div class="custom-box-1 bg-secondary p-4 mb-4 w-100">
-            <div class="content">
-              <h3>Box 1</h3>
-              <p>Custom shaped box with gradient background</p>
-            </div>
-          </div> -->
+       
         </div>
       </div>
 
-      <!-- <div class="col-md-6">
-        <div class="clip-box clip-box-blue">
-          <div class="content">
-            <h3>Box 1</h3>
-            <p>Custom shaped box with gradient background</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="clip-box clip-box-blue">
-          <div class="content">
-            <h3>Box 1</h3>
-            <p>Custom shaped box with gradient background</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="clip-box clip-box-purple">
-          <div class="content">
-            <h3>Box 2</h3>
-            <p>Another custom shaped box</p>
-          </div>
-        </div>
-      </div> -->
+     
     </div>
   </div>
 </template>
@@ -157,7 +111,6 @@
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: #ffffff00;
 }
 
 .custom-box-5 {

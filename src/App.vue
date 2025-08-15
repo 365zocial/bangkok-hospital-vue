@@ -7,29 +7,36 @@
       <div class="col-sm-4 col-lg-6 bg-danger text-white p-3">Column 4</div>
     </div>
 
-     <div style="margin: 30px 0 10px 0"></div>
+    <div style="margin: 30px 0 20px 0">Path : src/components/card/healthInfoWithAi.vue</div>
+    <div class="row g-3 g-sm-3">
+      <div v-for="data in healthInfoWithAiList" :key="data.id" class="col-12 col-md-6 col-lg-3 d-flex">
+        <HealthInfoWithAi :data="data" />
+      </div>
+    </div>
+
+    <div style="margin: 30px 0 10px 0"></div>
     <div>
       <Education :data="aboutData1" />
     </div>
 
     <div style="margin: 10px 0 10px 0"></div>
-    <div  v-for="item in doctorData2" :key="item.id">
+    <div v-for="item in doctorData2" :key="item.id">
       <ProfileDoctor2 :data="item" />
     </div>
 
-      <div style="margin: 30px 0 10px 0"></div>
+    <div style="margin: 30px 0 10px 0"></div>
     <div>
       <AboutDoctor :data="aboutData1" />
     </div>
 
     <div style="margin: 10px 0 10px 0"></div>
-    <div  v-for="item in doctorData" :key="item.id">
+    <div v-for="item in doctorData" :key="item.id">
       <ProfileDoctor :data="item" />
     </div>
 
-       <div style="margin: 30px 0 10px 0"></div>
+    <div style="margin: 30px 0 10px 0"></div>
     <div>
-      <AboutDoctor :data="aboutData2"/>
+      <AboutDoctor :data="aboutData2" />
     </div>
 
     <div style="margin: 50px 0 20px 0">Path : src/components/card/healthInfo.vue</div>
@@ -94,6 +101,7 @@ import ProfileDoctor from './components/profile/doctor.vue'
 import ProfileDoctor2 from './components/profile/doctor-2.vue'
 import AboutDoctor from './components/profile/about.vue'
 import Education from './components/profile/education.vue'
+import HealthInfoWithAi from './components/card/healthInfoWithAi.vue'
 const specialties = [
   {
     name: 'Heart',
@@ -308,38 +316,73 @@ const aboutData1 = [
   {
     id: 1,
     title: 'Centers & Clinics',
-    description: 'Kidney Center , Hemodialysis Center'
+    description: 'Kidney Center , Hemodialysis Center',
   },
   {
     id: 2,
     title: 'Specialty',
-    description: 'Internal Medicine'
+    description: 'Internal Medicine',
   },
   {
     id: 3,
     title: 'Sub Specialty',
-    description: 'Nephrology'
+    description: 'Nephrology',
   },
   {
     id: 4,
     title: 'Languages',
-    description: 'English, Thai'
-  }
+    description: 'English, Thai',
+  },
 ]
 
 const aboutData2 = [
   {
     id: 1,
     title: 'Centers & Clinics',
-    description: 'Kidney Center , Hemodialysis Center'
+    description: 'Kidney Center , Hemodialysis Center',
   },
   {
     id: 2,
     title: 'Specialty',
-    description: 'Internal Medicine'
-  },  
+    description: 'Internal Medicine',
+  },
+]
 
+const healthInfoWithAiList = [
 
-
+  {
+    id: 1,
+    image:'https://static.bangkokhospital.com/uploads/2025/08/IHL-weight-loss-hormones-obesity-21-31-640x336.jpg',
+    title: "Overweight due to hormones, no matter how you lose weight, you won't get slim.",
+    description:
+      'Many people diligently lose weight but still do not see results, possibly because the body lacks a balance of hormones such as GLP-1 and GIP that regulate hunger and metabolic rate. A health check-up with a specialist doctor can help identify causes and weight loss strategies suitable for you.',
+    translateByAi: true,
+  },
+  {
+    id: 2,
+    image: 'https://static.bangkokhospital.com/uploads/2024/11/IHL-Heart-cancer.jpg',
+    title: 'Heart cancer: A rare disease but possible',
+    description:
+      'Although heart cancer is a disease that is rarely found, it can occur in 1 per 100,000 people, especially if it is liver cancer, kidney cancer, or lung cancer, which can spread through the veins to the heart area. It is mostly found in men rather than women. ',
+    translateByAi: true,
+  },
+  {
+    id: 3,
+    image:
+      'https://bhq-cms.sgp1.digitaloceanspaces.com/uploads/2024/10/%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94-BHT_shutterstock_1056559850.jpg',
+    title: 'Heart disease can be detected from the eyes.',
+    description:
+      'The eyes are the windows to the heart. The eyes can tell us about our health, especially the heart. If you have a yellowish-white ring around your cornea, it may indicate high cholesterol levels in your blood.',
+    translateByAi: false,
+  },
+  {
+    id: 4,
+    image:
+      'https://static.bangkokhospital.com/uploads/2023/11/%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94_%E0%B8%AB%E0%B8%B1%E0%B8%A7%E0%B9%83%E0%B8%88%E0%B8%81%E0%B8%B3%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B8%9A.jpg',
+    title: 'Heart disease can be detected from the eyes.',
+    description:
+      'The eyes are the windows to the heart. The eyes can tell us about our health, especially the heart. If you have a yellowish-white ring around your cornea, it may indicate high cholesterol levels in your blood.',
+    translateByAi: false,
+  },
 ]
 </script>
