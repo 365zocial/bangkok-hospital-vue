@@ -1,13 +1,13 @@
 <template>
-  <div class="rounded-3 d-flex flex-column border card-content relative shadow-sm">
-    <div
-      class="absolute badge rounded-pill fw-semibold px-3 py-2 card-text top-0 start-0"
-      style="background-color: #e7edff; color: #0047a3"
-    >
-      Translated by AI
-    </div>
-    <div class="cov-img w-100 ">
+  <div class="rounded-3 d-flex flex-column card-content relative shadow">
+    <div class="cov-img w-100 position-relative">
       <img :src="data.image" :alt="data.title" class="rounded-top-3" />
+      <div
+        class="position-absolute badge rounded-pill fw-semibold px-3 py-2 card-text top-0 end-0 m-2"
+        style="background-color: #e7edff; color: #0047a3; top: 5px !important; right: 5px !important;"
+      >
+        Translated by AI
+      </div>
     </div>
     <div class="cov-detail w-100 d-flex flex-column d-flex flex-column justify-content-start">
       <h5 class="text-truncate-3" style="font-size: 1rem">{{ data.title }}</h5>
@@ -18,6 +18,7 @@
     </div>
   </div>
 </template>
+
 <script setup>
 const props = defineProps({
   data: {
@@ -25,12 +26,13 @@ const props = defineProps({
   },
 })
 </script>
+
 <style scoped>
 .card-content {
   height: 320px;
   border: none;
-
 }
+
 .cov-img {
   height: 48%;
 }
@@ -39,11 +41,13 @@ const props = defineProps({
   height: 52%;
   padding: 1rem 1rem 2rem 1rem;
 }
+
 .card-content img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
+
 .text-truncate-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -63,5 +67,18 @@ const props = defineProps({
 .badge {
   font-size: 0.8rem;
   font-weight: 500;
+  z-index: 10; /* ให้อยู่เหนือรูปภาพ */
+}
+
+/* Alternative approach using custom positioning */
+.ai-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #e7edff;
+  color: #0047a3;
+  font-size: 0.8rem;
+  font-weight: 500;
+  z-index: 10;
 }
 </style>
