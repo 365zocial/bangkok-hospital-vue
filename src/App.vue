@@ -8,7 +8,7 @@
     </div>
 
     <div style="margin: 30px 0 20px 0">Path : src/components/card/healthInfoWithAi.vue</div>
-    <div class="row g-sm-3">
+    <div class="row g-4 ">
       <div v-for="data in healthInfoWithAiList" :key="data.id" class="col-12 col-md-6 col-lg-3 d-flex">
         <HealthInfoWithAi :data="data" />
       </div>
@@ -40,7 +40,7 @@
     </div>
 
     <div style="margin: 50px 0 20px 0">Path : src/components/card/healthInfo.vue</div>
-    <div class="row g-3 g-sm-3">
+    <div class="row g-3 ">
       <div v-for="data in healthInfoList" :key="data.id" class="col-12 col-md-6 col-lg-3 d-flex">
         <HealthInfo :data="data" />
       </div>

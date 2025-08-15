@@ -9,9 +9,9 @@
       </div>
     </div>
     <div class="cov-detail w-100 d-flex flex-column d-flex flex-column justify-content-start">
-      <h5 class="text-truncate-3" style="font-size: 1rem">{{ data.title }}</h5>
+      <h5 class="text-truncate-3">{{ data.title }}</h5>
 
-      <p class="fw-light lh-sm text-truncate-2 m-0" style="font-size: 0.87rem">
+      <p class="fw-light lh-sm text-truncate-2 m-0">
         {{ data.description }}
       </p>
     </div>
@@ -33,12 +33,12 @@ const props = defineProps({
 }
 
 .cov-img {
-  height: 48%;
+  height: 52%;
 }
 
 .cov-detail {
-  height: 52%;
-  padding: 1rem 1rem 2rem 1rem;
+  height: 48%;
+  padding: 1rem;
 }
 
 .card-content img {
@@ -48,6 +48,8 @@ const props = defineProps({
 }
 
 .text-truncate-2 {
+  font-size: 0.87rem;
+  line-height: 150%;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -56,6 +58,8 @@ const props = defineProps({
 }
 
 .text-truncate-3 {
+  font-size: 1rem;
+  line-height: 150%;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
