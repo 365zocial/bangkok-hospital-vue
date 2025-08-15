@@ -7,28 +7,40 @@
       <div class="col-sm-4 col-lg-6 bg-danger text-white p-3">Column 4</div>
     </div>
 
+    <div style="margin: 30px 0 20px 0">Path : src/components/card/healthInfoWithAi.vue</div>
+    <div class="row g-4 ">
+      <div v-for="data in healthInfoWithAiList" :key="data.id" class="col-12 col-md-6 col-lg-3 d-flex">
+        <HealthInfoWithAi :data="data" />
+      </div>
+    </div>
+
+    <div style="margin: 30px 0 10px 0"></div>
+    <div>
+      <Education :data="aboutData1" />
+    </div>
+
     <div style="margin: 10px 0 10px 0"></div>
-    <div  v-for="item in doctorData2" :key="item.id">
+    <div v-for="item in doctorData2" :key="item.id">
       <ProfileDoctor2 :data="item" />
     </div>
 
-      <div style="margin: 30px 0 10px 0"></div>
+    <div style="margin: 30px 0 10px 0"></div>
     <div>
       <AboutDoctor :data="aboutData1" />
     </div>
 
     <div style="margin: 10px 0 10px 0"></div>
-    <div  v-for="item in doctorData" :key="item.id">
+    <div v-for="item in doctorData" :key="item.id">
       <ProfileDoctor :data="item" />
     </div>
 
-       <div style="margin: 30px 0 10px 0"></div>
+    <div style="margin: 30px 0 10px 0"></div>
     <div>
-      <AboutDoctor :data="aboutData2"/>
+      <AboutDoctor :data="aboutData2" />
     </div>
 
     <div style="margin: 50px 0 20px 0">Path : src/components/card/healthInfo.vue</div>
-    <div class="row g-3 g-sm-3">
+    <div class="row g-3 ">
       <div v-for="data in healthInfoList" :key="data.id" class="col-12 col-md-6 col-lg-3 d-flex">
         <HealthInfo :data="data" />
       </div>
@@ -88,6 +100,8 @@ import AnimationBtn from './components/button/animationBtn.vue'
 import ProfileDoctor from './components/profile/doctor.vue'
 import ProfileDoctor2 from './components/profile/doctor-2.vue'
 import AboutDoctor from './components/profile/about.vue'
+import Education from './components/profile/education.vue'
+import HealthInfoWithAi from './components/card/healthInfoWithAi.vue'
 const specialties = [
   {
     name: 'Heart',
@@ -302,38 +316,72 @@ const aboutData1 = [
   {
     id: 1,
     title: 'Centers & Clinics',
-    description: 'Kidney Center , Hemodialysis Center'
+    description: 'Kidney Center , Hemodialysis Center',
   },
   {
     id: 2,
     title: 'Specialty',
-    description: 'Internal Medicine'
+    description: 'Internal Medicine',
   },
   {
     id: 3,
     title: 'Sub Specialty',
-    description: 'Nephrology'
+    description: 'Nephrology',
   },
   {
     id: 4,
     title: 'Languages',
-    description: 'English, Thai'
-  }
+    description: 'English, Thai',
+  },
 ]
 
 const aboutData2 = [
   {
     id: 1,
     title: 'Centers & Clinics',
-    description: 'Kidney Center , Hemodialysis Center'
+    description: 'Kidney Center , Hemodialysis Center',
   },
   {
     id: 2,
     title: 'Specialty',
-    description: 'Internal Medicine'
-  },  
+    description: 'Internal Medicine',
+  },
+]
 
+const healthInfoWithAiList = [
 
-
+  {
+    id: 1,
+    image:'https://static.bangkokhospital.com/uploads/2025/08/IHL-weight-loss-hormones-obesity-21-31-640x336.jpg',
+    title: "Overweight due to hormones, no matter how you lose weight, you won't get slim and overweight due to hormones, no matter how you lose weight",
+    description:
+      'Many people diligently lose weight but still do not see results, possibly because the body lacks a balance of hormones such as GLP-1 and GIP that regulate hunger and metabolic rate. A health check-up with a specialist doctor can help identify causes and weight loss strategies suitable for you.',
+    translateByAi: true,
+  },
+  {
+    id: 2,
+    image: 'https://static.bangkokhospital.com/uploads/2025/07/IHL-brca-gene-testing-breast-cancer-risk-84-11-640x336.jpg',
+    title: 'BRCA gene test to check breast cancer risk',
+    description:
+      'BRCA gene mutations increase the risk of breast and ovarian cancer higher than the general population. BRCA gene testing helps assess risk, allows for preventive measures, and enables more precise treatment choices.',
+    translateByAi: true,
+  },
+  {
+    id: 3,
+    image:'https://static.bangkokhospital.com/uploads/2025/07/IHL-knee-swelling-elderly-knee-osteoarthritis-17-96-640x336.jpg',
+    title: 'Knee swelling in the elderly: A warning sign of osteoarthritis',
+    description:
+      'Do not overlook knee swelling in the elderly as it may be a sign of osteoarthritis, a disease that affects mobility and quality of life. Early diagnosis, prompt treatment, along with VELYS™ robotic surgery technology, aids in effective recovery.',
+    translateByAi: false,
+  },
+  {
+    id: 4,
+    image:
+      'https://static.bangkokhospital.com/uploads/2025/07/IHL-Allergic-Rhinitis-82-88-640x336.jpg',
+    title: 'Allergic Rhinitis: Answering All Questions for Allergy Sufferers',
+    description:
+      'Allergic rhinitis is a condition where the body is sensitive to allergens such as dust mites, animal fur, or pollen, resulting in symptoms like nasal congestion, sneezing, itchy eyes, and continuous runny nose. If neglected, it can impact daily life and develop into other diseases.',
+    translateByAi: false,
+  },
 ]
 </script>

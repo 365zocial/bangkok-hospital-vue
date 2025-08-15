@@ -1,0 +1,92 @@
+<template>
+  <div class="rounded-3 d-flex flex-column card-content relative shadow">
+    <div class="cov-img w-100 position-relative">
+      <img :src="data.image" :alt="data.title" class="rounded-top-3" />
+      <div
+        class="position-absolute badge rounded-pill fw-semibold px-3 py-2 card-text top-0 end-0 m-2"
+      >
+        Translated by AI
+      </div>
+    </div>
+    <div class="cov-detail w-100 d-flex flex-column d-flex flex-column justify-content-start">
+      <h5 class="text-truncate-3">{{ data.title }}</h5>
+
+      <p class="fw-light lh-sm text-truncate-2 m-0">
+        {{ data.description }}
+      </p>
+    </div>
+  </div>
+</template>
+
+<script setup>
+const props = defineProps({
+  data: {
+    type: Object,
+  },
+})
+</script>
+
+<style scoped>
+.card-content {
+  height: 320px;
+  border: none;
+}
+
+.cov-img {
+  height: 52%;
+}
+
+.cov-detail {
+  height: 48%;
+  padding: 1rem;
+}
+
+.card-content img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.text-truncate-2 {
+  font-size: 0.87rem;
+  line-height: 150%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-truncate-3 {
+  font-size: 1rem;
+  line-height: 150%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.badge {
+  font-size: 0.8rem;
+  font-weight: 500;
+  z-index: 10; /* ให้อยู่เหนือรูปภาพ */
+  background-color: #e7edff;
+  color: #0047a3;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+/* Alternative approach using custom positioning */
+.ai-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #e7edff;
+  color: #0047a3;
+  font-size: 0.8rem;
+  font-weight: 500;
+  z-index: 10;
+}
+</style>
