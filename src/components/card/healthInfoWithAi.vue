@@ -6,7 +6,7 @@
     >
       Translated by AI
     </div>
-    <div class="cov-img w-100 position-relative">
+    <div class="cov-img w-100 ">
       <img :src="data.image" :alt="data.title" class="rounded-top-3" />
     </div>
     <div class="cov-detail w-100 d-flex flex-column d-flex flex-column justify-content-start">
