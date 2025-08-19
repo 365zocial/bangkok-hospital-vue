@@ -15,7 +15,7 @@
             <div class="custom-box-1 w-100">
               <div class="content w-100 ">
 
-                <div v-for="item in educationList" :key="item.year" class="d-flex flex-column flex-md-row justify-content-between align-items-start w-100">
+                <div v-for="item in educationList" :key="item.year" class="d-flex flex-column flex-md-row justify-content-between align-items-start w-100 mb-4">
                   <div class="edu-year-width">{{ item.year }}</div>
                   <div class="edu-degree-width">{{ item.degree }}</div>
                   <div class="edu-institution-width">{{ item.institution }}</div>
@@ -53,7 +53,7 @@ const educationList = [
 }
 .edu-degree-width{
 width: 100% ;
-  font-weight: 750;
+  font-weight: 700;
   color: #002d73;
   font-size: 1.25rem;
 }
@@ -63,7 +63,7 @@ width: 100% ;
 }
 
 .custom-box-1 {
-  padding: 40px;
+  padding: 40px 40px 25px 40px;
   border-radius: 24px 24px 24px 24px;
   background: linear-gradient(34.83deg, rgba(0, 45, 115, .12) 17.64%, rgba(0, 45, 115, .02) 71.04%);
 }
