@@ -13,12 +13,12 @@
             <div class="new-triangle"></div>
             <div class="box-77"></div>
             <div class="custom-box-1 w-100">
-              <div class="content ">
+              <div class="content w-100 ">
 
-                <div v-for="item in educationList" :key="item.year" class="d-flex flex-column flex-md-row justify-content-between align-items-start">
-                  <div class="edu-year-width   ">{{ item.year }}</div>
-                  <div class="edu-width">{{ item.degree }}</div>
-                  <div class="edu-width">{{ item.institution }}</div>
+                <div v-for="item in educationList" :key="item.year" class="d-flex flex-column flex-md-row justify-content-between align-items-start w-100">
+                  <div class="edu-year-width">{{ item.year }}</div>
+                  <div class="edu-degree-width">{{ item.degree }}</div>
+                  <div class="edu-institution-width">{{ item.institution }}</div>
 
                 </div>
 
@@ -46,13 +46,22 @@ const educationList = [
 
 <style scoped>
 .edu-year-width{
-  width: 33.33%;
-  border:1px solid #000;
+  width: 100% ;
+  font-weight: 750;
+  color: #002d73;
+  font-size: 1.25rem;
 }
-.edu-width{
-  width: 33.33%;
-  border:1px solid #000;
+.edu-degree-width{
+width: 100% ;
+  font-weight: 750;
+  color: #002d73;
+  font-size: 1.25rem;
 }
+
+.edu-institution-width{
+  width: 100% ;
+}
+
 .custom-box-1 {
   padding: 40px;
   border-radius: 24px 24px 24px 24px;
@@ -66,8 +75,6 @@ const educationList = [
   position: sticky;
   right: 0px;
 }
-
-
 
 .custom-box-3 {
   border-radius: 16px;
@@ -108,7 +115,6 @@ const educationList = [
   top: 0;
   z-index: 10;
   --r: 24px;
-  /* radius */
   width: 150px;
   height: 80px;
   aspect-ratio: 1.5;
@@ -139,32 +145,10 @@ rotate: 0deg;
 }
 
 .content {
-  color: black;
-  font-size: 20px;
-  font-weight: 500;
   text-align: start;
   margin-top: 50px;
+  line-height: 130%;
 }
-
-.content h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.content h3 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.content p {
-  font-size: 1.1rem;
-  opacity: 0.9;
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
-}
-
 
 .triangle {
   width: 0;
@@ -172,7 +156,6 @@ rotate: 0deg;
   border-left: 30px solid transparent;
   border-right: 2px solid transparent;
   border-bottom: 40px solid #7e98f5;
-  /* สามเหลี่ยมชี้ขึ้น */
   position: absolute;
   left: 120px;
   bottom: 0;
@@ -190,32 +173,20 @@ mask: radial-gradient(41px at 100% 100%,#0000 100%,#000);
   left: 172px;
   z-index: 10;
 }
-@media (max-width: 768px) {
-  .content h2 {
-    font-size: 2rem;
-  }
-
-  .content h3 {
-    font-size: 1.5rem;
-  }
-
-  .content p {
-    font-size: 1rem;
-  }
+@media (min-width: 768px) {
+  .edu-year-width{
+  width: 25% !important;
 }
 
-@media (max-width: 480px) {
-
-  .content h2 {
-    font-size: 1.75rem;
-  }
-
-  .content h3 {
-    font-size: 1.3rem;
-  }
-
-  .content p {
-    font-size: 0.9rem;
-  }
+.edu-degree-width{
+width: 37.5% ;
 }
+
+.edu-institution-width{
+  width: 37.5% ;
+
+}
+}
+
+
 </style>
