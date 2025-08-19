@@ -12,11 +12,13 @@
             <div class="folded-rectangle d-flex flex-row justify-content-center align-items-start ">Education</div>
             <div class="new-triangle"></div>
             <div class="box-77"></div>
-            <div class="custom-box-1 p-4 w-100">
-              <div class="content">
-               
-                <div>
+            <div class="custom-box-1 w-100">
+              <div class="content ">
 
+                <div v-for="item in educationList" :key="item.year" class="d-flex flex-column flex-md-row justify-content-between align-items-start">
+                  <div class="edu-year-width   ">{{ item.year }}</div>
+                  <div class="edu-width">{{ item.degree }}</div>
+                  <div class="edu-width">{{ item.institution }}</div>
 
                 </div>
 
@@ -43,8 +45,16 @@ const educationList = [
 </script>
 
 <style scoped>
-
+.edu-year-width{
+  width: 33.33%;
+  border:1px solid #000;
+}
+.edu-width{
+  width: 33.33%;
+  border:1px solid #000;
+}
 .custom-box-1 {
+  padding: 40px;
   border-radius: 24px 24px 24px 24px;
   background: linear-gradient(34.83deg, rgba(0, 45, 115, .12) 17.64%, rgba(0, 45, 115, .02) 71.04%);
 }
@@ -129,8 +139,11 @@ rotate: 0deg;
 }
 
 .content {
-  color: white;
-  text-align: center;
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: start;
+  margin-top: 50px;
 }
 
 .content h2 {
