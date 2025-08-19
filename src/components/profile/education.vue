@@ -14,8 +14,12 @@
             <div class="box-77"></div>
             <div class="custom-box-1 p-4 w-100">
               <div class="content">
-                <h3>Box 1</h3>
-                <p>Custom shaped box with gradient background</p>
+               
+                <div>
+
+
+                </div>
+
               </div>
             </div>
           </div>
@@ -30,6 +34,11 @@
 </template>
 
 <script setup>
+const educationList = [
+  {year : "1995", degree: 'Nephrology', institution: "Chulalongkorn University, Thailand"},
+  {year : "1993", degree: 'Internal Medicine', institution: "Chulalongkorn University, Thailand"},
+  {year : "1987", degree: 'Doctor of Medicine', institution: "Chiang Mai University, Thailand"},
+]
 
 </script>
 
