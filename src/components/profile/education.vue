@@ -9,9 +9,13 @@
    
 
           <div class="new-cov">
-            <div class="folded-rectangle d-flex flex-row justify-content-center align-items-start ">Education</div>
+            <div class="folded-rectangle d-flex flex-row justify-content-center align-items-start ">
+
+              <h4 class="education-text text-center mt-3">Education</h4>
+            </div>
+
             <div class="new-triangle"></div>
-            <div class="box-77"></div>
+            <div class="box-77 "></div>
             <div class="custom-box-1 w-100">
               <div class="content w-100 ">
 
@@ -45,31 +49,39 @@ const educationList = [
 </script>
 
 <style scoped>
+.education-text{
+
+  font-weight: 700;
+  color: #002d73;
+  font-size: 1.25rem;
+
+}
+
 .edu-year-width{
   width: 100% ;
   font-weight: 700;
   color: #002d73;
   font-size: 1.25rem;
-  margin: 6px 0;
+  margin: 5px 0;
 }
 .edu-degree-width{
 width: 100% ;
   font-weight: 600;
   color: #002d73;
   font-size: 1.125rem;
-  margin: 6px 0;
+  margin: 5px 0;
 }
 
 .edu-institution-width{
   width: 100% ;
   font-size: 1rem;
   font-weight: 200;
-    margin: 6px 0;
+    margin: 5px 0;
 }
 
 .custom-box-1 {
   padding: 20px 20px 4px 20px;
-  border-radius: 24px;
+  border-radius: 12px;
   background: linear-gradient(34.83deg, rgba(0, 45, 115, .12) 17.64%, rgba(0, 45, 115, .02) 71.04%);
 }
 
@@ -79,30 +91,6 @@ width: 100% ;
   background: linear-gradient(34.83deg, rgba(0, 45, 115, .12) 17.64%, rgba(0, 45, 115, .02) 71.04%);
 } */
 
-.custom-box-2 {
-  border-radius: 24px 24px 0px 0px;
-  background-color: #7e98f5;
-  height: 50px;
-  position: sticky;
-  right: 0px;
-}
-
-.custom-box-3 {
-  border-radius: 16px;
-  background-color: #f5b7b1;
-  height: 50px;
-  position: sticky;
-  left: 50px;
-  z-index: 10;
-}
-
-.cov-box-23 {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: #b1f5da;
-  border-radius: 24px;
-}
 
 .new-cov {
   position: relative;
@@ -110,27 +98,16 @@ width: 100% ;
   height: 100%;
 }
 
-.custom-box-5 {
-  background-color: #f5b1b1;
-  height: 50px;
-  width: 150px;
-  border-radius: 16px;
-  position: absolute;
-  top: 0;
-  z-index: 10;
-  clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
-}
-
 .folded-rectangle {
   position: absolute;
   top: 0;
-  z-index: 10;
+  z-index: 20;
   --r: 24px;
-  width: 150px;
+  width: 140px;
   height: 80px;
   aspect-ratio: 1.5;
-  background: #ffffff;
-  border-top-left-radius: var(--r);
+  background: #fff;
+  border-top-left-radius: 12px;
   border-bottom-right-radius: var(--r) !important;
   mask:
     radial-gradient(var(--r) at 100% 100%, #0000 100%, #000 calc(100% + 1px)) 0 100%/var(--r) var(--r) no-repeat,
@@ -141,7 +118,8 @@ width: 100% ;
   position: absolute;
   top: 0;
   z-index: 10;
-  left: 109px;
+  /* left: 109px; */
+   left: 96px;
   --r: 14px;
   height: 70px;
   width: auto;
@@ -151,7 +129,7 @@ width: 100% ;
     linear-gradient(0deg,#0000 calc(3*var(--r)/2),#000 0),
     radial-gradient(var(--r) at 50% calc(100% - 2*var(--r)),#000 98%,#0000 101%);
   clip-path: polygon(50% 100%,100% 0,0 0);
-background: #ffffff;
+background: #fff;
 rotate: 0deg;
 }
 
@@ -161,27 +139,15 @@ rotate: 0deg;
   line-height: 130%;
 }
 
-.triangle {
-  width: 0;
-  height: 0px;
-  border-left: 30px solid transparent;
-  border-right: 2px solid transparent;
-  border-bottom: 40px solid #7e98f5;
-  position: absolute;
-  left: 120px;
-  bottom: 0;
-  z-index: 10;
-}
-
-
 .box-77 {
 mask: radial-gradient(41px at 100% 100%,#0000 100%,#000);
-  background: #ffffff;
+  background: #fff;
   width: 40px;
   height: 40px;
   position: absolute;
   top: 0;
-  left: 172px;
+  /* left: 172px; */
+  left: 160px;
   z-index: 10;
 }
 @media (min-width: 768px) {
