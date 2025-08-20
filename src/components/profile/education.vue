@@ -102,12 +102,12 @@ width: 100% ;
   position: absolute;
   top: 0;
   z-index: 20;
-  --r: 24px;
+  --r: 12px;  /* lg 24px */
   width: 140px;
-  height: 80px;
+  height: 68px; /* lg 80px */
   aspect-ratio: 1.5;
   background: #fff;
-  border-top-left-radius: 12px;
+  border-top-left-radius: var(--r);
   border-bottom-right-radius: var(--r) !important;
   mask:
     radial-gradient(var(--r) at 100% 100%, #0000 100%, #000 calc(100% + 1px)) 0 100%/var(--r) var(--r) no-repeat,

@@ -15,7 +15,7 @@
     </div>
 
     <div style="margin: 30px 0 10px 0"></div>
-    <div>
+    <div class="bg-white">
       <Education :data="aboutData1" />
     </div>
 
