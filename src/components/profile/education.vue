@@ -15,10 +15,10 @@
             <div class="custom-box-1 w-100">
               <div class="content w-100 ">
 
-                <div v-for="item in educationList" :key="item.year" class="d-flex flex-column flex-md-row justify-content-between align-items-start w-100 mb-4">
-                  <div class="edu-year-width">{{ item.year }}</div>
-                  <div class="edu-degree-width">{{ item.degree }}</div>
-                  <div class="edu-institution-width">{{ item.institution }}</div>
+                <div v-for="item in educationList" :key="item.year" class="d-flex flex-column flex-md-row justify-content-between align-items-start w-100 my-3">
+                  <div class="edu-year-width ">{{ item.year }}</div>
+                  <div class="edu-degree-width ">{{ item.degree }}</div>
+                  <div class="edu-institution-width ">{{ item.institution }}</div>
 
                 </div>
 
@@ -47,26 +47,37 @@ const educationList = [
 <style scoped>
 .edu-year-width{
   width: 100% ;
-  font-weight: 750;
-  color: #002d73;
-  font-size: 1.25rem;
-}
-.edu-degree-width{
-width: 100% ;
   font-weight: 700;
   color: #002d73;
   font-size: 1.25rem;
+  margin: 6px 0;
+}
+.edu-degree-width{
+width: 100% ;
+  font-weight: 600;
+  color: #002d73;
+  font-size: 1.125rem;
+  margin: 6px 0;
 }
 
 .edu-institution-width{
   width: 100% ;
+  font-size: 1rem;
+  font-weight: 200;
+    margin: 6px 0;
 }
 
 .custom-box-1 {
-  padding: 40px 40px 25px 40px;
-  border-radius: 24px 24px 24px 24px;
+  padding: 20px 20px 4px 20px;
+  border-radius: 24px;
   background: linear-gradient(34.83deg, rgba(0, 45, 115, .12) 17.64%, rgba(0, 45, 115, .02) 71.04%);
 }
+
+/* .custom-box-1 {
+  padding: 40px 40px 25px 40px;
+  border-radius: 24px;
+  background: linear-gradient(34.83deg, rgba(0, 45, 115, .12) 17.64%, rgba(0, 45, 115, .02) 71.04%);
+} */
 
 .custom-box-2 {
   border-radius: 24px 24px 0px 0px;
