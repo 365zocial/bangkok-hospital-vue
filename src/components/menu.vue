@@ -56,8 +56,8 @@
       <div class="row gx-2 gy-2">
         <!-- Services Card -->
         <div class="col-6">
-          <div class="shadow-blue mobile-menu-card rounded-3 h-100 p-2">
-            <div class="d-flex flex-column justify-content-start align-items-start w-100 bg-success">
+          <div class="shadow-blue mobile-menu-card rounded-3 h-100 ">
+            <div class="d-flex flex-column justify-content-start align-items-start w-100 ps-2 pt-2 pe-2 ">
               <div class="icon-wrapper mb-2">
                 <i class="bi bi-heart-pulse text-primary"></i>
               </div>
@@ -68,8 +68,8 @@
 
         <!-- Diseases & Treatments Card -->
         <div class="col-6">
-          <div class="shadow-blue mobile-menu-card rounded-3 h-100 p-2">
-            <div class="d-flex flex-column justify-content-start align-items-start w-100">
+          <div class="shadow-blue mobile-menu-card rounded-3 h-100 ">
+            <div class="d-flex flex-column justify-content-start align-items-start w-100 ps-2 pt-2 pe-2 ">
               <div class="icon-wrapper mb-2">
                 <i class="bi bi-clipboard2-plus text-primary"></i>
               </div>
@@ -80,8 +80,8 @@
 
         <!-- Related Doctors Card -->
         <div class="col-6">
-          <div class="shadow-blue mobile-menu-card rounded-3 h-100 p-2">
-            <div class="d-flex flex-column justify-content-start align-items-start w-100">
+          <div class="shadow-blue mobile-menu-card rounded-3 h-100 ">
+            <div class="d-flex flex-column justify-content-start align-items-start w-100 ps-2 pt-2 pe-2 ">
               <div class="icon-wrapper mb-2">
                 <i class="bi bi-person-badge text-primary"></i>
               </div>
@@ -92,12 +92,12 @@
 
         <!-- Packages & Promotions Card -->
         <div class="col-6">
-          <div class="shadow-blue mobile-menu-card rounded-3 h-100 p-2">
-            <div class="d-flex flex-column justify-content-start align-items-start w-100 bg-success">
+          <div class="shadow-blue mobile-menu-card rounded-3 h-100 ">
+            <div class="d-flex flex-column justify-content-start align-items-start w-100 ps-2 pt-2 pe-2 ">
               <div class="icon-wrapper mb-2">
                 <i class="bi bi-gift text-primary"></i>
               </div>
-              <h6 class="fw-bold text-primary">Packages & Promotions</h6>
+              <h6 class="fw-bold text-primary" >Packages & Promotions</h6>
             </div>
           </div>
         </div>
