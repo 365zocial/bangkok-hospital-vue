@@ -166,7 +166,7 @@ const props = defineProps({
 .mobile-menu-card {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  min-height: 120px;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -201,7 +201,7 @@ const props = defineProps({
 /* Responsive text sizing */
 @media (max-width: 575px) {
   .mobile-menu-card h6 {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
   
   .icon-wrapper {
