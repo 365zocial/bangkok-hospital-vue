@@ -7,6 +7,12 @@
       <div class="col-sm-4 col-lg-6 bg-danger text-white p-3">Column 4</div>
     </div>
 
+    <div style="margin: 30px 0 20px 0">Path : </div>
+    <div class="row g-4 ">
+      <Menu />
+    </div>
+
+
     <div style="margin: 30px 0 20px 0">Path : src/components/card/healthInfoWithAi.vue</div>
     <div class="row g-4 ">
       <div v-for="data in healthInfoWithAiList" :key="data.id" class="col-12 col-md-6 col-lg-3 d-flex">
@@ -102,6 +108,7 @@ import ProfileDoctor2 from './components/profile/doctor-2.vue'
 import AboutDoctor from './components/profile/about.vue'
 import Education from './components/profile/education.vue'
 import HealthInfoWithAi from './components/card/healthInfoWithAi.vue'
+import Menu from './components/menu.vue'
 const specialties = [
   {
     name: 'Heart',
