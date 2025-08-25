@@ -1,5 +1,5 @@
 <template>
-  <div class="menu-container bg-white rounded-3 shadow-sm p-4">
+  <div class="menu-container rounded-3 p-2">
     <!-- Desktop Layout (lg and up) -->
     <div class="d-none d-lg-block">
       <!-- Services Section -->
@@ -53,44 +53,52 @@
 
     <!-- Mobile Layout (below lg) -->
     <div class="d-lg-none">
-      <div class="row g-2">
+      <div class="row gx-2 gy-2">
         <!-- Services Card -->
-        <div class="col-6 shadow-blue mobile-menu-card rounded-3 h-100 ">
-          <div class="p-1 d-flex flex-column justify-content-start align-items-start w-100">
-            <div class="icon-wrapper mb-2">
-              <i class="bi bi-heart-pulse text-primary fs-1"></i>
+        <div class="col-6">
+          <div class="shadow-blue mobile-menu-card rounded-3 h-100 p-2">
+            <div class="d-flex flex-column justify-content-start align-items-start w-100">
+              <div class="icon-wrapper mb-2">
+                <i class="bi bi-heart-pulse text-primary"></i>
+              </div>
+              <h6 class="fw-bold text-primary">Services</h6>
             </div>
-            <h6 class="fw-bold text-primary mb-0">Services</h6>
           </div>
         </div>
 
         <!-- Diseases & Treatments Card -->
-        <div class="col-6 shadow-blue mobile-menu-card rounded-3 h-100 ">
-          <div class="p-1 d-flex flex-column justify-content-start align-items-start w-100">
-            <div class="icon-wrapper mb-2">
-              <i class="bi bi-clipboard2-plus text-primary fs-1"></i>
+        <div class="col-6">
+          <div class="shadow-blue mobile-menu-card rounded-3 h-100 p-2">
+            <div class="d-flex flex-column justify-content-start align-items-start w-100">
+              <div class="icon-wrapper mb-2">
+                <i class="bi bi-clipboard2-plus text-primary"></i>
+              </div>
+              <h6 class="fw-bold text-primary">Diseases & Treatments</h6>
             </div>
-            <h6 class="fw-bold text-primary mb-0">Diseases & Treatments</h6>
           </div>
         </div>
 
         <!-- Related Doctors Card -->
-       <div class="col-6 shadow-blue mobile-menu-card rounded-3 h-100 ">
-          <div class="p-1 d-flex flex-column justify-content-start align-items-start w-100">
-            <div class="icon-wrapper mb-2">
-              <i class="bi bi-person-badge text-primary fs-1"></i>
+        <div class="col-6">
+          <div class="shadow-blue mobile-menu-card rounded-3 h-100 p-2">
+            <div class="d-flex flex-column justify-content-start align-items-start w-100">
+              <div class="icon-wrapper mb-2">
+                <i class="bi bi-person-badge text-primary"></i>
+              </div>
+              <h6 class="fw-bold text-primary">Related Doctors</h6>
             </div>
-            <h6 class="fw-bold text-primary mb-0">Related Doctors</h6>
           </div>
         </div>
 
         <!-- Packages & Promotions Card -->
-        <div class="col-6 shadow-blue mobile-menu-card rounded-3 h-100 ">
-          <div class="p-1 d-flex flex-column justify-content-start align-items-start w-100">
-            <div class="icon-wrapper mb-2">
-              <i class="bi bi-gift text-primary fs-1"></i>
+        <div class="col-6">
+          <div class="shadow-blue mobile-menu-card rounded-3 h-100 p-2">
+            <div class="d-flex flex-column justify-content-start align-items-start w-100">
+              <div class="icon-wrapper mb-2">
+                <i class="bi bi-gift text-primary"></i>
+              </div>
+              <h6 class="fw-bold text-primary">Packages & Promotions</h6>
             </div>
-            <h6 class="fw-bold text-primary mb-0">Packages & Promotions</h6>
           </div>
         </div>
       </div>
@@ -109,9 +117,6 @@ const props = defineProps({
 </script>
 
 <style scoped>
-.menu-container {
-  border: 1px solid #e9ecef;
-}
 
 /* Desktop Styles */
 @media (min-width: 992px) {
