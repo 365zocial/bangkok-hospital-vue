@@ -57,7 +57,7 @@
         <!-- Services Card -->
         <div class="col-6">
           <div class="shadow-blue mobile-menu-card rounded-3 h-100 p-2">
-            <div class="d-flex flex-column justify-content-start align-items-start w-100">
+            <div class="d-flex flex-column justify-content-start align-items-start w-100 bg-success">
               <div class="icon-wrapper mb-2">
                 <i class="bi bi-heart-pulse text-primary"></i>
               </div>
@@ -93,7 +93,7 @@
         <!-- Packages & Promotions Card -->
         <div class="col-6">
           <div class="shadow-blue mobile-menu-card rounded-3 h-100 p-2">
-            <div class="d-flex flex-column justify-content-start align-items-start w-100">
+            <div class="d-flex flex-column justify-content-start align-items-start w-100 bg-success">
               <div class="icon-wrapper mb-2">
                 <i class="bi bi-gift text-primary"></i>
               </div>
@@ -166,10 +166,10 @@ const props = defineProps({
 .mobile-menu-card {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  min-height: 100px;
+  min-height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
 }
 
 .mobile-menu-card:hover {
@@ -181,7 +181,7 @@ const props = defineProps({
 .icon-wrapper {
   width: 20px;
   height: 20px;
-  background-color: rgba(13, 71, 161, 0.1);
+  background-color: #e7edff;
   border-radius: 10px;
   display: flex;
   align-items: center;
