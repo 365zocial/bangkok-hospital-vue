@@ -14,6 +14,21 @@
           </div>
         </div>
 
+        <div class="cov-service-item">
+          <div class=" d-flex align-items-center mb-2">
+            <div class="arrow-icon me-3">
+              <i class="bi bi-arrow-right-circle text-primary"></i>
+            </div>
+            <span class="text-primary fw-semibold">Overview</span>
+          </div>
+
+          <div class=" d-flex align-items-center mb-2">
+            <div class="arrow-icon me-3">
+              <i class="bi bi-arrow-right-circle text-muted"></i>
+            </div>
+            <span class="text-muted">Our Services</span>
+          </div>
+        </div>
         <!--  -->
 
         <div class="d-flex align-items-center mb-3">
@@ -27,44 +42,25 @@
         </div>
 
         <!--  -->
-        <div class="menu-items ms-5">
-          <div class="menu-item d-flex align-items-center mb-2">
-            <div class="arrow-icon me-3">
-              <i class="bi bi-arrow-right-circle text-primary"></i>
-            </div>
-            <span class="text-primary fw-semibold">Overview</span>
-          </div>
+      </div>
 
-          <div class="menu-item d-flex align-items-center mb-2">
-            <div class="arrow-icon me-3">
-              <i class="bi bi-arrow-right-circle text-muted"></i>
-            </div>
-            <span class="text-muted">Our Services</span>
-          </div>
+      <div class="d-flex align-items-center mb-3">
+        <div class="icon-wrapper-lg">
+          <i class="bi bi-person-badge text-primary fs-4"></i>
+        </div>
+         
+        <div>
+          <h5 class="fw-bold text-primary mb-0 menu-item">Related Doctors</h5>
         </div>
       </div>
 
-      <!-- Diseases & Treatments Section -->
-      <div class="menu-section mb-4">
-        <div class="d-flex align-items-center">
-          <i class="bi bi-clipboard2-plus text-primary me-3 fs-4"></i>
-          <h5 class="fw-bold text-primary mb-0">Diseases & Treatments</h5>
+      <div class="d-flex align-items-center mb-3">
+        <div class="icon-wrapper-lg">
+          <i class="bi bi-gift text-primary fs-4"></i>
         </div>
-      </div>
-
-      <!-- Related Doctors Section -->
-      <div class="menu-section mb-4">
-        <div class="d-flex align-items-center">
-          <i class="bi bi-person-badge text-primary me-3 fs-4"></i>
-          <h5 class="fw-bold text-primary mb-0">Related Doctors</h5>
-        </div>
-      </div>
-
-      <!-- Packages & Promotions Section -->
-      <div class="menu-section">
-        <div class="d-flex align-items-center">
-          <i class="bi bi-gift text-primary me-3 fs-4"></i>
-          <h5 class="fw-bold text-primary mb-0">Packages & Promotions</h5>
+         
+        <div>
+          <h5 class="fw-bold text-primary mb-0 menu-item">Packages & Promotions</h5>
         </div>
       </div>
     </div>
@@ -149,6 +145,9 @@ const props = defineProps({
     max-width: 350px;
   }
 }
+.cov-service-item{
+margin-left: 25px;
+}
 
 .menu-section {
   cursor: pointer;
@@ -167,8 +166,7 @@ const props = defineProps({
 }
 
 .menu-item:hover {
-   padding-left: 4px;
-  
+  padding-left: 4px;
 }
 
 .arrow-icon {
